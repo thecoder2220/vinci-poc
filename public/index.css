@@ -1,0 +1,22 @@
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.logo-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.top-menu-bar {
+  border: solid 1px #dfe3e6;
+  height: 45px;
+  background: #ededed
+}
