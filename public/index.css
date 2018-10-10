@@ -61,6 +61,16 @@ main div {
   max-width: 100% !important;
 }
 
+main .text {
+    padding: 0;
+}
+
+.text {
+    width: 100%;
+    font-size: 1.125rem;
+    text-align: left;
+}
+
 .content {
   width: 100%;
   color: #333;
@@ -157,4 +167,29 @@ li {
     font-family: VinciSansBold !important;
     font-weight: normal !important;
     padding: 4px 6px 4px 10px !important;
+}
+
+div#dyn_nav {
+    background: #FFF none repeat scroll 0 0;
+    position: relative !important;
+    padding-top: 1px;
+    top: 0;
+    width: 100% !important;
+    margin: 1% 0 !important;
+    border: none 0 !important;
+    float: left;
+    max-width: 100% !important;
+}
+
+.flexcontainer-as-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcontainer-as-row>div {
+    height: 100px;
+    width: 100px;
+    background-color: #b93c2f;
+    border: 1px solid #626262;
+    margin: 3px;
 }

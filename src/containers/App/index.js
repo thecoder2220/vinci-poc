@@ -87,16 +87,16 @@ const Hit = ({hit}) => {
     return (
         <article>
             <h1>
-                <Highlight attribute="title" hit={hit} />
+                <Highlight attribute="title" hit={hit}/>
             </h1>
             <p>
-                <Highlight attribute="title1" hit={hit} />
+                <Highlight attribute="title1" hit={hit}/>
             </p>
             <p>
-                <Highlight attribute="title2" hit={hit} />
+                <Highlight attribute="title2" hit={hit}/>
             </p>
             <p>
-                <Highlight attribute="title3" hit={hit} />
+                <Highlight attribute="title3" hit={hit}/>
             </p>
         </article>
     );
@@ -129,6 +129,11 @@ const HitsChecker = connectHits(({hits, searchState}) => {
     return (
         <div id="main">
             <div id="main_res">
+                <div id="dyn_nav">
+                    <div class="dn-hdr">
+                        <span><b>Filtrer</b></span>
+                    </div>
+                </div>
                 <div className="results">
                     <div className="refinements">
                         <Panel title="Catégories">
@@ -162,11 +167,7 @@ const HitsChecker = connectHits(({hits, searchState}) => {
                         <Pagination />
                     </div>
                 </div>
-                <div id="dyn_nav">
-                    <div class="dn-hdr">
-                        <span><b>Filtrer</b></span>
-                    </div>
-                </div>
+
             </div>
         </div>
     );
@@ -196,19 +197,15 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div className="wrapper">
-                        <header>
-                            <div className="header-search">
-                                <SearchBox
-                                    translations={{
-                                        placeholder: 'Recherchez des pages, documents...',
-                                    }}
-                                />
-                                <div className="stats-wrapper">
-                                    <Stats />
-                                </div>
-                            </div>
-                        </header>
+                    <div className="header-search">
+                        <SearchBox
+                            translations={{
+                                placeholder: 'Recherchez des pages, documents...',
+                            }}
+                        />
+                        <div className="stats-wrapper">
+                            <Stats />
+                        </div>
                     </div>
 
                     <div className="wrapper">
