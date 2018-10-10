@@ -64,7 +64,9 @@ function findTitle(hit) {
     if (
       hit._highlightResult &&
       hit._highlightResult[attrs[i]] &&
-      hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none') !== -1) {
+      hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none') !==
+        -1
+    ) {
       return [
         attrs[i],
         hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none'),
@@ -131,7 +133,7 @@ const HitsChecker = connectHits(({ hits, searchState }) => {
   }
   hasDisplayed = true;
   return (
-    <div id="main" style="position: relative; width: 100%;">
+    <div id="main">
       <div className="results">
         <div className="refinements">
           <Panel title="Catégories">
