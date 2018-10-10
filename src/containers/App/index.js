@@ -64,9 +64,7 @@ function findTitle(hit) {
     if (
       hit._highlightResult &&
       hit._highlightResult[attrs[i]] &&
-      hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none') !==
-        -1
-    ) {
+      hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none') !== -1) {
       return [
         attrs[i],
         hit._highlightResult[attrs[i]].findIndex(e => e.matchLevel !== 'none'),
@@ -133,37 +131,39 @@ const HitsChecker = connectHits(({ hits, searchState }) => {
   }
   hasDisplayed = true;
   return (
-    <div className="results">
-      <div className="refinements">
-        <Panel title="Catégories">
-          <Menu attributeName="categories_lvl0" />
-        </Panel>
-        <Panel title="Années">
-          <RefinementList attributeName="year" />
-        </Panel>
-      </div>
-      <div className="items">
-        <div className="tagList">
-          <Menu attributeName="categories_lvl1" />
+    <div id="main" style="position: relative; width: 100%;">
+      <div className="results">
+        <div className="refinements">
+          <Panel title="Catégories">
+            <Menu attributeName="categories_lvl0" />
+          </Panel>
+          <Panel title="Années">
+            <RefinementList attributeName="year" />
+          </Panel>
         </div>
-        <InstantSearch
-          appId="AP1SAU3HM8"
-          apiKey="ca5a4ca0494ad49d12591dc4823ac172"
-          indexName="site2"
-          searchState={searchState}
-        >
-          <Configure hitsPerPage="4" attributesToSnippet={['content:20']} />
-          <VirtualSearch />
-          <VirtualCategory />
-          <VirtualYear />
-          <VirtualLvl1 />
-          <Pdfs />
-          <div className="pdf-section">
-            <Hits hitComponent={PdfHit} />
+        <div className="items">
+          <div className="tagList">
+            <Menu attributeName="categories_lvl1" />
           </div>
-        </InstantSearch>
-        <Hits hitComponent={Hit} />
-        <Pagination />
+          <InstantSearch
+            appId="AP1SAU3HM8"
+            apiKey="ca5a4ca0494ad49d12591dc4823ac172"
+            indexName="site2"
+            searchState={searchState}
+          >
+            <Configure hitsPerPage="4" attributesToSnippet={['content:20']} />
+            <VirtualSearch />
+            <VirtualCategory />
+            <VirtualYear />
+            <VirtualLvl1 />
+            <Pdfs />
+            <div className="pdf-section">
+              <Hits hitComponent={PdfHit} />
+            </div>
+          </InstantSearch>
+          <Hits hitComponent={Hit} />
+          <Pagination />
+        </div>
       </div>
     </div>
   );
