@@ -148,3 +148,13 @@ li {
   list-style-type: none;
   vertical-align: middle;
 }
+
+.dn-hdr {
+    color: #fff;
+    background: #3C3C3B !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.25em !important;
+    font-family: VinciSansBold !important;
+    font-weight: normal !important;
+    padding: 4px 6px 4px 10px !important;
+}

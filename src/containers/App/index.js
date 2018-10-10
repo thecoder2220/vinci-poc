@@ -162,7 +162,11 @@ const HitsChecker = connectHits(({hits, searchState}) => {
                         <Pagination />
                     </div>
                 </div>
-                <div id="dyn_nav"/>
+                <div id="dyn_nav">
+                    <div class="dn-hdr">
+                        <span><b>Filtrer</b></span>
+                    </div>
+                </div>
             </div>
         </div>
     );
