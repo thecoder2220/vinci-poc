@@ -3,7 +3,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var hostname = '0.0.0.0' ;
-var port = 5000;
+var port = 5001;
 
 module.exports = {
   entry: [

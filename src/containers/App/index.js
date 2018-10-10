@@ -83,41 +83,24 @@ function findTitle(hit) {
 }
 
 const Hit = ({hit}) => {
-    const [titleAttr, offset] = findTitle(hit);
-    let title;
-    let htmlTitle;
-
-    if (titleAttr) {
-        title = hit[titleAttr][offset];
-        htmlTitle = hit._highlightResult[titleAttr][offset];
-    }
-
+    debugger
     return (
-        <div
-            className="result"
-            onClick={() => (window.location = hit.objectID)}
-        >
-            {title ? (
-                <div
-                    className="result__title"
-                    dangerouslySetInnerHTML={{
-                        __html: htmlTitle.value.replace(
-                            /ais-highlight-[0-9]+/gi,
-                            'em'
-                        ),
-                    }}
-                />
-            ) : (
-                <div className="result__title">
-                    <Highlight attributeName="title" hit={hit}/>
-                </div>
-            )}
-            <div className="result__content">
-                <Snippet attributeName="content" hit={hit}/>
-            </div>
-            <div className="result__url">{hit.objectID}</div>
-        </div>
+        <article>
+            <h1>
+                <Highlight attribute="title" hit={hit} />
+            </h1>
+            <p>
+                <Highlight attribute="title1" hit={hit} />
+            </p>
+            <p>
+                <Highlight attribute="title2" hit={hit} />
+            </p>
+            <p>
+                <Highlight attribute="title3" hit={hit} />
+            </p>
+        </article>
     );
+
 };
 
 let hasDisplayed = false;
@@ -174,9 +157,6 @@ const HitsChecker = connectHits(({hits, searchState}) => {
                             <VirtualYear />
                             <VirtualLvl1 />
                             <Pdfs />
-                            <div className="pdf-section">
-                                <Hits hitComponent={PdfHit}/>
-                            </div>
                         </InstantSearch>
                         <Hits hitComponent={Hit}/>
                         <Pagination />
