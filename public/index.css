@@ -71,6 +71,14 @@ main div {
   font-size: 1rem;
 }
 
+.header {
+  line-height: 1.5em;
+  background: #fff;
+  height: 70px;
+  width: 1200px;
+  margin: auto
+}
+
 .header_text_00 {
   background: linear-gradient(to right, rgba(0, 68, 137, 1) 0%, rgba(0, 68, 137, 0.6) 100%);
 }
