@@ -196,7 +196,6 @@ class App extends Component {
           <div className="wrapper">
             <header>
               <div className="header-search">
-                <span className="logo" />
                 <SearchBox
                   translations={{
                     placeholder: 'Recherchez des pages, documents...',

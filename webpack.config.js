@@ -30,6 +30,10 @@ module.exports = {
         }
       },
       {
+        test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=[name].[ext]'
+      },
+      {
         test: /\.svg$/,
         loader: 'url-loader'
       },
@@ -46,7 +50,6 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: './public/index.html',
     filename: 'index.html',
-    favicon: './public/favicon.png',
     inject: 'body'
   })],
   devServer: {
@@ -54,11 +57,5 @@ module.exports = {
     disableHostCheck: true,
     hostname: hostname,
     port: port
-  },
-  externals: {
-    // global app config object
-    config: JSON.stringify({
-      apiUrl: 'http://localhost:8000'
-    })
   }
 }
