@@ -210,6 +210,8 @@ span.ais-Menu-count {
     width: -webkit-calc(99% - 10px);  /* pour Chrome */
     width: -moz-calc(99% - 10px);     /* pour Firefox */
     width: calc(99% - 10px);
+    border: 0px solid #c4c8d8;
+    box-shadow: 0 0 0 0 #e3e5ec; ;
 }
 
 .ais-SearchBox-input {
