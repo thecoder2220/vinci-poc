@@ -8,6 +8,7 @@ import {
     connectSearchBox,
     connectMenu,
     connectHits,
+    connectCurrentRefinements,
     InstantSearch,
     SearchBox,
     Hits,
@@ -82,7 +83,6 @@ function findTitle(hit) {
 }
 
 const Hit = ({hit}) => {
-    debugger
     return (
         <article>
             <h1>
@@ -162,6 +162,43 @@ const HitsChecker = connectHits(({hits, searchState}) => {
     );
 });
 
+const HitsCategories  = connectHits(({hits}) => {
+    if (hits.length === 0 ) {
+        return null;
+    }
+    return (
+            <Menu attribute="categories_lvl0"  className="dn-attr-v"/>
+    );
+});
+
+const YearMenu = connectHits(({ hits }) => {
+
+    debugger
+    if (hits.length === 0 ) {
+        return null;
+    }
+    return (
+        <Menu attribute="year"  className="dn-attr-v"/>
+    );
+
+ /*   debugger
+    const isYearDefined = hits.find(
+        ({ year }) =>   year === 'title4.year'
+    );
+
+    return (
+        <div className="left-panel">
+            {isYearDefined ? (
+                <Panel header="Année">
+                    <Menu
+                        attribute={'title4.year'}   className="dn-attr-v"
+                    />
+                </Panel>
+            ) : null}
+        </div>
+    );  */
+});
+
 class App extends Component {
     static propTypes = {
         dispatch: PropTypes.func.isRequired,
@@ -194,14 +231,21 @@ class App extends Component {
                                     placeholder: 'Recherchez des pages, documents...',
                                 }}
                             />
-                            <div id="dyn_nav">
-                                <div class="dn-hdr">
+
+                                <div className="dn-hdr">
                                     <span><b>Filtrer</b></span>
                                 </div>
-                            </div>
-                            <div >
-                                <span title="Topic">Topic</span>
-                                <Menu attribute="categories_lvl1"/>
+
+                            <div id="dyn_nav" >
+                                <ul id="attr_1" class="dn-attr dn-attr-more">
+                                    <li className="dn-attr-hdr">
+                                        <span className="dn-attr-hdr-txt"  title="Topic">Topic</span>
+                                    </li>
+                                    <HitsCategories searchState={this.state.searchState}/>
+                                    <YearMenu />
+
+
+                                </ul>
                             </div>
                         </div>
                         <div className="wrapper">

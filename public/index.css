@@ -25,11 +25,6 @@ h1 {
   padding: 0;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
 body, td, div, .p, a, .d, .s {
   font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
@@ -181,36 +176,14 @@ div#dyn_nav {
     max-width: 100% !important;
 }
 
-.flexcontainer-as-row {
-    display: flex;
-    flex-direction: row;
+/****** CSS ALGOLIA *******/
+
+span.ais-Menu-count {
+    background-color:green;
 }
 
-.flexcontainer-as-row>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
-    height: calc(99% - 10px);
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
-    width: calc(99% - 10px);
-    background-color: #b93c2f;
-    margin: 3px;
-}
-
-.flexcontainer-as-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flexcontainer-as-column>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
-    height: calc(99% - 10px);
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
-    width: calc(99% - 10px);
-    background-color: #b93c2f;
-    margin: 3px;
+.ais-Menu-label {
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
 .ais-Hits-list {
@@ -238,4 +211,98 @@ div#dyn_nav {
 .ais-SearchBox-input {
     border: 1px solid #3C3C3B;
     border-radius: 0px;
+}
+
+.dn-attr-hdr-txt {
+
+    line-height: 1.5em;
+
+}
+.dn-attr-hdr-txt {
+
+    width: auto;
+    font-family: "VinciSansBold" !important;
+    font-weight: normal !important;
+
+}
+.dn-attr-hdr-txt {
+
+    display: inline-block;
+    overflow: hidden;
+}
+
+li.dn-attr-hdr {
+
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+    outline-style: none;
+
+}
+.dn-attr-hdr {
+
+    color: #3C3C3B !important;
+    background: #EDEDED !important;
+    margin: 0 !important;
+
+}
+
+.dn-attr-v {
+    padding: 6px 10px !important;
+   line-height: 1.1em !important;
+    margin-right: 5px;
+    overflow-x: hidden;
+    width: 99%;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+#dyn_nav li a:hover {
+
+    text-decoration: underline;
+
+}
+#dyn_nav li a {
+
+    color: #3C3C3B !important;
+    font-size: 0.917rem !important;
+
+}
+
+.text a:hover {
+    transition: 0.5s;
+
+}
+
+.flexcontainer-as-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcontainer-as-row>div {
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
+    background-color: white;
+    margin: 3px;
+}
+
+.flexcontainer-as-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexcontainer-as-column>div {
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
+    background-color: white;
+    margin: 3px;
 }
