@@ -319,4 +319,6 @@ li.dn-attr-hdr {
     margin: 3px;
 }
 
-
+.hits-wrapper {
+    border-left: 1px solid #c6c6c6 !important;
+}

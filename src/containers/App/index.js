@@ -236,7 +236,7 @@ class App extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="wrapper">
+                        <div className="hits-wrapper wrapper">
                             <Hits hitComponent={Hit} />
 
                             <div className="pagination">
