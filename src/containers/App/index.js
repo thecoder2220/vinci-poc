@@ -109,8 +109,7 @@ const HitsChecker = connectHits(({hits, searchState}) => {
         return null;
     } else if (hits.length === 0 && hasDisplayed) {
         return (
-            <div>
-                <div className="results">
+                <div className="results flexcontainer-as-column">
                     <div className="refinements"/>
                     <div className="items">
                         <p>Aucun résultat pour cette recherche.</p>
@@ -122,50 +121,42 @@ const HitsChecker = connectHits(({hits, searchState}) => {
                         />
                     </div>
                 </div>
-            </div>
         );
     }
     hasDisplayed = true;
     return (
-        <div class="flexcontainer-as-row" >
-                <div id="dyn_nav">
-                    <div class="dn-hdr">
-                        <span><b>Filtrer</b></span>
-                    </div>
+        <div className="wrapper" >
+            <div className="results">
+                <div className="refinements">
+                    <Panel title="Catégories">
+                        <Menu attributeName="categories_lvl0"/>
+                    </Panel>
+                    <Panel title="Années">
+                        <RefinementList attributeName="year"/>
+                    </Panel>
                 </div>
-            <div className="wrapper">
-                <div className="results">
-                    <div className="refinements">
-                        <Panel title="Catégories">
-                            <Menu attributeName="categories_lvl0"/>
-                        </Panel>
-                        <Panel title="Années">
-                            <RefinementList attributeName="year"/>
-                        </Panel>
+                <div className="items  flexcontainer-as-column">
+                    <div className="tagList">
+                        <Menu attributeName="categories_lvl1"/>
                     </div>
-                    <div className="items">
-                        <div className="tagList">
-                            <Menu attributeName="categories_lvl1"/>
-                        </div>
-                        <InstantSearch
-                            appId="AP1SAU3HM8"
-                            apiKey="ca5a4ca0494ad49d12591dc4823ac172"
-                            indexName="site2"
-                            searchState={searchState}
-                        >
-                            <Configure
-                                hitsPerPage="4"
-                                attributesToSnippet={['content:20']}
-                            />
-                            <VirtualSearch />
-                            <VirtualCategory />
-                            <VirtualYear />
-                            <VirtualLvl1 />
-                            <Pdfs />
-                        </InstantSearch>
-                        <Hits hitComponent={Hit}/>
-                        <Pagination />
-                    </div>
+                    <InstantSearch
+                        appId="AP1SAU3HM8"
+                        apiKey="ca5a4ca0494ad49d12591dc4823ac172"
+                        indexName="site2"
+                        searchState={searchState}
+                    >
+                        <Configure
+                            hitsPerPage="4"
+                            attributesToSnippet={['content:20']}
+                        />
+                        <VirtualSearch />
+                        <VirtualCategory />
+                        <VirtualYear />
+                        <VirtualLvl1 />
+                        <Pdfs />
+                    </InstantSearch>
+                    <Hits hitComponent={Hit}/>
+                    <Pagination />
                 </div>
             </div>
         </div>
@@ -196,16 +187,23 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div className="header-search">
-                        <SearchBox
-                            translations={{
-                                placeholder: 'Recherchez des pages, documents...',
-                            }}
-                        />
-                    </div>
+                    <div class="flexcontainer-as-row">
+                        <div class="flexcontainer-as-column">
+                            <SearchBox
+                                translations={{
+                                    placeholder: 'Recherchez des pages, documents...',
+                                }}
+                            />
+                            <div id="dyn_nav">
+                                <div class="dn-hdr">
+                                    <span><b>Filtrer</b></span>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div className="wrapper">
-                        <HitsChecker searchState={this.state.searchState}/>
+                        <div className="wrapper">
+                            <HitsChecker searchState={this.state.searchState}/>
+                        </div>
                     </div>
                 </InstantSearch>
             </div>
