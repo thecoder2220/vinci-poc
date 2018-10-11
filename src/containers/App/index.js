@@ -203,9 +203,6 @@ class App extends Component {
                                 placeholder: 'Recherchez des pages, documents...',
                             }}
                         />
-                        <div className="stats-wrapper">
-                            <Stats />
-                        </div>
                     </div>
 
                     <div className="wrapper">
