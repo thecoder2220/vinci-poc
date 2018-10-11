@@ -17,7 +17,6 @@ import {
     Pagination,
     Panel,
     RefinementList,
-    Stats,
 } from 'react-instantsearch-dom';
 
 import './style.scss';
@@ -201,10 +200,15 @@ class App extends Component {
                             </div>
                             <div >
                                 <span title="Topic">Topic</span>
+                                <Menu attribute="categories_lvl1"/>
                             </div>
                         </div>
                         <div className="wrapper">
-                            <HitsChecker searchState={this.state.searchState}/>
+                            <Hits hitComponent={Hit} />
+
+                            <div className="pagination">
+                                <Pagination />
+                            </div>
                         </div>
 
                     </div>
