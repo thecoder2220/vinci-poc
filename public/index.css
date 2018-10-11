@@ -230,5 +230,10 @@ div#dyn_nav {
     background-color: #b93c2f;
     border: 1px solid #626262;
     margin: 3px;
+}
 
+.ais-Hits-item {
+    width: -webkit-calc(99% - 100px);  /* pour Chrome */
+    width: -moz-calc(99% - 100px);     /* pour Firefox */
+    width: calc(99% - 100px);
 }

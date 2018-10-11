@@ -109,23 +109,23 @@ const HitsChecker = connectHits(({hits, searchState}) => {
         return null;
     } else if (hits.length === 0 && hasDisplayed) {
         return (
-                <div className="results flexcontainer-as-column">
-                    <div className="refinements"/>
-                    <div className="items">
-                        <p>Aucun résultat pour cette recherche.</p>
-                        <ClearRefinements
-                            clearsQuery
-                            translations={{
-                                reset: 'Supprimer les filtres',
-                            }}
-                        />
-                    </div>
+            <div className="results flexcontainer-as-column">
+                <div className="refinements"/>
+                <div className="items">
+                    <p>Aucun résultat pour cette recherche.</p>
+                    <ClearRefinements
+                        clearsQuery
+                        translations={{
+                            reset: 'Supprimer les filtres',
+                        }}
+                    />
                 </div>
+            </div>
         );
     }
     hasDisplayed = true;
     return (
-        <div className="wrapper" >
+        <div className="wrapper">
             <div className="results">
                 <div className="refinements">
                     <Panel title="Catégories">
@@ -199,11 +199,14 @@ class App extends Component {
                                     <span><b>Filtrer</b></span>
                                 </div>
                             </div>
+                            <div >
+                                <span title="Topic">Topic</span>
+                            </div>
                         </div>
-
                         <div className="wrapper">
                             <HitsChecker searchState={this.state.searchState}/>
                         </div>
+
                     </div>
                 </InstantSearch>
             </div>
