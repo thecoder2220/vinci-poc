@@ -187,14 +187,13 @@ div#dyn_nav {
 }
 
 .flexcontainer-as-row>div {
-    height: -webkit-calc(99% - 100px);  /* pour Chrome */
-    height: -moz-calc(99% - 100px);     /* pour Firefox */
-    height: calc(99% - 100px);
-    width: -webkit-calc(99% - 100px);  /* pour Chrome */
-    width: -moz-calc(99% - 100px);     /* pour Firefox */
-    width: calc(99% - 100px);
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
     background-color: #b93c2f;
-    border: 1px solid #626262;
     margin: 3px;
 }
 
@@ -204,14 +203,13 @@ div#dyn_nav {
 }
 
 .flexcontainer-as-column>div {
-    height: -webkit-calc(99% - 100px);  /* pour Chrome */
-    height: -moz-calc(99% - 100px);     /* pour Firefox */
-    height: calc(99% - 100px);
-    width: -webkit-calc(99% - 100px);  /* pour Chrome */
-    width: -moz-calc(99% - 100px);     /* pour Firefox */
-    width: calc(99% - 100px);
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
     background-color: #b93c2f;
-    border: 1px solid #626262;
     margin: 3px;
 }
 
@@ -221,19 +219,23 @@ div#dyn_nav {
 }
 
 .ais-Hits-list>div {
-    height: -webkit-calc(99% - 100px);  /* pour Chrome */
-    height: -moz-calc(99% - 100px);     /* pour Firefox */
-    height: calc(99% - 100px);
-    width: -webkit-calc(99% - 100px);  /* pour Chrome */
-    width: -moz-calc(99% - 100px);     /* pour Firefox */
-    width: calc(99% - 100px);
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
     background-color: #b93c2f;
-    border: 1px solid #626262;
     margin: 3px;
 }
 
 .ais-Hits-item {
-    width: -webkit-calc(99% - 100px);  /* pour Chrome */
-    width: -moz-calc(99% - 100px);     /* pour Firefox */
-    width: calc(99% - 100px);
+    width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: calc(99% - 10px);
+}
+
+.ais-SearchBox-input {
+    border: 1px solid #3C3C3B;
+    border-radius: 0px;
 }

@@ -187,6 +187,7 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div class="flexcontainer-as-row">
+                        <div />
                         <div class="flexcontainer-as-column">
                             <SearchBox
                                 translations={{
@@ -210,7 +211,7 @@ class App extends Component {
                                 <Pagination />
                             </div>
                         </div>
-
+                        <div />
                     </div>
                 </InstantSearch>
             </div>
