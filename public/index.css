@@ -279,6 +279,12 @@ li.dn-attr-hdr {
 
 }
 
+/*** CSS Flexbox ****/
+
+.width15{
+    width: calc(15% - 10px);
+}
+
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
@@ -288,9 +294,9 @@ li.dn-attr-hdr {
     height: -webkit-calc(99% - 10px);  /* pour Chrome */
     height: -moz-calc(99% - 10px);     /* pour Firefox */
     height: calc(99% - 10px);
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
-    width: calc(99% - 10px);
+    max-width: -webkit-calc(95% - 10px);  /* pour Chrome */
+    max-width: -moz-calc(95% - 10px);     /* pour Firefox */
+    max-width: calc(95% - 10px);
     background-color: white;
     margin: 3px;
 }
@@ -304,9 +310,11 @@ li.dn-attr-hdr {
     height: -webkit-calc(99% - 10px);  /* pour Chrome */
     height: -moz-calc(99% - 10px);     /* pour Firefox */
     height: calc(99% - 10px);
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
-    width: calc(99% - 10px);
+    max-width: -webkit-calc(99% - 10px);  /* pour Chrome */
+    max-width: -moz-calc(99% - 10px);     /* pour Firefox */
+    max-width: calc(99% - 10px);
     background-color: white;
     margin: 3px;
 }
+
+

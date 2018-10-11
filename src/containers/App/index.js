@@ -207,8 +207,8 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div class="flexcontainer-as-row">
-                        <div />
-                        <div class="flexcontainer-as-column">
+                        <div className="width15" />
+                        <div className="flexcontainer-as-column">
                             <SearchBox
                                 translations={{
                                     placeholder: 'Recherchez des pages, documents...',
