@@ -173,30 +173,13 @@ const HitsCategories  = connectHits(({hits}) => {
 
 const YearMenu = connectHits(({ hits }) => {
 
-    debugger
     if (hits.length === 0 ) {
         return null;
     }
+    debugger
     return (
         <Menu attribute="year"  className="dn-attr-v"/>
     );
-
- /*   debugger
-    const isYearDefined = hits.find(
-        ({ year }) =>   year === 'title4.year'
-    );
-
-    return (
-        <div className="left-panel">
-            {isYearDefined ? (
-                <Panel header="Année">
-                    <Menu
-                        attribute={'title4.year'}   className="dn-attr-v"
-                    />
-                </Panel>
-            ) : null}
-        </div>
-    );  */
 });
 
 class App extends Component {
@@ -242,9 +225,14 @@ class App extends Component {
                                         <span className="dn-attr-hdr-txt"  title="Topic">Topic</span>
                                     </li>
                                     <HitsCategories searchState={this.state.searchState}/>
+                                    <li className="dn-attr-hdr">
+                                        <span className="dn-attr-hdr-txt"  title="Topic">Année</span>
+                                    </li>
                                     <YearMenu />
-
-
+                                    <li className="dn-attr-hdr">
+                                        <span className="dn-attr-hdr-txt"  title="Topic">Pays</span>
+                                    </li>
+                                    <Menu attribute="country"  className="dn-attr-v"/>
                                 </ul>
                             </div>
                         </div>

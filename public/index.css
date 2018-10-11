@@ -176,6 +176,10 @@ div#dyn_nav {
     max-width: 100% !important;
 }
 
+main {
+    padding-top: 0px
+}
+
 /****** CSS ALGOLIA *******/
 
 span.ais-Menu-count {
