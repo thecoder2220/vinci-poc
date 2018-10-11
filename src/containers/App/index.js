@@ -127,13 +127,13 @@ const HitsChecker = connectHits(({hits, searchState}) => {
     }
     hasDisplayed = true;
     return (
-        <div id="main">
-            <div id="main_res">
+        <div class="flexcontainer-as-row" >
                 <div id="dyn_nav">
                     <div class="dn-hdr">
                         <span><b>Filtrer</b></span>
                     </div>
                 </div>
+            <div className="wrapper">
                 <div className="results">
                     <div className="refinements">
                         <Panel title="Catégories">
@@ -167,7 +167,6 @@ const HitsChecker = connectHits(({hits, searchState}) => {
                         <Pagination />
                     </div>
                 </div>
-
             </div>
         </div>
     );
