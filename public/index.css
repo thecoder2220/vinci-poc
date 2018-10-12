@@ -168,6 +168,10 @@ li {
     padding: 4px 6px 4px 10px !important;
 }
 
+.fake-column{
+    min-width: 221px;
+}
+
 div#dyn_nav {
     background: #FFF none repeat scroll 0 0;
     position: relative !important;
@@ -323,7 +327,7 @@ li.dn-attr-hdr {
     max-height: 460px;
     background-color: #edf6fa;
     border: 1px solid #3a99c7;
-    margin: 2rem 0 0;
+    margin: 1rem 0 0;
 }
 
 .flexcontainer-as-row>div {

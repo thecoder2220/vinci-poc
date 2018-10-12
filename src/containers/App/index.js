@@ -199,8 +199,7 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div className="flexcontainer-as-row">
-                        <SearchBox className="align-center smallitem"
-
+                        <SearchBox className="align-center smallitem fake-column"
                                    translations={{
                                        placeholder: 'Recherchez des pages, documents...',
                                    }}
@@ -224,7 +223,7 @@ class App extends Component {
 
                     <div className="flexcontainer-as-row">
                         <div className="flexcontainer-as-column">
-                            <div className="dn-hdr smallitem">
+                            <div className="dn-hdr smallitem fake-column">
                                 <span><b>Filtrer</b></span>
                             </div>
 
