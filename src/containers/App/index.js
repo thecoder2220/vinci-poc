@@ -121,7 +121,7 @@ const HitsChecker = connectHits(({hits, searchState}) => {
             <div className="results">
                 <div className="refinements">
                     <Panel title="Catégories">
-                        <Menu attributeName="categories_lvl0"/>
+                        <Menu attributeName="categories_lvl0" limit="4" />
                     </Panel>
                     <Panel title="Années">
                         <RefinementList attributeName="year"/>
@@ -159,8 +159,10 @@ const HitsCategories = connectHits(({hits}) => {
     if (hits.length === 0) {
         return null;
     }
+    const toto={active: "<a class=\"ais-show-more ais-show-more__active\">Show lesssd</a>",inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Show moreds</a>"}
+
     return (
-        <Menu attribute="categories_lvl0" className="dn-attr-v"/>
+        <Menu attribute="categories_lvl0" className="dn-attr-v" showMore={true} limit={3} templates={toto} />
     );
 });
 
@@ -170,9 +172,15 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <Menu attribute="year" className="dn-attr-v"/>
+        <Menu attribute="year" className="dn-attr-v"  showMore={true} limit={3}  />
     );
 });
+
+var MyMenu = require('react-instantsearch-dom');
+var MyMenuShowMoreFalse = MyMenu.Menu;
+console.log(MyMenuShowMoreFalse)
+
+debugger
 
 class App extends Component {
     static propTypes = {
@@ -240,7 +248,7 @@ class App extends Component {
                                     <li className="dn-attr-hdr">
                                         <span className="dn-attr-hdr-txt" title="Topic">Pays</span>
                                     </li>
-                                    <Menu attribute="country" className="dn-attr-v"/>
+                                    <Menu attribute="country" className="dn-attr-v" showMore={true} limit={3} />
                                 </ul>
                             </div>
                         </div>
