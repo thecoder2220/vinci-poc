@@ -265,7 +265,6 @@ li.dn-attr-hdr {
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
-    vertical-align: middle;
 }
 
 #dyn_nav li a:hover {
@@ -282,7 +281,27 @@ li.dn-attr-hdr {
 
 .text a:hover {
     transition: 0.5s;
+}
 
+.title-result{
+    color: #0000cc;
+    font-family: 'VinciSansRegular','Trebuchet MS',Arial,Helvetica,sans-serif;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    font-size:1.125rem;
+    text-align:left
+}
+
+.ais-Highlight-nonHighlighted{
+    color: #0000cc;
+    font-family: 'VinciSansRegular','Trebuchet MS',Arial,Helvetica,sans-serif;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    font-size:1.125rem;
+}
+
+.text-align-center {
+    text-align:left
 }
 
 /*** CSS Flexbox ****/
@@ -294,11 +313,9 @@ li.dn-attr-hdr {
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
-    min-height: 300px;
     max-height: 460px;
     background-color: #edf6fa;
     border: 1px solid #3a99c7;
-    padding: 1rem;
     margin: 2rem 0 0;
 }
 
@@ -337,7 +354,7 @@ li.dn-attr-hdr {
     border-left: 1px solid #c6c6c6 !important;
 }
 
-.growshrink {
+.align-center {
     -webkit-align-items: center;
     align-items: center;
 }
@@ -350,4 +367,6 @@ li.dn-attr-hdr {
 .smallitem {
     -webkit-flex: 1 0 0;
     flex: 1 0 0;
+    margin: 0 50px;
 }
+

@@ -85,10 +85,8 @@ function findTitle(hit) {
 const Hit = ({hit}) => {
     debugger
     return (
-        <article>
-            <h1>
-                <Highlight attribute="title" hit={hit}/>
-            </h1>
+        <article className="text-align-center" >
+                <Highlight attribute="title" hit={hit}  className="title-result" />
             <p>
                 <Snippet attribute="content" hit={hit}/>
             </p>
@@ -201,22 +199,36 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div className="flexcontainer-as-row">
-                        <div className="width15"/>
-                        <div className="flexcontainer-as-column">
-                            <SearchBox className="growshrink smallitem"
+                        <SearchBox className="align-center smallitem"
 
-                                        translations={{
-                                    placeholder: 'Recherchez des pages, documents...',
-                                }}
-                            />
-                            <div className="growshrink bigitem"  >
-                                <span>&nbsp;</span>
-                            </div>
+                                   translations={{
+                                       placeholder: 'Recherchez des pages, documents...',
+                                   }}
+                        />
+                        <div className="align-center bigitem">
+                            <span>&nbsp;</span>
+                        </div>
+                        <div className="align-center bigitem">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div>
+                    <div className="flexcontainer-as-row">
+                        <div className="align-center bigitem">
+                            <span>&nbsp;</span>
+                        </div>
+                        <div className="align-center smallitem">
+                            <span className="s"><a ctype="sort" href="">Tri par date</a><font
+                                color="#000000"> / Tri par pertinence</font></span>
+                        </div>
+                    </div>
+
+                    <div className="flexcontainer-as-row">
+                        <div className="flexcontainer-as-column">
                             <div className="dn-hdr smallitem">
                                 <span><b>Filtrer</b></span>
                             </div>
 
-                            <div id="dyn_nav"  className="growshrink smallitem" >
+                            <div id="dyn_nav" className="align-center smallitem">
                                 <ul id="attr_1" className="dn-attr dn-attr-more">
                                     <li className="dn-attr-hdr">
                                         <span className="dn-attr-hdr-txt" title="Topic">Topic</span>
@@ -233,9 +245,6 @@ class App extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div>
-                            <span className="s"><a ctype="sort" href=""  >Tri par date</a><font color="#000000"> / Tri par pertinence</font></span>
-                        </div>
                         <div className="hits-wrapper wrapper">
                             <Hits hitComponent={Hit}/>
 
@@ -243,8 +252,8 @@ class App extends Component {
                                 <Pagination />
                             </div>
                         </div>
-                        <div />
                     </div>
+
                 </InstantSearch>
             </div>
         );
