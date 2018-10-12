@@ -19,6 +19,10 @@
   src: url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.svg#vinci_sans_condensed-medium') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.eot')
 }
 
+html, body {
+    height:100%
+}
+
 body,
 h1 {
   margin: 0;
@@ -182,8 +186,8 @@ main {
 
 /****** CSS ALGOLIA *******/
 
-span.ais-Menu-count {
-    background-color:green;
+.ais-Menu-count {
+    background-color:white;
 }
 
 .ais-Menu-label {
@@ -290,6 +294,12 @@ li.dn-attr-hdr {
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
+    min-height: 300px;
+    max-height: 460px;
+    background-color: #edf6fa;
+    border: 1px solid #3a99c7;
+    padding: 1rem;
+    margin: 2rem 0 0;
 }
 
 .flexcontainer-as-row>div {
@@ -306,6 +316,9 @@ li.dn-attr-hdr {
 .flexcontainer-as-column {
     display: flex;
     flex-direction: column;
+    min-height: 400px;
+    max-height: 560px;
+    margin: 2rem 0 0;
 }
 
 .flexcontainer-as-column>div {
@@ -317,8 +330,24 @@ li.dn-attr-hdr {
     max-width: calc(99% - 10px);
     background-color: white;
     margin: 3px;
+    padding: 1rem;
 }
 
 .hits-wrapper {
     border-left: 1px solid #c6c6c6 !important;
+}
+
+.growshrink {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.bigitem {
+    -webkit-flex: 2 0 0;
+    flex: 2 0 0;
+}
+
+.smallitem {
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
 }

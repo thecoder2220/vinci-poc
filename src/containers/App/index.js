@@ -83,19 +83,14 @@ function findTitle(hit) {
 }
 
 const Hit = ({hit}) => {
+    debugger
     return (
         <article>
             <h1>
                 <Highlight attribute="title" hit={hit}/>
             </h1>
             <p>
-                <Highlight attribute="title1" hit={hit}/>
-            </p>
-            <p>
-                <Highlight attribute="title2" hit={hit}/>
-            </p>
-            <p>
-                <Highlight attribute="title3" hit={hit}/>
+                <Snippet attribute="content" hit={hit}/>
             </p>
         </article>
     );
@@ -162,23 +157,22 @@ const HitsChecker = connectHits(({hits, searchState}) => {
     );
 });
 
-const HitsCategories  = connectHits(({hits}) => {
-    if (hits.length === 0 ) {
+const HitsCategories = connectHits(({hits}) => {
+    if (hits.length === 0) {
         return null;
     }
     return (
-            <Menu attribute="categories_lvl0"  className="dn-attr-v"/>
+        <Menu attribute="categories_lvl0" className="dn-attr-v"/>
     );
 });
 
-const YearMenu = connectHits(({ hits }) => {
+const YearMenu = connectHits(({hits}) => {
 
-    if (hits.length === 0 ) {
+    if (hits.length === 0) {
         return null;
     }
-    debugger
     return (
-        <Menu attribute="year"  className="dn-attr-v"/>
+        <Menu attribute="year" className="dn-attr-v"/>
     );
 });
 
@@ -206,38 +200,44 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div class="flexcontainer-as-row">
-                        <div className="width15" />
+                    <div className="flexcontainer-as-row">
+                        <div className="width15"/>
                         <div className="flexcontainer-as-column">
-                            <SearchBox
-                                translations={{
+                            <SearchBox className="growshrink smallitem"
+
+                                        translations={{
                                     placeholder: 'Recherchez des pages, documents...',
                                 }}
                             />
+                            <div className="growshrink bigitem"  >
+                                <span>&nbsp;</span>
+                            </div>
+                            <div className="dn-hdr smallitem">
+                                <span><b>Filtrer</b></span>
+                            </div>
 
-                                <div className="dn-hdr">
-                                    <span><b>Filtrer</b></span>
-                                </div>
-
-                            <div id="dyn_nav" >
-                                <ul id="attr_1" class="dn-attr dn-attr-more">
+                            <div id="dyn_nav"  className="growshrink smallitem" >
+                                <ul id="attr_1" className="dn-attr dn-attr-more">
                                     <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt"  title="Topic">Topic</span>
+                                        <span className="dn-attr-hdr-txt" title="Topic">Topic</span>
                                     </li>
                                     <HitsCategories searchState={this.state.searchState}/>
                                     <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt"  title="Topic">Année</span>
+                                        <span className="dn-attr-hdr-txt" title="Topic">Année</span>
                                     </li>
                                     <YearMenu />
                                     <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt"  title="Topic">Pays</span>
+                                        <span className="dn-attr-hdr-txt" title="Topic">Pays</span>
                                     </li>
-                                    <Menu attribute="country"  className="dn-attr-v"/>
+                                    <Menu attribute="country" className="dn-attr-v"/>
                                 </ul>
                             </div>
                         </div>
+                        <div>
+                            <span className="s"><a ctype="sort" href=""  >Tri par date</a><font color="#000000"> / Tri par pertinence</font></span>
+                        </div>
                         <div className="hits-wrapper wrapper">
-                            <Hits hitComponent={Hit} />
+                            <Hits hitComponent={Hit}/>
 
                             <div className="pagination">
                                 <Pagination />
