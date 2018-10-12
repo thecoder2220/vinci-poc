@@ -85,12 +85,12 @@ function findTitle(hit) {
 const Hit = ({hit}) => {
     debugger
     return (
-        <p className="algolia-article-result" >
+        <div className="algolia-article-result" >
                 <Highlight attribute="title" hit={hit}  className="title-result" />
             <div className="algolia-content-result">
                 <Snippet attribute="content" hit={hit}/>
             </div>
-        </p>
+        </div>
     );
 
 };
