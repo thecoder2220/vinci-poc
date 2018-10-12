@@ -211,11 +211,11 @@ class App extends Component {
                             <span>&nbsp;</span>
                         </div>
                     </div>
-                    <div className="flexcontainer-as-row">
-                        <div className="align-center bigitem">
+                    <div className="flexcontainer-as-row align-center">
+                        <div className="bigitem">
                             <span>&nbsp;</span>
                         </div>
-                        <div className="align-center smallitem">
+                        <div className="text-align-right smallitem">
                             <span className="s"><a ctype="sort" href="">Tri par date</a><font
                                 color="#000000"> / Tri par pertinence</font></span>
                         </div>

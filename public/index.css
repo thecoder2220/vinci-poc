@@ -367,6 +367,9 @@ li.dn-attr-hdr {
     -webkit-align-items: center;
     align-items: center;
 }
+.text-align-right {
+    text-align:right;
+}
 
 .bigitem {
     -webkit-flex: 2 0 0;
