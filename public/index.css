@@ -184,7 +184,7 @@ main {
     padding-top: 0px
 }
 
-/****** CSS ALGOLIA *******/
+/****** CSS FOR ALGOLIA *******/
 
 .ais-Menu-count {
     background-color:white;
@@ -216,6 +216,8 @@ main {
     width: calc(99% - 10px);
     border: 0px solid #c4c8d8;
     box-shadow: 0 0 0 0 #e3e5ec; ;
+    padding-bottom: 0;
+    margin-bottom:0;
 }
 
 .ais-SearchBox-input {
@@ -300,8 +302,10 @@ li.dn-attr-hdr {
     font-size:1.125rem;
 }
 
-.text-align-center {
-    text-align:left
+.algolia-article-result {
+    text-align:left;
+    padding-bottom:16px;
+;
 }
 
 /*** CSS Flexbox ****/
