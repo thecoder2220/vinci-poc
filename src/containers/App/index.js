@@ -227,10 +227,10 @@ class App extends Component {
                                 <span><b>Filtrer</b></span>
                             </div>
 
-                            <div id="dyn_nav" className="align-center smallitem">
-                                <ul id="attr_1" className="dn-attr dn-attr-more">
-                                    <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt" title="Topic">Topic</span>
+                            <div id="dyn_nav" className="align-center smallitem fake-column">
+                                <ul id="attr_1" className="dn-attr dn-attr-more ">
+                                    <li className="dn-attr-hdr ">
+                                        <span className="dn-attr-hdr-txt" title="Topic">Rubrique</span>
                                     </li>
                                     <HitsCategories searchState={this.state.searchState}/>
                                     <li className="dn-attr-hdr">

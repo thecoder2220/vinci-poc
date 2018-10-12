@@ -162,7 +162,6 @@ li {
     color: #fff;
     background: #3C3C3B !important;
     font-size: 1rem !important;
-    margin-bottom: 0.25em !important;
     font-family: VinciSansBold !important;
     font-weight: normal !important;
     padding: 4px 6px 4px 10px !important;
@@ -174,14 +173,11 @@ li {
 
 div#dyn_nav {
     background: #FFF none repeat scroll 0 0;
-    position: relative !important;
     padding-top: 1px;
     top: 0;
     width: 100% !important;
     margin: 1% 0 !important;
     border: none 0 !important;
-    float: left;
-    max-width: 100% !important;
 }
 
 main {
@@ -258,14 +254,11 @@ li.dn-attr-hdr {
 
     color: #3C3C3B !important;
     background: #EDEDED !important;
-    margin: 0 !important;
-
 }
 
 .dn-attr-v {
     padding: 6px 10px !important;
-   line-height: 1.1em !important;
-    margin-right: 5px;
+    line-height: 1.1em !important;
     overflow-x: hidden;
     width: 99%;
     list-style-image: none;
@@ -356,8 +349,6 @@ li.dn-attr-hdr {
     max-width: -moz-calc(99% - 10px);     /* pour Firefox */
     max-width: calc(99% - 10px);
     background-color: white;
-    margin: 3px;
-    padding: 1rem;
 }
 
 .hits-wrapper {
@@ -377,7 +368,6 @@ li.dn-attr-hdr {
 .smallitem {
     -webkit-flex: 1 0 0;
     flex: 1 0 0;
-    margin: 0 50px;
 }
 
 #root {
