@@ -313,6 +313,9 @@ li.dn-attr-hdr {
 .width15{
     width: calc(15% - 10px);
 }
+.width70 {
+    width: calc(70% - 10px);
+}
 
 .flexcontainer-as-row {
     display: flex;

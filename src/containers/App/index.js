@@ -87,9 +87,9 @@ const Hit = ({hit}) => {
     return (
         <article className="algolia-article-result" >
                 <Highlight attribute="title" hit={hit}  className="title-result" />
-            <p>
+            <div className="width70">
                 <Snippet attribute="content" hit={hit}/>
-            </p>
+            </div>
         </article>
     );
 
