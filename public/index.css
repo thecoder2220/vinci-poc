@@ -169,6 +169,14 @@ li {
 
 .fake-column{
     min-width: 221px;
+    text-align:left;
+}
+.fake-column>span{
+    padding-left:6px;
+}
+
+.fake-column>ul>li{
+    padding-left:16px;
 }
 
 div#dyn_nav {
