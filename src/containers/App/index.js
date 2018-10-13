@@ -176,11 +176,6 @@ const YearMenu = connectHits(({hits}) => {
     );
 });
 
-var MyMenu = require('react-instantsearch-dom');
-var MyMenuShowMoreFalse = new MyMenu ({showMore: false });
-
-console.log(MyMenuShowMoreFalse)
-
 debugger
 
 class App extends Component {

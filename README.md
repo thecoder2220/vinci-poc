@@ -20,4 +20,7 @@ inactive: '<a class="ais-show-more ais-show-more__inactive">Show more</a>',
 	  
 	  https://community.algolia.com/instantsearch.js/v1/documentation/#refinementlist
 	 
-	 
+	 var MyMenu = require('react-instantsearch-dom');
+     var MyMenuShowMoreFalse = new MyMenu;
+     
+     console.log(MyMenuShowMoreFalse)
