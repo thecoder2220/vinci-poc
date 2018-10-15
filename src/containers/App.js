@@ -87,8 +87,8 @@ function findTitle(hit) {
 const Hit = ({hit}) => {
     debugger
     return (
-        <div className="algolia-article-result" >
-                <Highlight attribute="title" hit={hit}  className="title-result" />
+        <div className="algolia-article-result">
+            <Highlight attribute="title" hit={hit} className="title-result"/>
             <div className="algolia-content-result">
                 <Snippet attribute="content" hit={hit}/>
             </div>
@@ -123,7 +123,7 @@ const HitsChecker = connectHits(({hits, searchState}) => {
             <div className="results">
                 <div className="refinements">
                     <Panel title="Catégories">
-                        <Menu attributeName="categories_lvl0" limit="4" />
+                        <Menu attributeName="categories_lvl0" limit="4"/>
                     </Panel>
                     <Panel title="Années">
                         <RefinementList attributeName="year"/>
@@ -161,10 +161,14 @@ const HitsCategories = connectHits(({hits}) => {
     if (hits.length === 0) {
         return null;
     }
-    const toto={active: "<a class=\"ais-show-more ais-show-more__active\">Show lesssd</a>",inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Show moreds</a>"}
+    const toto = {
+        active: "<a class=\"ais-show-more ais-show-more__active\">Show lesssd</a>",
+        inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Show moreds</a>"
+    }
 
     return (
-        <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column" showMore={true} limit={3} />
+        <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column"
+                        showMore={true} limit={3}/>
     );
 });
 
@@ -174,7 +178,7 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <CustomizedMenu attribute="year" className="dn-attr-v"  showMore={true} limit={3}  />
+        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}/>
     );
 });
 
@@ -234,19 +238,25 @@ class App extends Component {
                             </div>
 
                             <div id="dyn_nav" className="align-center smallitem fake-column">
-                                <ul id="attr_1" className="dn-attr dn-attr-more ">
+                                <ul className="one-category dn-attr-more ">
                                     <li className="dn-attr-hdr ">
-                                        <span className="dn-attr-hdr-txt" title="Topic">Rubrique</span>
+                                        <span className="dn-attr-hdr-txt"
+                                              title="Topic">Rubrique</span>
                                     </li>
                                     <HitsCategories searchState={this.state.searchState}/>
+                                </ul>
+                                <ul className="one-category dn-attr-more ">
                                     <li className="dn-attr-hdr">
                                         <span className="dn-attr-hdr-txt" title="Topic">Année</span>
                                     </li>
                                     <YearMenu />
+                                </ul>
+                                <ul className="one-category dn-attr-more ">
                                     <li className="dn-attr-hdr">
                                         <span className="dn-attr-hdr-txt" title="Topic">Pays</span>
                                     </li>
-                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} />
+                                    <CustomizedMenu attribute="country" className="dn-attr-v"
+                                                    showMore={true} limit={3}/>
                                 </ul>
                             </div>
                         </div>

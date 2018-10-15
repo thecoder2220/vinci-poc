@@ -193,7 +193,7 @@ main {
 }
 
 span.showMore-count-customized {
-    color: #777;
+    color: #3C3C3B;
 }
 
 /****** CSS FOR ALGOLIA *******/
@@ -314,12 +314,17 @@ li.dn-attr-hdr {
     margin-bottom: 0px;
 }
 
+.ais-Snippet-nonHighlighted {
+    font-size:18px;
+}
+
 .algolia-article-result {
     text-align:left;
 }
 
 .algolia-content-result {
     width: calc(70% - 10px);
+    padding-bottom:1rem;
     padding-top:1rem;
 }
 
@@ -432,4 +437,8 @@ li.showMore-customized {
     padding-right: 10px;
     padding-top: 6px;
 
+}
+
+ul.one-category {
+    margin: 8px 0 4px 0;
 }
