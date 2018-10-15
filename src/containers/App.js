@@ -162,17 +162,16 @@ const HitsCategories = connectHits(({hits}) => {
     }
     return (
         <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column"
-                        showMore={true} limit={3} searchable={true} />
+                        showMore={true} limit={3}  headerTitle="Rubrique" />
     );
 });
 
 const YearMenu = connectHits(({hits}) => {
-
     if (hits.length === 0) {
         return null;
     }
     return (
-        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3} searchable={false} />
+        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}  headerTitle="Année" />
     );
 });
 
@@ -186,13 +185,7 @@ class App extends Component {
     };
 
     state = {
-        makeItSearchable: false,
-    };
-
-    onClick = () => {
-        this.setState({
-            makeItSearchable: !this.state.makeItSearchable,
-        });
+        searchState: {},
     };
 
     handleSearchState = searchState => this.setState({searchState});
@@ -237,26 +230,9 @@ class App extends Component {
                             </div>
 
                             <div id="dyn_nav" className="align-center smallitem fake-column">
-                                <ul className="one-category dn-attr-more ">
-                                    <li className="header-category ">
-                                        <div className="display-searchable"  onClick={this.onClick} />
-                                        <span className="header-category-txt"
-                                              title="Topic">Rubrique</span>
-                                    </li>
                                     <HitsCategories searchState={this.state.searchState}/>
-                                </ul>
-                                <ul className="one-category dn-attr-more ">
-                                    <li className="header-category">
-                                        <span className="header-category-txt" title="Topic">Année</span>
-                                    </li>
                                     <YearMenu />
-                                </ul>
-                                <ul className="one-category dn-attr-more ">
-                                    <li className="header-category">
-                                        <span className="header-category-txt" title="Topic">Pays</span>
-                                    </li>
-                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} searchable={this.state.makeItSearchable}/>
-                                </ul>
+                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} headerTitle="Pays"/>
                             </div>
                         </div>
                         <div className="hits-wrapper wrapper">
