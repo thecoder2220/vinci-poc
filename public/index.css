@@ -192,11 +192,11 @@ main {
     padding-top: 0px
 }
 
-/****** CSS FOR ALGOLIA *******/
-
-.ais-Menu-count {
-    background-color:white;
+span.dn-attr-c {
+    color: #777;
 }
+
+/****** CSS FOR ALGOLIA *******/
 
 .ais-Menu-label {
     font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
@@ -269,7 +269,6 @@ li.dn-attr-hdr {
 }
 
 .dn-attr-v {
-    padding: 6px 10px !important;
     line-height: 1.1em !important;
     overflow-x: hidden;
     width: 99%;
@@ -317,6 +316,40 @@ li.dn-attr-hdr {
 .algolia-content-result {
     width: calc(70% - 10px);
     margin-top: 5%;
+}
+
+span.ais-Menu-showMore-customized {
+    margin-top: .5rem;
+    background: transparent url("https://www.vinci.com/search/more.gif") no-repeat scroll 0 0;
+    height: 15px;
+    margin-right: 1px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: text-bottom;
+    width: 15px;
+    display: inline-block;
+}
+
+.ais-Menu-label {
+    color: #3C3C3B !important;
+    font-size: 0.917rem !important;
+}
+
+a.ais-Menu-link:visited {
+    color: #1111CC;
+}
+
+.ais-Menu-link {
+    line-height: 0;
+}
+
+li.ais-Menu-item {
+    padding: 6px 10px !important;
+    line-height: 1.1em !important;
+}
+
+.ais-Menu-list {
+    line-height: 0;
 }
 
 /*** CSS Flexbox ****/
@@ -389,14 +422,10 @@ li.dn-attr-hdr {
     margin: 0 11% 0 11%;
 }
 
-span.ais-Menu-showMore-customized {
-    margin-top: .5rem;
-    background: transparent url("https://www.vinci.com/search/more.gif") no-repeat scroll 0 0;
-    height: 15px;
-    margin-right: 1px;
-    overflow: hidden;
-    position: relative;
-    vertical-align: text-bottom;
-    width: 15px;
-    display: inline-block;
+li.showMore-customized {
+    padding-bottom:6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+
 }

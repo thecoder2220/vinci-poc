@@ -51,8 +51,8 @@ class Menu extends Component {
                 onClick={() => this.selectItem(item, resetQuery)}
                 href={createURL(item.value)}
             >
-                <span className={cx('label')}>{label}</span>{' '}
-                <span className={cx('count')}>( {item.count} )</span>
+                <span className={cx('label')}>{label}</span>
+                <span className={cx('count')}>({item.count})</span>
             </Link>
         );
     };
@@ -86,7 +86,7 @@ class Menu extends Component {
 }
 
 export default translatable({
-    showMore: extended => (extended ? '' : ''),
+    showMore: extended => (extended ? 'Moins' : ' Plus'),
     noResults: 'No results',
     submit: null,
     reset: null,

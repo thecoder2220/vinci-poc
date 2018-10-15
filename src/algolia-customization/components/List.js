@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import SearchBox from '../components/SearchBox';
@@ -52,13 +52,13 @@ class List extends Component {
     };
 
     getLimit = () => {
-        const { limit, showMoreLimit } = this.props;
-        const { extended } = this.state;
+        const {limit, showMoreLimit} = this.props;
+        const {extended} = this.state;
         return extended ? showMoreLimit : limit;
     };
 
     resetQuery = () => {
-        this.setState({ query: '' });
+        this.setState({query: ''});
     };
 
     renderItem = (item, resetQuery) => {
@@ -77,9 +77,7 @@ class List extends Component {
                 {this.props.renderItem(item, resetQuery)}
                 {itemHasChildren && (
                     <ul className={this.props.cx('list', 'list--child')}>
-                        {item.items
-                            .slice(0, this.getLimit())
-                            .map(child => this.renderItem(child, item))}
+                        {item.items.slice(0, this.getLimit()).map(child => this.renderItem(child, item))}
                     </ul>
                 )}
             </li>
@@ -87,21 +85,24 @@ class List extends Component {
     };
 
     renderShowMore() {
-        const { showMore, translate, cx } = this.props;
-        const { extended } = this.state;
+        const {showMore, translate, cx} = this.props;
+        const {extended} = this.state;
         const disabled = this.props.limit >= this.props.items.length;
         if (!showMore) {
             return null;
         }
 
         return (
-            <span
-                disabled={disabled}
-                className={cx('showMore-customized', disabled && 'showMore--disabled')}
-                onClick={this.onShowMoreClick}
-            >
-                {translate('showMore', extended)}
+            <li className="showMore-customized">
+                <a><span
+                    disabled={disabled}
+                    className={cx('showMore-customized', disabled && 'showMore--disabled')}
+                    onClick={this.onShowMoreClick}
+                >
             </span>
+                    <span className="dn-attr-c">{translate('showMore', extended)}</span>
+                </a>
+            </li>
         );
     }
 
@@ -124,7 +125,7 @@ class List extends Component {
                 <SearchBox
                     currentRefinement={this.state.query}
                     refine={value => {
-                        this.setState({ query: value });
+                        this.setState({query: value});
                         searchForItems(value);
                     }}
                     focusShortcuts={[]}
@@ -143,7 +144,7 @@ class List extends Component {
     }
 
     render() {
-        const { cx, items, className, searchable, canRefine } = this.props;
+        const {cx, items, className, searchable, canRefine} = this.props;
         const searchBox = searchable ? this.renderSearchBox() : null;
         const rootClassName = classNames(
             cx('', !canRefine && '-noRefinement'),
@@ -161,9 +162,7 @@ class List extends Component {
             <div className={rootClassName}>
                 {searchBox}
                 <ul className={cx('list', !canRefine && 'list--noRefinement')}>
-                    {items
-                        .slice(0, this.getLimit())
-                        .map(item => this.renderItem(item, this.resetQuery))}
+                    {items.slice(0, this.getLimit()).map(item => this.renderItem(item, this.resetQuery))}
                 </ul>
                 {this.renderShowMore()}
             </div>
