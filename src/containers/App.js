@@ -174,7 +174,7 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <Menu attribute="year" className="dn-attr-v"  showMore={true} limit={3}  />
+        <CustomizedMenu attribute="year" className="dn-attr-v"  showMore={true} limit={3}  />
     );
 });
 
@@ -246,7 +246,7 @@ class App extends Component {
                                     <li className="dn-attr-hdr">
                                         <span className="dn-attr-hdr-txt" title="Topic">Pays</span>
                                     </li>
-                                    <Menu attribute="country" className="dn-attr-v" showMore={true} limit={3} />
+                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} />
                                 </ul>
                             </div>
                         </div>

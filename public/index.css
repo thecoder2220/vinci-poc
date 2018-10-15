@@ -218,7 +218,7 @@ span.showMore-count-customized {
     margin: 3px;
 }
 
-ul.ais-Hits-list li.ais-Hits-item article:first-child>span{
+ul.ais-Hits-list li:first-child{
     margin-top:0;
 }
 
