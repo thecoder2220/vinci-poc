@@ -161,14 +161,9 @@ const HitsCategories = connectHits(({hits}) => {
     if (hits.length === 0) {
         return null;
     }
-    const toto = {
-        active: "<a class=\"ais-show-more ais-show-more__active\">Show lesssd</a>",
-        inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Show moreds</a>"
-    }
-
     return (
         <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column"
-                        showMore={true} limit={3}/>
+                        showMore={true} limit={3} searchable />
     );
 });
 
@@ -239,21 +234,22 @@ class App extends Component {
 
                             <div id="dyn_nav" className="align-center smallitem fake-column">
                                 <ul className="one-category dn-attr-more ">
-                                    <li className="dn-attr-hdr ">
-                                        <span className="dn-attr-hdr-txt"
+                                    <li className="header-category ">
+                                        <div className="display-searchable" />
+                                        <span className="header-category-txt"
                                               title="Topic">Rubrique</span>
                                     </li>
                                     <HitsCategories searchState={this.state.searchState}/>
                                 </ul>
                                 <ul className="one-category dn-attr-more ">
-                                    <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt" title="Topic">Année</span>
+                                    <li className="header-category">
+                                        <span className="header-category-txt" title="Topic">Année</span>
                                     </li>
                                     <YearMenu />
                                 </ul>
                                 <ul className="one-category dn-attr-more ">
-                                    <li className="dn-attr-hdr">
-                                        <span className="dn-attr-hdr-txt" title="Topic">Pays</span>
+                                    <li className="header-category">
+                                        <span className="header-category-txt" title="Topic">Pays</span>
                                     </li>
                                     <CustomizedMenu attribute="country" className="dn-attr-v"
                                                     showMore={true} limit={3}/>

@@ -259,14 +259,15 @@ ul.ais-Hits-list li:first-child{
     overflow: hidden;
 }
 
-li.dn-attr-hdr {
-
+li.header-category{
     font-family: 'VinciSansBold' !important;
     font-weight: normal !important;
     outline-style: none;
-
+    padding: 6px 10px !important;
+    line-height: 1.1em !important;
 }
-.dn-attr-hdr {
+
+.header-category{
 
     color: #3C3C3B !important;
     background: #EDEDED !important;
@@ -282,15 +283,12 @@ li.dn-attr-hdr {
 }
 
 #dyn_nav li a:hover {
-
     text-decoration: underline;
-
 }
-#dyn_nav li a {
 
+#dyn_nav li a {
     color: #3C3C3B !important;
     font-size: 0.917rem !important;
-
 }
 
 .text a:hover {
@@ -441,4 +439,11 @@ li.showMore-customized {
 
 ul.one-category {
     margin: 8px 0 4px 0;
+}
+
+div.display-searchable {
+    background: url(https://www.vinci.com/search/images/ic_search.png) no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 12px;
+    width: 10px;
 }
