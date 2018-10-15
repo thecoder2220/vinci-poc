@@ -8,7 +8,6 @@ import {
     connectSearchBox,
     connectMenu,
     connectHits,
-    connectCurrentRefinements,
     InstantSearch,
     SearchBox,
     Hits,
@@ -20,7 +19,7 @@ import {
     RefinementList,
 } from 'react-instantsearch-dom';
 
-import CustomizedMenu from '../algolia-customization/widgets/Menu';
+import CustomizedMenu from '../algolia-customization/widgets/CustomizedMenu';
 
 import './style.scss';
 
@@ -163,7 +162,7 @@ const HitsCategories = connectHits(({hits}) => {
     }
     return (
         <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column"
-                        showMore={true} limit={3} searchable />
+                        showMore={true} limit={3} searchable={true} />
     );
 });
 
@@ -173,11 +172,9 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}/>
+        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3} searchable={false} />
     );
 });
-
-debugger
 
 class App extends Component {
     static propTypes = {
