@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -94,13 +95,13 @@ class List extends Component {
         }
 
         return (
-            <button
+            <span
                 disabled={disabled}
-                className={cx('showMore', disabled && 'showMore--disabled')}
+                className={cx('showMore-customized', disabled && 'showMore--disabled')}
                 onClick={this.onShowMoreClick}
             >
                 {translate('showMore', extended)}
-            </button>
+            </span>
         );
     }
 

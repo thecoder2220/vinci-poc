@@ -389,3 +389,14 @@ li.dn-attr-hdr {
     margin: 0 11% 0 11%;
 }
 
+span.ais-Menu-showMore-customized {
+    margin-top: .5rem;
+    background: transparent url("https://www.vinci.com/search/more.gif") no-repeat scroll 0 0;
+    height: 15px;
+    margin-right: 1px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: text-bottom;
+    width: 15px;
+    display: inline-block;
+}
