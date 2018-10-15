@@ -189,7 +189,7 @@ class App extends Component {
         makeItSearchable: false,
     };
 
-    onChange = () => {
+    onClick = () => {
         this.setState({
             makeItSearchable: !this.state.makeItSearchable,
         });
@@ -239,7 +239,7 @@ class App extends Component {
                             <div id="dyn_nav" className="align-center smallitem fake-column">
                                 <ul className="one-category dn-attr-more ">
                                     <li className="header-category ">
-                                        <div className="display-searchable"  onClick={this.onChange} />
+                                        <div className="display-searchable"  onClick={this.onClick} />
                                         <span className="header-category-txt"
                                               title="Topic">Rubrique</span>
                                     </li>
@@ -255,8 +255,7 @@ class App extends Component {
                                     <li className="header-category">
                                         <span className="header-category-txt" title="Topic">Pays</span>
                                     </li>
-                                    <CustomizedMenu attribute="country" className="dn-attr-v"
-                                                    showMore={true} limit={3} searchable={this.state.makeItSearchable}/>
+                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} searchable={this.state.makeItSearchable}/>
                                 </ul>
                             </div>
                         </div>
