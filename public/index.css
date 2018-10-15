@@ -192,7 +192,7 @@ main {
     padding-top: 0px
 }
 
-span.dn-attr-c {
+span.showMore-count-customized {
     color: #777;
 }
 
@@ -340,12 +340,13 @@ a.ais-Menu-link:visited {
 }
 
 .ais-Menu-link {
-    line-height: 0;
+    line-height: 1.1em !important;
 }
 
 li.ais-Menu-item {
     padding: 6px 10px !important;
     line-height: 1.1em !important;
+    font-size: 18px;
 }
 
 .ais-Menu-list {
@@ -381,9 +382,7 @@ li.ais-Menu-item {
 .flexcontainer-as-column {
     display: flex;
     flex-direction: column;
-    min-height: 400px;
     max-height: 560px;
-    margin: 2rem 0 0;
 }
 
 .flexcontainer-as-column>div {

@@ -29,3 +29,6 @@ translations={{
               return extended ? "Less" : "More";
             }
           }} 
+
+dn-attr-c => showMore-count-customized
+
