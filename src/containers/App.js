@@ -20,6 +20,8 @@ import {
     RefinementList,
 } from 'react-instantsearch-dom';
 
+import CustomizedMenu from '../algolia-customization/widgets/Menu';
+
 import './style.scss';
 
 const PdfHit = ({hit}) => (
@@ -162,7 +164,7 @@ const HitsCategories = connectHits(({hits}) => {
     const toto={active: "<a class=\"ais-show-more ais-show-more__active\">Show lesssd</a>",inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Show moreds</a>"}
 
     return (
-        <Menu attribute="categories_lvl0" className="dn-attr-v" showMore={true} limit={3} templates={toto} />
+        <CustomizedMenu attribute="categories_lvl0" className="dn-attr-v" showMore={true} limit={3} />
     );
 });
 

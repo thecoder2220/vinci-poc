@@ -24,3 +24,8 @@ inactive: '<a class="ais-show-more ais-show-more__inactive">Show more</a>',
      var MyMenuShowMoreFalse = new MyMenu;
      
      console.log(MyMenuShowMoreFalse)
+translations={{
+            showMore(extended) {
+              return extended ? "Less" : "More";
+            }
+          }} 

@@ -1,9 +1,10 @@
 import { pick } from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Highlight } from 'react-instantsearch-dom';
 import { translatable } from 'react-instantsearch-core';
 import { createClassNames } from '../core/utils';
-import Highlight from '../widgets/Highlight';
+
 import List from './List';
 import Link from './Link';
 
@@ -85,7 +86,7 @@ class Menu extends Component {
 }
 
 export default translatable({
-    showMore: extended => (extended ? 'Show less' : 'Show more'),
+    showMore: extended => (extended ? 'Showb less' : 'Showb more'),
     noResults: 'No results',
     submit: null,
     reset: null,
