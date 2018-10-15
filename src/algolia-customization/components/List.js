@@ -88,7 +88,8 @@ class List extends Component {
         const {showMore, translate, cx} = this.props;
         const {extended} = this.state;
         const disabled = this.props.limit >= this.props.items.length;
-        const countRemainingItems = this.props.items.length - this.props.limit;
+        const nbItemsToDisplay = this.props.items.length - this.props.limit;
+        const countRemainingItems = nbItemsToDisplay >0 ?nbItemsToDisplay+' ':false;
         if (!showMore) {
             return null;
         }
@@ -101,13 +102,12 @@ class List extends Component {
                     onClick={this.onShowMoreClick}
                 >
             </span>
-
                     {extended ? (
                         <span
                             className="showMore-count-customized">{translate('showMore', extended)}</span>
                     ) : (
                         <span
-                            className="showMore-count-customized">{countRemainingItems} {translate('showMore', extended)}</span>
+                            className="showMore-count-customized">{countRemainingItems}{translate('showMore', extended)}</span>
                     )}
                 </a>
             </li>
