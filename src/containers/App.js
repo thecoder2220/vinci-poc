@@ -186,12 +186,19 @@ class App extends Component {
     };
 
     state = {
-        searchState: {},
+        makeItSearchable: false,
+    };
+
+    onChange = () => {
+        this.setState({
+            makeItSearchable: !this.state.makeItSearchable,
+        });
     };
 
     handleSearchState = searchState => this.setState({searchState});
 
     render() {
+
         return (
             <div>
                 <InstantSearch
@@ -232,7 +239,7 @@ class App extends Component {
                             <div id="dyn_nav" className="align-center smallitem fake-column">
                                 <ul className="one-category dn-attr-more ">
                                     <li className="header-category ">
-                                        <div className="display-searchable" />
+                                        <div className="display-searchable"  onClick={this.onChange} />
                                         <span className="header-category-txt"
                                               title="Topic">Rubrique</span>
                                     </li>
@@ -249,7 +256,7 @@ class App extends Component {
                                         <span className="header-category-txt" title="Topic">Pays</span>
                                     </li>
                                     <CustomizedMenu attribute="country" className="dn-attr-v"
-                                                    showMore={true} limit={3}/>
+                                                    showMore={true} limit={3} searchable={this.state.makeItSearchable}/>
                                 </ul>
                             </div>
                         </div>
