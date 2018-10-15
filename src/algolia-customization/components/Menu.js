@@ -52,7 +52,7 @@ class Menu extends Component {
                 href={createURL(item.value)}
             >
                 <span className={cx('label')}>{label}</span>{' '}
-                <span className={cx('count')}>{item.count}</span>
+                <span className={cx('count')}>( {item.count} )</span>
             </Link>
         );
     };
@@ -86,7 +86,7 @@ class Menu extends Component {
 }
 
 export default translatable({
-    showMore: extended => (extended ? 'Showb less' : 'Showb more'),
+    showMore: extended => (extended ? '' : ''),
     noResults: 'No results',
     submit: null,
     reset: null,
