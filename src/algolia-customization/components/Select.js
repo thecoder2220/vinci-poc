@@ -59,7 +59,7 @@ export default class Select extends Component {
         });
 
         return (
-            <ul className={cx('list')} value={selectedItem}>
+            <ul className={cx('list') +' flexcontainer-as-row align-center flex-end'} value={selectedItem}>
                 {breadcrumb}
             </ul>
         );

@@ -136,7 +136,7 @@ class App extends Component {
                         <div className="bigitem"/>
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
-                        <div className="text-align-right smallitem">
+                        <div className="smallitem">
                             <CustomizedSortBy
                                 items={[
                                     {value: 'site2_sort_by_date', label: 'Tri par date'},

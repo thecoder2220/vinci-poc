@@ -406,7 +406,7 @@ li.header-category{
     max-height: 460px;
     background-color: #edf6fa;
     border: 1px solid #3a99c7;
-    margin: 1rem 0 0;
+    margin: 1rem 0 ;
 }
 
 .flexcontainer-as-row>div {
@@ -464,6 +464,7 @@ li.header-category{
     -webkit-align-items: center;
     align-items: center;
 }
+
 .text-align-right {
     text-align:right;
 }
@@ -506,4 +507,8 @@ div.display-searchable {
 
 .fontsize18 {
     font-size: 18px;
+}
+
+.flex-end{
+    justify-content: flex-end;
 }
