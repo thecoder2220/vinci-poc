@@ -17,6 +17,7 @@ import {
     Pagination,
     Panel,
     RefinementList,
+    Stats,
 } from 'react-instantsearch-dom';
 
 import CustomizedMenu from '../algolia-customization/widgets/CustomizedMenu';
@@ -236,6 +237,9 @@ class App extends Component {
                             </div>
                         </div>
                         <div className="hits-wrapper wrapper">
+                            <div className="text-align-right">
+                                <Stats />
+                            </div>
                             <Hits hitComponent={Hit}/>
 
                             <div className="pagination">

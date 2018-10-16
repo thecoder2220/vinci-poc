@@ -270,55 +270,9 @@ ul.ais-Hits-list li:first-child{
     height: 0px;
 }
 
-.dn-attr-hdr-txt {
-
-    line-height: 1.5em;
-
-}
-.dn-attr-hdr-txt {
-
-    width: auto;
-    font-family: "VinciSansBold" !important;
-    font-weight: normal !important;
-
-}
-.dn-attr-hdr-txt {
-
-    display: inline-block;
-    overflow: hidden;
-}
-
-li.header-category{
-    font-family: 'VinciSansBold' !important;
-    font-weight: normal !important;
-    font-size:18px;
-    outline-style: none;
-    padding: 6px 10px !important;
-    line-height: 1.5em !important;
-    color: #3C3C3B !important;
-    background: #EDEDED !important;
-}
-
-.dn-attr-v {
-    line-height: 1.1em !important;
-    overflow-x: hidden;
-    width: 99%;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-}
-
-#dyn_nav li a:hover {
-    text-decoration: underline;
-}
-
-#dyn_nav li a {
-    color: #3C3C3B !important;
-    font-size: 0.917rem !important;
-}
-
-.text a:hover {
-    transition: 0.5s;
+.ais-Stats-text {
+    color:black;
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
 .title-result{
@@ -387,7 +341,60 @@ li.ais-Menu-item {
     line-height: 0;
 }
 
+
 /*** CSS Flexbox ****/
+
+
+.dn-attr-hdr-txt {
+
+    line-height: 1.5em;
+
+}
+.dn-attr-hdr-txt {
+
+    width: auto;
+    font-family: "VinciSansBold" !important;
+    font-weight: normal !important;
+
+}
+.dn-attr-hdr-txt {
+
+    display: inline-block;
+    overflow: hidden;
+}
+
+li.header-category{
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+    font-size:18px;
+    outline-style: none;
+    padding: 6px 10px !important;
+    line-height: 1.5em !important;
+    color: #3C3C3B !important;
+    background: #EDEDED !important;
+}
+
+.dn-attr-v {
+    line-height: 1.1em !important;
+    overflow-x: hidden;
+    width: 99%;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+#dyn_nav li a:hover {
+    text-decoration: underline;
+}
+
+#dyn_nav li a {
+    color: #3C3C3B !important;
+    font-size: 0.917rem !important;
+}
+
+.text a:hover {
+    transition: 0.5s;
+}
 
 .width15{
     width: calc(15% - 10px);
@@ -472,7 +479,7 @@ li.ais-Menu-item {
 }
 
 #root {
-    margin: 0 11% 0 11%;
+    margin: 0 20% 0 20%;
 }
 
 li.showMore-customized {
@@ -480,7 +487,6 @@ li.showMore-customized {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 6px;
-
 }
 
 ul.one-category {
