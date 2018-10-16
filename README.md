@@ -36,3 +36,14 @@ dn-attr => one-category
 dn-attr-hdr => header-category
 
 debugger // eslint-disable-line
+
+                 <CustomizedSortBy
+                                items={[
+                                    { value: 'site2_sort_by_date', label: 'Tri par date' },
+                                    { value: 'site2', label: 'Tri par pertinence' },
+                                ]}
+                                defaultRefinement="site2"
+                            />
+                            
+                                                        <span className="fontsize18"><a ctype="sort" href="">Tri par date</a><font
+                                                            color="#000000"> / Tri par pertinence</font></span>

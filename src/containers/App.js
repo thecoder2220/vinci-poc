@@ -21,6 +21,7 @@ import {
 } from 'react-instantsearch-dom';
 
 import CustomizedMenu from '../algolia-customization/widgets/CustomizedMenu';
+import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy';
 
 import './style.scss';
 
@@ -62,30 +63,7 @@ const VirtualCategory = () => <VirtualMenu attributeName="categories_lvl0"/>;
 const VirtualLvl1 = () => <VirtualMenu attributeName="categories_lvl1"/>;
 const VirtualYear = () => <VirtualMenu attributeName="year"/>;
 
-function findTitle(hit) {
-    const attrs = ['title1', 'title2', 'title3', 'title4'];
-    for (let i = 0; i < attrs.length; ++i) {
-        if (
-            hit._highlightResult &&
-            hit._highlightResult[attrs[i]] &&
-            hit._highlightResult[attrs[i]].findIndex(
-                e => e.matchLevel !== 'none'
-            ) !== -1
-        ) {
-            return [
-                attrs[i],
-                hit._highlightResult[attrs[i]].findIndex(
-                    e => e.matchLevel !== 'none'
-                ),
-            ];
-        }
-    }
-
-    return [null, null];
-}
-
 const Hit = ({hit}) => {
-    debugger
     return (
         <div className="algolia-article-result">
             <Highlight attribute="title" hit={hit} className="title-result"/>
@@ -96,66 +74,6 @@ const Hit = ({hit}) => {
     );
 
 };
-
-let hasDisplayed = false;
-const HitsChecker = connectHits(({hits, searchState}) => {
-    if (hits.length === 0 && !hasDisplayed) {
-        return null;
-    } else if (hits.length === 0 && hasDisplayed) {
-        return (
-            <div className="results flexcontainer-as-column">
-                <div className="refinements"/>
-                <div className="items">
-                    <p>Aucun résultat pour cette recherche.</p>
-                    <ClearRefinements
-                        clearsQuery
-                        translations={{
-                            reset: 'Supprimer les filtres',
-                        }}
-                    />
-                </div>
-            </div>
-        );
-    }
-    hasDisplayed = true;
-    return (
-        <div className="wrapper">
-            <div className="results">
-                <div className="refinements">
-                    <Panel title="Catégories">
-                        <Menu attributeName="categories_lvl0" limit="4"/>
-                    </Panel>
-                    <Panel title="Années">
-                        <RefinementList attributeName="year"/>
-                    </Panel>
-                </div>
-                <div className="items  flexcontainer-as-column">
-                    <div className="tagList">
-                        <Menu attributeName="categories_lvl1"/>
-                    </div>
-                    <InstantSearch
-                        appId="AP1SAU3HM8"
-                        apiKey="ca5a4ca0494ad49d12591dc4823ac172"
-                        indexName="site2"
-                        searchState={searchState}
-                    >
-                        <Configure
-                            hitsPerPage="4"
-                            attributesToSnippet={['content:20']}
-                        />
-                        <VirtualSearch />
-                        <VirtualCategory />
-                        <VirtualYear />
-                        <VirtualLvl1 />
-                        <Pdfs />
-                    </InstantSearch>
-                    <Hits hitComponent={Hit}/>
-                    <Pagination />
-                </div>
-            </div>
-        </div>
-    );
-});
 
 const HitsCategories = connectHits(({hits}) => {
     if (hits.length === 0) {
@@ -216,8 +134,14 @@ class App extends Component {
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
                         <div className="text-align-right smallitem">
-                            <span className="fontsize18"><a ctype="sort" href="">Tri par date</a><font
-                                color="#000000"> / Tri par pertinence</font></span>
+                            <CustomizedSortBy
+                                items={[
+                                    { value: 'site2_sort_by_date', label: 'Tri par date' },
+                                    { value: 'site2', label: 'Tri par pertinence' },
+                                ]}
+                                defaultRefinement="site2"
+                            />
+
                         </div>
                         <div className="bigitem">
                             <span>&nbsp;</span>

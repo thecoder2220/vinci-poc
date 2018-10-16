@@ -226,7 +226,6 @@ class SearchBoxFromMenu extends Component {
             autoFocus,
             loadingIndicator,
             submit,
-            reset,
         } = this.props;
         const query = this.getQuery();
 
@@ -289,14 +288,6 @@ class SearchBoxFromMenu extends Component {
                         className={cx('submit')}
                     >
                         {submit}
-                    </button>
-                    <button
-                        type="reset"
-                        title={translate('resetTitle')}
-                        className={cx('reset')}
-                        hidden={!query || isSearchStalled}
-                    >
-                        {reset}
                     </button>
                     {this.props.showLoadingIndicator && (
                         <span
