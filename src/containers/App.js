@@ -213,13 +213,13 @@ class App extends Component {
                             <span>&nbsp;</span>
                         </div>
                     </div>
-                    <div className="flexcontainer-as-row align-center">
+                    <div className="flexcontainer-as-row-reverse align-center">
+                        <div className="text-align-right smallitem">
+                            <span className="fontsize18"><a ctype="sort" href="">Tri par date</a><font
+                                color="#000000"> / Tri par pertinence</font></span>
+                        </div>
                         <div className="bigitem">
                             <span>&nbsp;</span>
-                        </div>
-                        <div className="text-align-right smallitem">
-                            <span className="s"><a ctype="sort" href="">Tri par date</a><font
-                                color="#000000"> / Tri par pertinence</font></span>
                         </div>
                     </div>
 

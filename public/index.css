@@ -385,6 +385,26 @@ li.ais-Menu-item {
     margin: 3px;
 }
 
+.flexcontainer-as-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 460px;
+    background-color: #edf6fa;
+    border: 1px solid #3a99c7;
+    margin: 1rem 0 0;
+}
+
+.flexcontainer-as-row-reverse>div {
+    height: -webkit-calc(99% - 10px);  /* pour Chrome */
+    height: -moz-calc(99% - 10px);     /* pour Firefox */
+    height: calc(99% - 10px);
+    max-width: -webkit-calc(95% - 10px);  /* pour Chrome */
+    max-width: -moz-calc(95% - 10px);     /* pour Firefox */
+    max-width: calc(95% - 10px);
+    background-color: white;
+    margin: 3px;
+}
+
 .flexcontainer-as-column {
     display: flex;
     flex-direction: column;
@@ -444,4 +464,8 @@ div.display-searchable {
     float: right;
     height: 12px;
     width: 10px;
+}
+
+.fontsize18 {
+    font-size: 18px;
 }
