@@ -125,12 +125,14 @@ class App extends Component {
                                        placeholder: '',
                                    }}
                         />
-                        <div className="align-center bigitem">
-                            <span>&nbsp;</span>
+                        <div className="align-center bigitem text-align-left" >
+                            <Stats translations={{
+                                stats (n) {
+                                    return `${n.toLocaleString()} résultats`
+                                }
+                            }} />
                         </div>
-                        <div className="align-center bigitem">
-                            <span>&nbsp;</span>
-                        </div>
+                    <div className="align-center bigitem" />
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
                         <div className="text-align-right smallitem">
@@ -143,9 +145,7 @@ class App extends Component {
                             />
 
                         </div>
-                        <div className="bigitem">
-                            <span>&nbsp;</span>
-                        </div>
+                        <div className="bigitem" />
                     </div>
 
                     <div className="flexcontainer-as-row">
@@ -161,11 +161,7 @@ class App extends Component {
                             </div>
                         </div>
                         <div className="hits-wrapper wrapper">
-                            <div className="text-align-right">
-                                <Stats />
-                            </div>
                             <Hits hitComponent={Hit}/>
-
                             <div className="pagination">
                                 <Pagination />
                             </div>

@@ -468,6 +468,10 @@ li.header-category{
     text-align:right;
 }
 
+.text-align-left {
+    text-align:left;
+}
+
 .bigitem {
     -webkit-flex: 2 0 0;
     flex: 2 0 0;
