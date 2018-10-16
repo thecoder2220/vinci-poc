@@ -96,14 +96,6 @@ class List extends Component {
         const nbItemsToDisplay = this.props.items.length - this.props.limit;
         const countRemainingItems = nbItemsToDisplay > this.props.limit ? nbItemsToDisplay : '';
 
-        /* if (nbItemsToDisplay>this.props.limit) {
-         button = <LogoutButton onClick={this.handleLogoutClick} />;
-         } else {
-         button = <LoginButton onClick={this.handleLoginClick} />
-         }
-         {nbItemsToDisplay>this.props.limit && (
-         )}
-         */
         if (nbItemsToDisplay <= this.props.limit) {
             return null;
         }

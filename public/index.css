@@ -262,13 +262,11 @@ ul.ais-Hits-list li:first-child{
 li.header-category{
     font-family: 'VinciSansBold' !important;
     font-weight: normal !important;
+    font-size:18px;
     outline-style: none;
     padding: 6px 10px !important;
-    line-height: 1.1em !important;
-}
-
-.header-category{
-
+    line-height: 1.5em !important;
+    margin-left:2px;
     color: #3C3C3B !important;
     background: #EDEDED !important;
 }
