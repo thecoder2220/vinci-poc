@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import { createClassNames } from '../core/utils';
 import Select from './Select';
 
-const cx = createClassNames('SortBy');
+/* const cx = createClassNames('SortBy');*/
+const cx = createClassNames('SortBy', 'algolia');
 
 class SortBy extends Component {
     static propTypes = {

@@ -29,7 +29,7 @@ export default class Select extends Component {
 
     static defaultProps = {
         rootURL: null,
-        separator: ' / ',
+        separator: '/',
         className: '',
     };
 
@@ -52,14 +52,14 @@ export default class Select extends Component {
                         {item.label}
                     </Link>
                     {!isLast &&
-                    <span className={cx('separator')}>{separator}</span>
+                    <span className={cx('separator')}> {separator} </span>
                     }
                 </li>
             );
         });
 
         return (
-            <ul className={cx('list') +' flexcontainer-as-row align-center flex-end'} value={selectedItem}>
+            <ul className={cx('list') +' flexcontainer-as-row flex-end'} >
                 {breadcrumb}
             </ul>
         );
