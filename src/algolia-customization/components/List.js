@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -86,14 +87,26 @@ class List extends Component {
 
     renderShowMore() {
         const {showMore, translate, cx} = this.props;
-        const {extended} = this.state;
-        const disabled = this.props.limit >= this.props.items.length;
-        const nbItemsToDisplay = this.props.items.length - this.props.limit;
-        const countRemainingItems = nbItemsToDisplay >0 ?nbItemsToDisplay+' ':false;
         if (!showMore) {
             return null;
         }
 
+        const {extended} = this.state;
+        const disabled = this.props.limit >= this.props.items.length;
+        const nbItemsToDisplay = this.props.items.length - this.props.limit;
+        const countRemainingItems = nbItemsToDisplay > this.props.limit ? nbItemsToDisplay : '';
+
+        /* if (nbItemsToDisplay>this.props.limit) {
+         button = <LogoutButton onClick={this.handleLogoutClick} />;
+         } else {
+         button = <LoginButton onClick={this.handleLoginClick} />
+         }
+         {nbItemsToDisplay>this.props.limit && (
+         )}
+         */
+        if (nbItemsToDisplay <= this.props.limit) {
+            return null;
+        }
         return (
             <li className="showMore-customized">
                 <a><span
@@ -101,13 +114,14 @@ class List extends Component {
                     className={cx('showMore-customized', disabled && 'showMore--disabled')}
                     onClick={this.onShowMoreClick}
                 >
-            </span>
+                        </span>
                     {extended ? (
                         <span
                             className="showMore-count-customized">{translate('showMore', extended)}</span>
                     ) : (
                         <span
-                            className="showMore-count-customized">{countRemainingItems}{translate('showMore', extended)}</span>
+                            className="showMore-count-customized">{countRemainingItems} {translate('showMore', extended)}
+                            </span>
                     )}
                 </a>
             </li>
