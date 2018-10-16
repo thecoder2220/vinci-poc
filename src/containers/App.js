@@ -81,7 +81,7 @@ const HitsCategories = connectHits(({hits}) => {
     }
     return (
         <CustomizedMenu attribute="categories_lvl0" className="flexcontainer-as-column"
-                        showMore={true} limit={3}  headerTitle="Rubrique" />
+                        showMore={true} limit={3} headerTitle="Rubrique"/>
     );
 });
 
@@ -90,7 +90,8 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}  headerTitle="Année" />
+        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}
+                        headerTitle="Année"/>
     );
 });
 
@@ -119,33 +120,33 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div className="flexcontainer-as-row">
-                        <SearchBox className="align-center smallitem fake-column"
+                    <div className="flexcontainer-as-row align-center">
+                        <SearchBox className="smallitem fake-column"
                                    translations={{
                                        placeholder: '',
                                    }}
                         />
-                        <div className="align-center bigitem text-align-left" >
+                        <div className="bigitem text-align-left">
                             <Stats translations={{
                                 stats (n) {
                                     return `${n.toLocaleString()} résultats`
                                 }
-                            }} />
+                            }}/>
                         </div>
-                    <div className="align-center bigitem" />
+                        <div className="bigitem"/>
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
                         <div className="text-align-right smallitem">
                             <CustomizedSortBy
                                 items={[
-                                    { value: 'site2_sort_by_date', label: 'Tri par date' },
-                                    { value: 'site2', label: 'Tri par pertinence' },
+                                    {value: 'site2_sort_by_date', label: 'Tri par date'},
+                                    {value: 'site2', label: 'Tri par pertinence'},
                                 ]}
                                 defaultRefinement="site2"
                             />
 
                         </div>
-                        <div className="bigitem" />
+                        <div className="bigitem"/>
                     </div>
 
                     <div className="flexcontainer-as-row">
@@ -155,9 +156,10 @@ class App extends Component {
                             </div>
 
                             <div id="dyn_nav" className="align-center smallitem fake-column">
-                                    <HitsCategories searchState={this.state.searchState}/>
-                                    <YearMenu />
-                                    <CustomizedMenu attribute="country" className="dn-attr-v" showMore={true} limit={3} headerTitle="Pays"/>
+                                <HitsCategories searchState={this.state.searchState}/>
+                                <YearMenu />
+                                <CustomizedMenu attribute="country" className="dn-attr-v"
+                                                showMore={true} limit={3} headerTitle="Pays"/>
                             </div>
                         </div>
                         <div className="hits-wrapper wrapper">
