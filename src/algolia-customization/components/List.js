@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import SearchBox from '../components/SearchBox';
+import SearchBoxFromMenu from '../components/SearchBoxFromMenu';
 
 const itemsPropType = PropTypes.arrayOf(
     PropTypes.shape({
@@ -135,8 +135,8 @@ class List extends Component {
                 <div className={cx('noResults')}>{translate('noResults')}</div>
             ) : null;
         return (
-            <div className={cx('searchBox')}>
-                <SearchBox
+            <div className={cx('searchBox-from-menu')}>
+                <SearchBoxFromMenu
                     currentRefinement={this.state.query}
                     refine={value => {
                         this.setState({query: value});
@@ -174,7 +174,7 @@ class List extends Component {
         // option.
         return (
             <div className={rootClassName}>
-                {searchBox}
+                    {searchBox}
                 <ul className={cx('list', !canRefine && 'list--noRefinement')}>
                     {items.slice(0, this.getLimit()).map(item => this.renderItem(item, this.resetQuery))}
                 </ul>

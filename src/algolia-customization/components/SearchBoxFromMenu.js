@@ -58,7 +58,7 @@ const defaultSubmit = (
     </svg>
 );
 
-class SearchBox extends Component {
+class SearchBoxFromMenu extends Component {
     static propTypes = {
         currentRefinement: PropTypes.string,
         className: PropTypes.string,
@@ -281,7 +281,7 @@ class SearchBox extends Component {
                         value={query}
                         onChange={this.onChange}
                         {...searchInputEvents}
-                        className={cx('input')}
+                        className={cx('input-from-menu')}
                     />
                     <button
                         type="submit"
@@ -317,4 +317,4 @@ export default translatable({
     resetTitle: 'Clear the search query.',
     submitTitle: 'Submit your search query.',
     placeholder: 'Search here…',
-})(SearchBox);
+})(SearchBoxFromMenu);

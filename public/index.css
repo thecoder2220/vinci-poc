@@ -239,6 +239,35 @@ ul.ais-Hits-list li:first-child{
 .ais-SearchBox-input {
     border: 1px solid #3C3C3B;
     border-radius: 0px;
+    width: 220px !important;
+    padding: 2px 10px !important;
+    font-size: 1rem !important;
+    font-family: 'VinciSansRegular' !important;
+}
+
+.ais-SearchBox-input-from-menu {
+
+    width: auto !important;
+    border: 1px solid #3C3C3B;
+    padding: 2px 10px !important;
+    font-size: 1rem !important;
+    font-family: 'VinciSansRegular' !important;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-top: 1px;
+    background:white;
+}
+
+.ais-Menu-searchBox-from-menu{
+    padding: 0 10px 6px 10px !important;
+    line-height: 1.5em !important;
+    color: #3C3C3B !important;
+    background: #EDEDED !important;
+}
+
+.ais-SearchBox-submitIcon {
+    width: 0px;
+    height: 0px;
 }
 
 .dn-attr-hdr-txt {
@@ -266,7 +295,6 @@ li.header-category{
     outline-style: none;
     padding: 6px 10px !important;
     line-height: 1.5em !important;
-    margin-left:2px;
     color: #3C3C3B !important;
     background: #EDEDED !important;
 }

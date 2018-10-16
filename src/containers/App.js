@@ -203,7 +203,7 @@ class App extends Component {
                     <div className="flexcontainer-as-row">
                         <SearchBox className="align-center smallitem fake-column"
                                    translations={{
-                                       placeholder: 'Recherchez des pages, documents...',
+                                       placeholder: '',
                                    }}
                         />
                         <div className="align-center bigitem">

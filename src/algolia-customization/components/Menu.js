@@ -92,5 +92,5 @@ export default translatable({
     reset: null,
     resetTitle: 'Clear the search query.',
     submitTitle: 'Submit your search query.',
-    placeholder: 'Search here…',
+    placeholder: '',
 })(Menu);
