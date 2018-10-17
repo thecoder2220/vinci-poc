@@ -23,7 +23,6 @@ export default class Select extends Component {
     };
 
     onChange = e => {
-        debugger // eslint-disable-line
         this.props.onSelect(e);
     };
 
@@ -38,14 +37,15 @@ export default class Select extends Component {
 
         const breadcrumb = items.map((item, idx) => {
             const isLast = idx === items.length - 1;
-
+            const theClassName= cx(selectedItem=== item.value?'link-selected':'link')
+            debugger // eslint-disable-line
+            console.log('theClassName='+theClassName)
             return (
                 <li
-                    className={cx('item', isLast && 'item--selected')}
                     key={idx}
                 >
                     <Link
-                        className={cx('link')}
+                        className={theClassName}
                         onClick={() => this.onChange(item.value)}
                         href="#"
                     >

@@ -345,7 +345,7 @@ li.ais-Menu-item {
     padding-right: 4px;
 }
 
-.algolia-SortBy-link a:hover {
+/*.algolia-SortBy-link a:hover {
     color: #000;
     text-decoration: underline;
     transition: 0.5s;
@@ -353,7 +353,16 @@ li.ais-Menu-item {
 
 a.algolia-SortBy-link  {
     color: #004489;
+}*/
+
+a.algolia-SortBy-link-selected {
+    color:red;
 }
+
+a.algolia-SortBy-link {
+    color:orange;
+}
+
 
 /*** CSS Flexbox ****/
 
