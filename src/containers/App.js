@@ -66,8 +66,8 @@ const VirtualYear = () => <VirtualMenu attributeName="year"/>;
 const Hit = ({hit}) => {
     return (
         <div className="algolia-article-result">
-            {hit.type==='PDF' &&
-                <span	className="pdf-icon" />}
+            {hit.type === 'PDF' &&
+            <span className="pdf-icon"/>}
             <a href={hit.objectID}>
                 <Highlight attribute="title" hit={hit} className="title-result"/>
             </a>
@@ -124,7 +124,8 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div id="container-main-searchbox" className="flexcontainer-as-row align-center">
+                    <div id="container-main-searchbox"
+                         className="flexcontainer-as-row align-center">
                         <SearchBox className="smallitem fake-column"
                                    translations={{
                                        placeholder: '',
@@ -166,14 +167,15 @@ class App extends Component {
                                                 showMore={true} limit={3} headerTitle="Pays"/>
                             </div>
                         </div>
-                        <div className="hits-wrapper wrapper">
-                            <Hits hitComponent={Hit}/>
-                            <div className="pagination">
-                                <Pagination />
+                        <div className="flexcontainer-as-column">
+                            <div className="hits-wrapper wrapper">
+                                <Hits hitComponent={Hit}/>
                             </div>
                         </div>
                     </div>
-
+                    <div className="pagination">
+                        <Pagination />
+                    </div>
                 </InstantSearch>
             </div>
         );
