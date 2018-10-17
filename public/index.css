@@ -356,11 +356,14 @@ a.algolia-SortBy-link  {
 }*/
 
 a.algolia-SortBy-link-selected {
-    color:red;
+    color: #000;
+    cursor:auto;
 }
 
 a.algolia-SortBy-link {
-    color:orange;
+    color: #004489;
+    text-decoration: underline;
+    transition: 0.5s;
 }
 
 

@@ -38,8 +38,6 @@ export default class Select extends Component {
         const breadcrumb = items.map((item, idx) => {
             const isLast = idx === items.length - 1;
             const theClassName= cx(selectedItem=== item.value?'link-selected':'link')
-            debugger // eslint-disable-line
-            console.log('theClassName='+theClassName)
             return (
                 <li
                     key={idx}
