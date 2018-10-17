@@ -280,6 +280,7 @@ ul.ais-Hits-list li:first-child {
 
 .ais-Snippet-nonHighlighted {
     font-size: 18px;
+    color:black;
 }
 
 .algolia-article-result {
