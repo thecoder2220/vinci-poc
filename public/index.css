@@ -381,28 +381,6 @@ div.display-searchable {
     align-items: center;
 }
 
-/***** RESPONSIVE   **********/
-
-@media only screen and (min-width: 901px) {
-    main {
-        margin-top: 0
-    }
-}
-
-@media only screen and (min-width: 1001px) {
-    main {
-        margin-top: 1rem;
-    }
-}
-
-@media only screen and (min-width: 1201px) {
-    .text, .sharing, footer {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 footer {
     background: #ededed;
     color: #3c3c3c;
@@ -410,4 +388,24 @@ footer {
     clear: both;
     font-size: 1rem;
     text-align: left;
+}
+
+/***** RESPONSIVE   **********/
+
+@media only screen and (min-width: 901px) {
+    main {
+        margin-top: 1rem;
+        padding-top: 99px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    main {
+        padding-top: 69px;
+    }
+    .text, .sharing, footer {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

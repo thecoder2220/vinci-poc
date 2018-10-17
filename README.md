@@ -37,13 +37,28 @@ dn-attr-hdr => header-category
 
 debugger // eslint-disable-line
 
-                 <CustomizedSortBy
-                                items={[
-                                    { value: 'site2_sort_by_date', label: 'Tri par date' },
-                                    { value: 'site2', label: 'Tri par pertinence' },
-                                ]}
-                                defaultRefinement="site2"
-                            />
-                            
-                                                        <span className="fontsize18"><a ctype="sort" href="">Tri par date</a><font
-                                                            color="#000000"> / Tri par pertinence</font></span>
+/**** RESPONSIVE ***/
+
+Le min width s'applique à l'écran d'ordi
+Le max width s'applique à l'écrans d'un mobile
+ 
+ écran d'ordi
+ 
+ @media only screen and (min-width: 901px)  =>  
+ main {
+     padding-top: 99px;
+     margin-top: 1rem;
+ }
+ 
+ écrans d'un mobile
+ 
+ @media only screen and (max-width: 900px)
+ main {
+     padding-top: 69px;
+ }
+ 
+ @media only screen and (max-width: 1000px)
+ main {
+     margin-top: 0;
+ }
+ 
