@@ -428,7 +428,6 @@ li.header-category{
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
-    max-height: 460px;
     background-color: #edf6fa;
     border: 1px solid #3a99c7;
     margin: 0.5rem 0 ;
@@ -537,5 +536,19 @@ div.display-searchable {
 .flex-end{
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+#container-main-searchbox {
+    margin: 1rem 0 ;
+}
+
+/***** RESPONSIVE   **********/
+
+@media only screen and (min-width:901px){
+    main {margin-top:0}
+}
+
+@media only screen and (min-width:1001px){
+    main {margin-top: 1rem;}
 }
 

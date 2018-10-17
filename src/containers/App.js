@@ -66,7 +66,9 @@ const VirtualYear = () => <VirtualMenu attributeName="year"/>;
 const Hit = ({hit}) => {
     return (
         <div className="algolia-article-result">
-            <Highlight attribute="title" hit={hit} className="title-result"/>
+            <a href={hit.objectID}>
+                <Highlight attribute="title" hit={hit} className="title-result"/>
+            </a>
             <div className="algolia-content-result">
                 <Snippet attribute="content" hit={hit}/>
             </div>
@@ -120,7 +122,7 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div className="flexcontainer-as-row align-center">
+                    <div id="container-main-searchbox" className="flexcontainer-as-row align-center">
                         <SearchBox className="smallitem fake-column"
                                    translations={{
                                        placeholder: '',
