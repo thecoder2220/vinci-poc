@@ -247,7 +247,6 @@ li.header-category {
     flex-direction: row;
     background-color: #edf6fa;
     border: 0px solid #3a99c7;
-    margin: 0.5rem 0;
 }
 
 .flexcontainer-as-row > div {
@@ -258,7 +257,6 @@ li.header-category {
     max-width: -moz-calc(95% - 10px); /* pour Firefox */
     max-width: calc(95% - 10px);
     background-color: white;
-    margin: 3px;
 }
 
 .flexcontainer-as-row-reverse {

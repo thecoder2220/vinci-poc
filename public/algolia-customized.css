@@ -159,7 +159,33 @@ a.algolia-SortBy-link {
 }
 
 .ais-Pagination-list {
-    padding: 10px 0 !important;
-    margin-top: 1ex;
+    padding: 1vw 0 !important;
     border-top: 1px solid #c6c6c6 !important;
 }
+
+.ais-Pagination-item--selected .ais-Pagination-link {
+    background-color: #c6c6c6;
+    color: #3C3C3B !important;
+    transition: 0.5s;
+    text-decoration: none !important;
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+    font-size: 10pt;
+    padding: 4px 10px;
+    margin: 0 5px;
+    border: 1px solid #3C3C3B;
+    border-radius: 2px;
+}
+
+.ais-Pagination-link {
+    padding: 4px 10px;
+    border: 1px solid #3C3C3B;
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+    font-size: 10pt;
+    background: #3C3C3B;
+    color: #fff !important;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
