@@ -1,63 +1,63 @@
 @charset "utf-8";
 @font-face {
-  font-family: 'VinciDingbats';
-  src: url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.svg#vinci_dingbats') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.eot')
+    font-family: 'VinciDingbats';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.svg#vinci_dingbats') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.eot')
 }
 
 @font-face {
-  font-family: 'VinciSansBold';
-  src: url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.svg#vinci_sans_bold') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.eot')
+    font-family: 'VinciSansBold';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.svg#vinci_sans_bold') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.eot')
 }
 
 @font-face {
-  font-family: 'VinciSansRegular';
-  src: url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.svg#vinci_sans_regular') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.eot')
+    font-family: 'VinciSansRegular';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.svg#vinci_sans_regular') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.eot')
 }
 
 @font-face {
-  font-family: 'VinciCondensedMedium';
-  src: url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.svg#vinci_sans_condensed-medium') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.eot')
+    font-family: 'VinciCondensedMedium';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.svg#vinci_sans_condensed-medium') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.eot')
 }
 
 html, body {
-    height:100%
+    height: 100%
 }
 
 body,
 h1 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body, td, div, .p, a, .d, .s {
-  font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
 a:visited, .f a:visited {
-  color: #551a8b;
+    color: #551a8b;
 }
 
 a:link, .w, .w a:link {
-  color: #004489;
+    color: #004489;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  color: #333;
+    font-weight: normal;
+    color: #333;
 }
 
 h1 {
-  width: 100%;
-  font-size: 3.125rem;
-  line-height: 0.85;
+    width: 100%;
+    font-size: 3.125rem;
+    line-height: 0.85;
 }
 
 h1, h2, .ariane {
-  font-family: VinciCondensedMedium, "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: VinciCondensedMedium, "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 main div {
-  max-width: 100% !important;
+    max-width: 100% !important;
 }
 
 main .text {
@@ -71,91 +71,77 @@ main .text {
 }
 
 .content {
-  width: 100%;
-  color: #333;
+    width: 100%;
+    color: #333;
 }
 
 .ariane {
-  padding-bottom: 5px;
-  font-size: 1rem;
-}
-
-.header {
-  line-height: 1.5em;
-  background: #fff;
-  height: 70px;
-  width: 1200px;
-  margin: auto
+    padding-bottom: 5px;
+    font-size: 1rem;
 }
 
 .header_text_00 {
-  background: linear-gradient(to right, rgba(0, 68, 137, 1) 0%, rgba(0, 68, 137, 0.6) 100%);
+    background: linear-gradient(to right, rgba(0, 68, 137, 1) 0%, rgba(0, 68, 137, 0.6) 100%);
 }
 
 .header_text {
-  width: 100%;
-  display: inline-block;
-  margin: 0;
-  padding: 20px 0
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 20px 0
 }
 
 .header_text * {
-  width: 1200px;
-  margin: 0 auto;
-  color: #fff;
-  text-align: left;
-  padding: 0 20px
-}
-
-.logo-desktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: left;
+    padding: 0 20px
 }
 
 .top-menu-bar {
-  border: solid 1px #dfe3e6;
-  height: 45px;
-  background: #ededed
+    border: solid 1px #dfe3e6;
+    height: 45px;
+    background: #ededed
 }
 
 .dropdown-toggle {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.125rem;
-  padding: 0 2vw
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.125rem;
+    padding: 0 2vw
 }
 
 .top-menu {
-  width: 1200px;
-  margin: 0 auto 0 auto;
-  text-align: left;
+    width: 1200px;
+    margin: 0 auto 0 auto;
+    text-align: left;
 }
 
 .top-menu ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
-  text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+    text-align: left;
 }
 
 .dropdown {
-  position: relative;
-  width: 100%;
-  font-size: 1.125rem;
-  font-family: VinciSansBold;
-  padding: 0.75rem 0 0 0;
-  height: 44px;
+    position: relative;
+    width: 100%;
+    font-size: 1.125rem;
+    font-family: VinciSansBold;
+    padding: 0.75rem 0 0 0;
+    height: 44px;
 }
 
 li {
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  vertical-align: middle;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    vertical-align: middle;
 }
 
 .dn-hdr {
@@ -167,16 +153,17 @@ li {
     padding: 4px 6px 4px 10px !important;
 }
 
-.fake-column{
+.fake-column {
     min-width: 221px;
-    text-align:left;
-}
-.fake-column>span{
-    padding-left:6px;
+    text-align: left;
 }
 
-.fake-column>ul>li{
-    padding-left:16px;
+.fake-column > span {
+    padding-left: 6px;
+}
+
+.fake-column > ul > li {
+    padding-left: 16px;
 }
 
 div#dyn_nav {
@@ -209,31 +196,30 @@ span.showMore-count-customized {
     margin-left: 0rem;
 }
 
-.ais-Hits-list>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
+.ais-Hits-list > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: -webkit-calc(99% - 10px); /* pour Chrome */
+    width: -moz-calc(99% - 10px); /* pour Firefox */
     width: calc(99% - 10px);
     background-color: #b93c2f;
     margin: 3px;
 }
 
-ul.ais-Hits-list li:first-child{
-    margin-top:0;
+ul.ais-Hits-list li:first-child {
+    margin-top: 0;
 }
 
 .ais-Hits-item {
-    width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    width: -moz-calc(99% - 10px);     /* pour Firefox */
+    width: -webkit-calc(99% - 10px); /* pour Chrome */
+    width: -moz-calc(99% - 10px); /* pour Firefox */
     width: calc(99% - 10px);
     border: 0px solid #c4c8d8;
-    box-shadow: 0 0 0 0 #e3e5ec; ;
+    box-shadow: 0 0 0 0 #e3e5ec;;
     padding-bottom: 0;
-    margin-bottom:0;
     padding-top: 0;
-    margin-top:0;
+    margin: 0;
 }
 
 .ais-SearchBox-input {
@@ -255,10 +241,10 @@ ul.ais-Hits-list li:first-child{
     margin-bottom: 2px;
     margin-left: 5px;
     margin-top: 1px;
-    background:white;
+    background: white;
 }
 
-.ais-Menu-searchBox-from-menu{
+.ais-Menu-searchBox-from-menu {
     padding: 0 10px 6px 10px !important;
     line-height: 1.5em !important;
     color: #3C3C3B !important;
@@ -271,39 +257,39 @@ ul.ais-Hits-list li:first-child{
 }
 
 .ais-Stats-text {
-    color:black;
+    color: black;
     font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
-.title-result{
+.title-result {
     color: #0000cc;
-    font-family: 'VinciSansRegular','Trebuchet MS',Arial,Helvetica,sans-serif;
-    padding-top:0rem;
-    padding-bottom:1rem;
-    font-size:1.125rem;
-    text-align:left;
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    text-align: left;
 }
 
-.ais-Highlight-nonHighlighted{
+.ais-Highlight-nonHighlighted {
     color: #0000cc;
-    font-family: 'VinciSansRegular','Trebuchet MS',Arial,Helvetica,sans-serif;
-    font-size:1.125rem;
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
     margin-top: 0;
     margin-bottom: 0px;
 }
 
 .ais-Snippet-nonHighlighted {
-    font-size:18px;
+    font-size: 18px;
 }
 
 .algolia-article-result {
-    text-align:left;
+    text-align: left;
 }
 
 .algolia-content-result {
     width: calc(70% - 10px);
-    padding-bottom:1rem;
-    padding-top:1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 span.ais-Menu-showMore-customized {
@@ -357,7 +343,7 @@ a.algolia-SortBy-link  {
 
 a.algolia-SortBy-link-selected {
     color: #000;
-    cursor:auto;
+    cursor: auto;
 }
 
 a.algolia-SortBy-link {
@@ -366,15 +352,14 @@ a.algolia-SortBy-link {
     transition: 0.5s;
 }
 
-
 /*** CSS Flexbox ****/
-
 
 .dn-attr-hdr-txt {
 
     line-height: 1.5em;
 
 }
+
 .dn-attr-hdr-txt {
 
     width: auto;
@@ -382,16 +367,17 @@ a.algolia-SortBy-link {
     font-weight: normal !important;
 
 }
+
 .dn-attr-hdr-txt {
 
     display: inline-block;
     overflow: hidden;
 }
 
-li.header-category{
+li.header-category {
     font-family: 'VinciSansBold' !important;
     font-weight: normal !important;
-    font-size:18px;
+    font-size: 18px;
     outline-style: none;
     padding: 6px 10px !important;
     line-height: 1.5em !important;
@@ -421,7 +407,7 @@ li.header-category{
     transition: 0.5s;
 }
 
-.width15{
+.width15 {
     width: calc(15% - 10px);
 }
 
@@ -430,15 +416,15 @@ li.header-category{
     flex-direction: row;
     background-color: #edf6fa;
     border: 1px solid #3a99c7;
-    margin: 0.5rem 0 ;
+    margin: 0.5rem 0;
 }
 
-.flexcontainer-as-row>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
+.flexcontainer-as-row > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
-    max-width: -webkit-calc(95% - 10px);  /* pour Chrome */
-    max-width: -moz-calc(95% - 10px);     /* pour Firefox */
+    max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+    max-width: -moz-calc(95% - 10px); /* pour Firefox */
     max-width: calc(95% - 10px);
     background-color: white;
     margin: 3px;
@@ -453,12 +439,12 @@ li.header-category{
     margin: 1rem 0 0;
 }
 
-.flexcontainer-as-row-reverse>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
+.flexcontainer-as-row-reverse > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
-    max-width: -webkit-calc(95% - 10px);  /* pour Chrome */
-    max-width: -moz-calc(95% - 10px);     /* pour Firefox */
+    max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+    max-width: -moz-calc(95% - 10px); /* pour Firefox */
     max-width: calc(95% - 10px);
     background-color: white;
     margin: 3px;
@@ -470,12 +456,12 @@ li.header-category{
     max-height: 560px;
 }
 
-.flexcontainer-as-column>div {
-    height: -webkit-calc(99% - 10px);  /* pour Chrome */
-    height: -moz-calc(99% - 10px);     /* pour Firefox */
+.flexcontainer-as-column > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
-    max-width: -webkit-calc(99% - 10px);  /* pour Chrome */
-    max-width: -moz-calc(99% - 10px);     /* pour Firefox */
+    max-width: -webkit-calc(99% - 10px); /* pour Chrome */
+    max-width: -moz-calc(99% - 10px); /* pour Firefox */
     max-width: calc(99% - 10px);
     background-color: white;
 }
@@ -490,11 +476,11 @@ li.header-category{
 }
 
 .text-align-right {
-    text-align:right;
+    text-align: right;
 }
 
 .text-align-left {
-    text-align:left;
+    text-align: left;
 }
 
 .bigitem {
@@ -512,7 +498,7 @@ li.header-category{
 }
 
 li.showMore-customized {
-    padding-bottom:6px;
+    padding-bottom: 6px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 6px;
@@ -533,22 +519,51 @@ div.display-searchable {
     font-size: 18px;
 }
 
-.flex-end{
+.flex-end {
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 #container-main-searchbox {
-    margin: 1rem 0 ;
+    margin: 1rem 0;
+}
+
+.pdf-icon {
+    background: url(../src/resources/ico-pdf.png) no-repeat scroll right center;
+    padding-left: 16px;
+    margin-right: 0.5em;
+}
+
+#logo-desktop {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+#logo-header {
+    background: #fff;
+    height: 70px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
 }
 
 /***** RESPONSIVE   **********/
 
-@media only screen and (min-width:901px){
-    main {margin-top:0}
+@media only screen and (min-width: 901px) {
+    main {
+        margin-top: 0
+    }
 }
 
-@media only screen and (min-width:1001px){
-    main {margin-top: 1rem;}
+@media only screen and (min-width: 1001px) {
+    main {
+        margin-top: 1rem;
+    }
 }
 

@@ -66,6 +66,8 @@ const VirtualYear = () => <VirtualMenu attributeName="year"/>;
 const Hit = ({hit}) => {
     return (
         <div className="algolia-article-result">
+            {hit.type==='PDF' &&
+                <span	className="pdf-icon" />}
             <a href={hit.objectID}>
                 <Highlight attribute="title" hit={hit} className="title-result"/>
             </a>
