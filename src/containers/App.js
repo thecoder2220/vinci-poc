@@ -124,8 +124,7 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div id="container-main-searchbox"
-                         className="flexcontainer-as-row align-center">
+                    <div id="container-main-searchbox" className="Grid">
                         <SearchBox className="smallitem fake-column"
                                    translations={{
                                        placeholder: '',
