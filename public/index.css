@@ -99,44 +99,6 @@ main .text {
     padding: 0 20px
 }
 
-.top-menu-bar {
-    border: solid 1px #dfe3e6;
-    height: 45px;
-    background: #ededed
-}
-
-.dropdown-toggle {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.125rem;
-    padding: 0 2vw
-}
-
-.top-menu {
-    width: 1200px;
-    margin: 0 auto 0 auto;
-    text-align: left;
-}
-
-.top-menu ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-    text-align: left;
-}
-
-.dropdown {
-    position: relative;
-    width: 100%;
-    font-size: 1.125rem;
-    font-family: VinciSansBold;
-    padding: 0.75rem 0 0 0;
-    height: 44px;
-}
-
 li {
     list-style-image: none;
     list-style-position: outside;
@@ -362,25 +324,6 @@ div.display-searchable {
     margin-right: 0.5em;
 }
 
-#logo-desktop {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-}
-
-#logo-header {
-    background: #fff;
-    height: 70px;
-    width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
-}
-
 footer {
     background: #ededed;
     color: #3c3c3c;
@@ -388,72 +331,5 @@ footer {
     clear: both;
     font-size: 1rem;
     text-align: left;
-}
-
-/***** RESPONSIVE   **********/
-
-    /**** desktop  ***/
-    @media only screen and (min-width: 901px) {
-        main {
-        }
-    }
-
-    /**** mobile  ***/
-    @media only screen and (max-width:900px) {
-        main {
-            padding-top: 69px;
-        }
-        .text, .sharing, footer {
-            width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        header {
-            border-bottom: solid 1px #ccc;
-            position: fixed;
-            display: block;
-            left: auto;
-            right: auto;
-            top: 0;
-            width: 100%;
-            z-index: 3;
-            max-height: 100%;
-            background: #fff;
-            box-sizing: border-box;
-        }
-
-        .logo-mobile {
-            display: block;
-            border-bottom: solid thin #EDEDED;
-            background: rgba(255,255,255,1);
-            margin-left: auto;
-            margin-right: auto;
-            text-align: right;
-            padding: 5px 0 0 0;
-        }
-
-        .nav-toggle {
-            width: 69px;
-            height: 69px;
-            float: left;
-            margin-top: -70px;
-            text-indent: -9999px;
-            overflow: hidden;
-            background: #706f70 url('resources/hamburger.png') no-repeat 50% 50%;
-            background-image: url("resources/hamburger.png");
-            background-size: auto auto;
-        }
-
-        /**********/
-        /* RETINA */
-        /**********/
-        @media only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx),only screen and  (-webkit-min-device-pixel-ratio:2){
-            .nav-toggle{background-image:url("resources/hamburger-retina.png");background-size:100px 100px}
-        }
-    }
-
-@media print{
-    header{display:none}
 }
 

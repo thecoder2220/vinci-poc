@@ -1,0 +1,146 @@
+/***** RESPONSIVE   **********/
+
+/**** desktop  ***/
+@media only screen and (min-width: 901px) {
+
+    header {
+        position: fixed;
+        display: block;
+        left: auto;
+        right: auto;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        max-height: 100%;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    .nav-toggle {
+        transition: max-height 284ms ease 0s;
+        position: relative;
+        max-height: none;
+    }
+
+    #logo-header {
+        /* ma version qui remplace la classe .header de vinci.com
+
+        background: #fff;
+        height: 70px;
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        */
+
+        line-height: 1.5em;
+        background: #fff;
+        height: 70px;
+        width: 1200px;
+        margin: auto;
+        text-align: left;
+        font-size: 1.125rem;
+    }
+
+    #logo-header div {
+        display: inline-block;
+        vertical-align: top;
+        height: 70px;
+        line-height: 70px;
+        overflow: hidden;
+    }
+
+    #logo-desktop {
+        float: right;
+        width: 166px;
+        padding: 5px 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: right;
+
+        /* ma version qui remplace la classe .logo-desktop de vinci.com
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;   */
+
+    }
+
+    .bourse {
+        width: auto;
+        font-family: VinciSansBold;
+        padding: 0 2rem 0 20px;
+        color: #3C3C3B;
+        text-align: left;
+        clear: both;
+    }
+
+    .langues, .nav-toggle, .search, .logo-mobile {
+        display: none;
+    }
+
+    .top-menu-bar {
+        border: solid 1px #dfe3e6;
+        height: 45px;
+        background: #ededed
+    }
+
+    .top-menu {
+        width: 100%;
+        margin: -45px 18vw 0 18vw;
+        text-align: left;
+    }
+
+    .top-menu ul {
+        padding: 0;
+        width: 100%;
+        margin: auto;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        font-family: VinciSansBold;
+        background: #ededed;
+        border-top: solid 1px #dfe3e6;
+    }
+
+    .dropdown-toggle {
+        display: block;
+        height: 44px;
+        line-height: 35px;
+        border-top: solid 3px #ededed;
+        border-bottom: solid 1px #dfe3e6;
+        text-decoration: none;
+        font-size: 1.125rem;
+        border-left: solid 1px #ededed;
+        border-right: solid 1px #ededed;
+        padding: 0 2rem;
+    }
+
+
+    main {
+        padding-top: 99px;
+        margin-top: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .top-menu {
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 901px) {
+    .top-menu {
+        background: #ededed;
+        margin: 0;
+    }
+}

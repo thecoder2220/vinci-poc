@@ -3,19 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="manifest" href="public/manifest.json">
-    <link rel="shortcut icon" href="public/favicon.png">
+    <link rel="icon" href="https://www.vinci.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.vinci.com/favicon.ico" type="image/x-icon">
 
     <!--
       Do not use @7 in production, use a complete version like x.x.x, see website for latest version:
       https://community.algolia.com/react-instantsearch/Getting_started.html#load-the-algolia-theme
     -->
     <link rel="stylesheet" href="public/commun.8.2018.018.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
     <link rel="stylesheet" href="public/index.css">
+    <link rel="stylesheet" href="public/css-for-desktop.css">
+    <link rel="stylesheet" href="public/css-for-mobile.css">
     <link rel="stylesheet" href="public/algolia-customized.css">
     <title>vinci-poc</title>
 </head>
@@ -23,23 +26,31 @@
 <body>
 <header>
     <div class="logo-mobile">
-        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt="VINCI" width="166" height="60"></a>
+        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img
+            src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt="VINCI"
+            width="166" height="60"></a>
     </div>
     <a href="#" class="nav-toggle" aria-hidden="false">Menu</a>
-    <nav>
-        <div id="logo-header" className="flexcontainer-as-row" >
-            <div  id="logo-desktop" ><a  href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img
-                src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt=""
-                width="166"
-                height="60"></a>
+
+    <nav class="navbar navbar-default navbar-fixed-top nav-collapse nav-collapse nav-collapse-0 closed" aria-hidden="false" style="transition: max-height 284ms ease 0s; position: relative;">
+        <div class="header-wrapper-mobile">
+            <div id="logo-header" className="header-mobile">
+                <div id="logo-desktop">
+                    <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img
+                    src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt=""
+                    width="166"
+                    height="60"></a>
+                </div>
+                <div class="bourse bourse_desktop">&nbsp;</div>
+                <div class="langues">&nbsp;</div>
+                <div class="search">&nbsp;</div>
             </div>
-        </div>
-        <div class="top-menu-bar">
+            <div class="top-menu-bar"></div>
             <div class="top-menu">
                 <ul>
-                    <li class="dropdown dropdown_00">
-                        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm" class="dropdown-toggle
-            dropdown-toggle-00" data-toggle="">Accueil</a>
+                    <li class="dropdown">
+                        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"
+                           class="dropdown-toggle dropdown-toggle-00" data-toggle="">Accueil</a>
                     </li>
                 </ul>
             </div>
@@ -50,9 +61,10 @@
     <div class="content">
         <div class="header_text header_text_00">
             <div class="ariane"></div>
-            <h1>Rechercher</h1></div>
+            <h1>Rechercher</h1>
+        </div>
     </div>
-    <div id="root" />
+    <div id="root"></div>
 </main>
 <footer>&nbsp;</footer>
 </body>
