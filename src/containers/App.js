@@ -137,7 +137,14 @@ class App extends Component {
                                 }
                             }}/>
                         </div>
-                        <div className="bigitem"/>
+                    </div>
+                    <div class="Grid Grid--gutters u-textCenter">
+                        <div class="Grid-cell u-1of4">
+                            <div class="Demo">1/4</div>
+                        </div>
+                        <div class="Grid-cell">
+                            <div class="Demo">auto</div>
+                        </div>
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
                         <div className="Grid-cell fontsize18">
