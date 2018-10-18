@@ -357,7 +357,7 @@ div.display-searchable {
 }
 
 .pdf-icon {
-    background: url(../src/resources/ico-pdf.png) no-repeat scroll right center;
+    background: url(resources/ico-pdf.png) no-repeat scroll right center;
     padding-left: 16px;
     margin-right: 0.5em;
 }
@@ -392,20 +392,68 @@ footer {
 
 /***** RESPONSIVE   **********/
 
-@media only screen and (min-width: 901px) {
-    main {
-        margin-top: 1rem;
-        padding-top: 99px;
+    /**** desktop  ***/
+    @media only screen and (min-width: 901px) {
+        main {
+        }
     }
+
+    /**** mobile  ***/
+    @media only screen and (max-width:900px) {
+        main {
+            padding-top: 69px;
+        }
+        .text, .sharing, footer {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            border-bottom: solid 1px #ccc;
+            position: fixed;
+            display: block;
+            left: auto;
+            right: auto;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+            max-height: 100%;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .logo-mobile {
+            display: block;
+            border-bottom: solid thin #EDEDED;
+            background: rgba(255,255,255,1);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            padding: 5px 0 0 0;
+        }
+
+        .nav-toggle {
+            width: 69px;
+            height: 69px;
+            float: left;
+            margin-top: -70px;
+            text-indent: -9999px;
+            overflow: hidden;
+            background: #706f70 url('resources/hamburger.png') no-repeat 50% 50%;
+            background-image: url("resources/hamburger.png");
+            background-size: auto auto;
+        }
+
+        /**********/
+        /* RETINA */
+        /**********/
+        @media only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx),only screen and  (-webkit-min-device-pixel-ratio:2){
+            .nav-toggle{background-image:url("resources/hamburger-retina.png");background-size:100px 100px}
+        }
+    }
+
+@media print{
+    header{display:none}
 }
 
-@media only screen and (max-width:900px) {
-    main {
-        padding-top: 69px;
-    }
-    .text, .sharing, footer {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}

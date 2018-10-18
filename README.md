@@ -42,7 +42,7 @@ debugger // eslint-disable-line
 Le min width s'applique à l'écran d'ordi
 Le max width s'applique à l'écrans d'un mobile
  
- écran d'ordi
+    /**** desktop  ***/
  
  @media only screen and (min-width: 901px)  =>  
  main {
@@ -50,7 +50,7 @@ Le max width s'applique à l'écrans d'un mobile
      margin-top: 1rem;
  }
  
- écrans d'un mobile
+     /**** mobile  ***/
  
  @media only screen and (max-width: 900px)
  main {
