@@ -331,10 +331,6 @@ div.display-searchable {
     align-items: flex-end;
 }
 
-#container-main-searchbox {
-    margin: 1rem 0;
-}
-
 .Grid {
     display: -webkit-box;
     display: -webkit-flex;

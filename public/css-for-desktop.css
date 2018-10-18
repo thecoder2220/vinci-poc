@@ -126,7 +126,11 @@
     }
 
     #root {
-        margin: 0 20% 0 20%;
+        margin: 0 19.5% 0 19.5%;
+    }
+
+    #container-main-searchbox {
+        margin: 1rem 0;
     }
 }
 
