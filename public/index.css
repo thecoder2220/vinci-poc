@@ -19,6 +19,10 @@
     src: url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.svg#vinci_sans_condensed-medium') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.eot')
 }
 
+*, :after, :before {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%
 }
