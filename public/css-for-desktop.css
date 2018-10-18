@@ -69,15 +69,6 @@
 
     }
 
-    .bourse {
-        width: auto;
-        font-family: VinciSansBold;
-        padding: 0 2rem 0 20px;
-        color: #3C3C3B;
-        text-align: left;
-        clear: both;
-    }
-
     .langues, .nav-toggle, .search, .logo-mobile {
         display: none;
     }
@@ -130,6 +121,9 @@
         margin-top: 1rem;
     }
 
+    .bourse_mobile {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

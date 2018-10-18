@@ -337,3 +337,15 @@ footer {
     text-align: left;
 }
 
+.bourse {
+    width: auto;
+    font-family: VinciSansBold;
+    padding: 0 2rem 0 20px;
+    padding-left: 20px;
+    color: #3C3C3B;
+    text-align: left;
+    clear: both;
+}
+
+
+
