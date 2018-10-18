@@ -124,6 +124,10 @@
     .bourse_mobile {
         display: none;
     }
+
+    #root {
+        margin: 0 20% 0 20%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
