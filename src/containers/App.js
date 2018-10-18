@@ -125,7 +125,7 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div id="container-main-searchbox" className="Grid">
-                        <SearchBox className="smallitem fake-column"
+                        <SearchBox className="Grid-cell fake-column"
                                    translations={{
                                        placeholder: '',
                                    }}
@@ -140,7 +140,7 @@ class App extends Component {
                         <div className="bigitem"/>
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
-                        <div className="smallitem fontsize18">
+                        <div className="Grid-cell fontsize18">
                             <CustomizedSortBy
                                 items={[
                                     {value: 'site2_sort_by_date', label: 'Tri par date'},
@@ -155,11 +155,11 @@ class App extends Component {
 
                     <div className="flexcontainer-as-row">
                         <div className="flexcontainer-as-column">
-                            <div className="dn-hdr smallitem fake-column">
+                            <div className="dn-hdr Grid-cell fake-column">
                                 <span><b>Filtrer</b></span>
                             </div>
 
-                            <div id="dyn_nav" className="align-center smallitem fake-column">
+                            <div id="dyn_nav" className="align-center Grid-cell fake-column">
                                 <HitsCategories searchState={this.state.searchState}/>
                                 <YearMenu />
                                 <CustomizedMenu attribute="country" className="dn-attr-v"

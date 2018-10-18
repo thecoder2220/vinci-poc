@@ -304,11 +304,6 @@ li.header-category {
     flex: 2 0 0;
 }
 
-.smallitem {
-    -webkit-flex: 1 0 0;
-    flex: 1 0 0;
-}
-
 li.showMore-customized {
     padding-bottom: 6px;
     padding-left: 10px;
