@@ -139,8 +139,11 @@ class App extends Component {
                             }}/>
                         </div>
                     </div>
-                    <div className="flexcontainer-as-row-reverse align-center">
-                        <div className="Grid-cell fontsize18">
+                    <div id="sortBlock" className="Grid align-center" >
+                        <div className="Grid-cell">
+
+                        </div>
+                        <div className="u-1of5 fontsize18" >
                             <CustomizedSortBy
                                 items={[
                                     {value: 'site2_sort_by_date', label: 'Tri par date'},
@@ -148,9 +151,7 @@ class App extends Component {
                                 ]}
                                 defaultRefinement="site2"
                             />
-
                         </div>
-                        <div className="bigitem"/>
                     </div>
 
                     <div className="flexcontainer-as-row">

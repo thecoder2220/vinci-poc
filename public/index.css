@@ -333,3 +333,7 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     font-family: 'VinciSansBold' !important;
     font-weight: normal !important;
 }
+
+#sortBlock {
+    margin: 2vw 0 0 ;
+}
