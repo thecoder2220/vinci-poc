@@ -131,6 +131,7 @@
 
     #container-main-searchbox {
         margin: 1.2vw 0;
+        align-items: center;
     }
 
     #BlockSortBy {
