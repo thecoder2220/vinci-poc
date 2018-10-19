@@ -154,8 +154,13 @@ class App extends Component {
                         </div>
                     </div>
 
-                    <div className="flexcontainer-as-row">
+                    <div id="ContainerHitsAndCategories" >
                         <div className="flexcontainer-as-column">
+                            <div className="hits-wrapper wrapper">
+                                <Hits hitComponent={Hit}/>
+                            </div>
+                        </div>
+                        <div id="ContainerCategories" >
                             <div className="dn-hdr Grid-cell fake-column">
                                 <span><b>Filtrer</b></span>
                             </div>
@@ -167,11 +172,7 @@ class App extends Component {
                                                 showMore={true} limit={3} headerTitle="Pays"/>
                             </div>
                         </div>
-                        <div className="flexcontainer-as-column">
-                            <div className="hits-wrapper wrapper">
-                                <Hits hitComponent={Hit}/>
-                            </div>
-                        </div>
+
                     </div>
                     <div className="pagination">
                         <Pagination />

@@ -101,6 +101,19 @@
     #BlockSortBy {
         width: 50%!important;
     }
+
+    #ContainerHitsAndCategories {
+        position: relative;
+        width: 100%;
+    }
+
+    #ContainerHitsAndCategories > div {
+
+    }
+
+    #ContainerCategories {
+;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {

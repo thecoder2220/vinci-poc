@@ -136,6 +136,26 @@
     #BlockSortBy {
         width: 20%!important;
     }
+
+    #ContainerHitsAndCategories {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #ContainerHitsAndCategories > div {
+        height: -webkit-calc(99% - 10px); /* pour Chrome */
+        height: -moz-calc(99% - 10px); /* pour Firefox */
+        height: calc(99% - 10px);
+        max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+        max-width: -moz-calc(95% - 10px); /* pour Firefox */
+        max-width: calc(95% - 10px);
+        background-color: white;
+    }
+
+    #ContainerCategories {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

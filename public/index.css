@@ -234,7 +234,6 @@ li.header-category {
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
-    border: 0px solid #3a99c7;
 }
 
 .flexcontainer-as-row > div {
