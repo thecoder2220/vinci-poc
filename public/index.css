@@ -92,14 +92,10 @@ main .text {
     width: 100%;
     display: inline-block;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 18.5%;
 }
 
 .header_text * {
-    width: 100%;
-    margin: 0 auto;
-    color: #fff;
-    text-align: left;
     padding: 0 20px
 }
 
@@ -120,7 +116,6 @@ li {
 }
 
 .fake-column {
-    min-height: 30px;
     min-width: 221px;
     text-align: left;
 }

@@ -147,3 +147,6 @@ h2, h3 {
     flex: none!important;
 }
 
+.align-items-flex-start {
+    align-items: flex-start;
+}

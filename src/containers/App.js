@@ -124,14 +124,14 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div id="container-main-searchbox" className="Grid">
-                        <div className="u-1of5">
+                        <div className="Grid-cell u-1of4">
                             <SearchBox className="fake-column"
                                    translations={{
                                        placeholder: '',
                                    }}
                         />
                         </div>
-                        <div className="text-align-left">
+                        <div className="Grid-cell text-align-left" >
                             <Stats translations={{
                                 stats (n) {
                                     return `${n.toLocaleString()} résultats`
