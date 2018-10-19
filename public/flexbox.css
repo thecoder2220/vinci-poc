@@ -125,13 +125,14 @@ h2, h3 {
     flex: none!important;
 }
 
-.u-1of3 {
-    width: 33.3333%!important;
+.u-1of5 {
+    width: 20%!important;
 }
 
-.u-1of3, .u-2of3 {
+.u-1of5, .u-4of5 {
     -webkit-box-flex: 0!important;
     -webkit-flex: none!important;
     -ms-flex: none!important;
     flex: none!important;
 }
+

@@ -117,33 +117,26 @@ class App extends Component {
     render() {
 
         return (
-            <div>
                 <InstantSearch
                     appId="AP1SAU3HM8"
                     apiKey="ca5a4ca0494ad49d12591dc4823ac172"
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div id="container-main-searchbox" className="Grid">
-                        <SearchBox className="Grid-cell fake-column"
+                    <div id="container-main-searchbox" className="Grid Grid--gutters">
+                        <div class="u-1of5">
+                            <SearchBox className="fake-column"
                                    translations={{
                                        placeholder: '',
                                    }}
                         />
-                        <div className="bigitem text-align-left">
+                        </div>
+                        <div className="text-align-left">
                             <Stats translations={{
                                 stats (n) {
                                     return `${n.toLocaleString()} résultats`
                                 }
                             }}/>
-                        </div>
-                    </div>
-                    <div class="Grid Grid--gutters u-textCenter">
-                        <div class="Grid-cell u-1of4">
-                            <div class="Demo">1/4</div>
-                        </div>
-                        <div class="Grid-cell">
-                            <div class="Demo">auto</div>
                         </div>
                     </div>
                     <div className="flexcontainer-as-row-reverse align-center">
@@ -183,7 +176,6 @@ class App extends Component {
                         <Pagination />
                     </div>
                 </InstantSearch>
-            </div>
         );
     }
 }

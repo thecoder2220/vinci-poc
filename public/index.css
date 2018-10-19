@@ -120,6 +120,7 @@ li {
 }
 
 .fake-column {
+    min-height: 30px;
     min-width: 221px;
     text-align: left;
 }
@@ -233,7 +234,6 @@ li.header-category {
 .flexcontainer-as-row {
     display: flex;
     flex-direction: row;
-    background-color: #edf6fa;
     border: 0px solid #3a99c7;
 }
 
@@ -251,8 +251,6 @@ li.header-category {
     display: flex;
     flex-direction: row-reverse;
     max-height: 460px;
-    background-color: #edf6fa;
-    border: 1px solid #3a99c7;
     margin: 1rem 0 0;
 }
 
@@ -331,4 +329,7 @@ div.display-searchable {
     align-items: flex-end;
 }
 
-
+strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+}
