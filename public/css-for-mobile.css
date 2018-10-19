@@ -112,7 +112,18 @@
     }
 
     #ContainerCategories {
-;
+
+    }
+
+    #container-main-searchbox {
+        margin: 0;
+       /* align-items: flex-start;  */
+    }
+
+    .ais-Stats {
+        margin: 0.2rem 1rem;
+        /*justify-content: space-around;
+        align-content: space-around;*/
     }
 }
 
