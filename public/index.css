@@ -334,6 +334,7 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     font-weight: normal !important;
 }
 
-#sortBlock {
+#ContainerSortBy {
     margin: 2vw 0 0 ;
+    white-space: nowrap;
 }

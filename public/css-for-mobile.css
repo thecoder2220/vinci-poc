@@ -97,6 +97,10 @@
     .bourse, .bourse .b_cotation {
         font-size: 1.25rem !important;
     }
+
+    #BlockSortBy {
+        width: 50%!important;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {

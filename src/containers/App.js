@@ -139,11 +139,11 @@ class App extends Component {
                             }}/>
                         </div>
                     </div>
-                    <div id="sortBlock" className="Grid align-center" >
+                    <div id="ContainerSortBy" className="Grid align-center" >
                         <div className="Grid-cell">
 
                         </div>
-                        <div className="u-1of5 fontsize18" >
+                        <div className="fontsize18"  id="BlockSortBy" >
                             <CustomizedSortBy
                                 items={[
                                     {value: 'site2_sort_by_date', label: 'Tri par date'},
