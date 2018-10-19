@@ -124,7 +124,7 @@ class App extends Component {
                     onSearchStateChange={this.handleSearchState}
                 >
                     <div id="container-main-searchbox" className="Grid">
-                        <div className="Grid-cell u-1of5">
+                        <div className="Grid-cell">
                             <SearchBox className="fake-column"
                                    translations={{
                                        placeholder: '',

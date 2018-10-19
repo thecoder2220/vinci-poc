@@ -130,8 +130,16 @@
     }
 
     #container-main-searchbox {
-        margin: 1.2vw 0;
+        margin: 1.2rem 0;
         align-items: center;
+    }
+
+    #container-main-searchbox div:first-child {
+        width: 20%!important;
+        -webkit-box-flex: 0!important;
+        -webkit-flex: none!important;
+        -ms-flex: none!important;
+        flex: none!important;
     }
 
     #BlockSortBy {
