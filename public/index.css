@@ -329,3 +329,29 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     margin: 1.4rem 0  ;
     white-space: nowrap;
 }
+
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    overflow: hidden;
+    width: 51px;
+    height: 51px;
+    border: none;
+    text-indent: 100%;
+    background: url(./resources/ui.totop.png) no-repeat left top;
+}
+
+#toTopHover {
+
+    background: url(./resources/ui.totop.png) no-repeat left -51px;
+    width: 51px;
+    height: 51px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    opacity: 0;
+
+}
