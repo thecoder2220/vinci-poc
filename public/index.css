@@ -60,10 +60,6 @@ h1, h2, .ariane {
     font-family: VinciCondensedMedium, "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-main div {
-    max-width: 100% !important;
-}
-
 main .text {
     padding: 0;
 }
@@ -92,7 +88,7 @@ main .text {
     width: 100%;
     display: inline-block;
     margin: 0;
-    padding: 20px 18.5%;
+    padding: 22px 18.5%;
 }
 
 .header_text * {
@@ -117,6 +113,7 @@ li {
 
 .fake-column {
     min-width: 221px;
+    max-width: 221px;
     text-align: left;
 }
 
@@ -329,6 +326,6 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
 }
 
 #ContainerSortBy {
-    margin: 2vw 0 0 ;
+    margin: 1.5rem 0  ;
     white-space: nowrap;
 }
