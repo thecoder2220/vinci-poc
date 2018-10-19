@@ -96,7 +96,7 @@ main .text {
 }
 
 .header_text * {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     color: #fff;
     text-align: left;
