@@ -123,7 +123,7 @@ class App extends Component {
                     indexName="site2"
                     onSearchStateChange={this.handleSearchState}
                 >
-                    <div id="container-main-searchbox" className="Grid Grid--gutters">
+                    <div id="container-main-searchbox" className="Grid">
                         <div className="u-1of5">
                             <SearchBox className="fake-column"
                                    translations={{
