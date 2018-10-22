@@ -157,7 +157,7 @@ class App extends Component {
                         </div>
                     </div>
                     <div id="ContainerCategories">
-                        <div className="dn-hdr Grid-cell fake-column">
+                        <div className="header-all-categories Grid-cell fake-column">
                             <span><b>Filtrer</b></span>
                         </div>
 

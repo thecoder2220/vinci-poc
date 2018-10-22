@@ -33,7 +33,9 @@ translations={{
 dn-attr-c => showMore-count-customized
 dn-attr => one-category
 
-dn-attr-hdr => header-category
+dn-attr-hdr => header-category 
+
+dn-hdr => header-all-categories
 
 debugger // eslint-disable-line
 

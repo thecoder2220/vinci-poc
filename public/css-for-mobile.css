@@ -113,13 +113,14 @@
 
     #container-main-searchbox {
         margin: 0;
-       /* align-items: flex-start;  */
     }
 
     .ais-Stats {
         margin: 0.2rem 1rem;
-        /*justify-content: space-around;
-        align-content: space-around;*/
+    }
+
+    .header-all-categories {
+        padding: 4px 10px !important;
     }
 }
 
@@ -161,4 +162,10 @@
     .text, .sharing, footer {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 1200px)  {
+    #dyn_nav {
+        text-align: center;
+            }
 }

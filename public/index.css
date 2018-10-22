@@ -102,20 +102,17 @@ li {
     vertical-align: middle;
 }
 
-.dn-hdr {
+.header-all-categories {
     color: #fff;
     background: #3C3C3B !important;
     font-size: 1rem !important;
     font-family: VinciSansBold !important;
     font-weight: normal !important;
-    padding: 4px 6px 4px 10px !important;
 }
 
 .fake-column {
     min-width: 221px;
     max-width: 221px;
-    text-align: left;
-    margin-right: 1rem;
 }
 
 .fake-column > span {

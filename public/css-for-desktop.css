@@ -158,6 +158,15 @@
         flex-direction: column;
     }
 
+    .fake-column {
+        text-align: left;
+        margin-right: 1rem;
+    }
+
+    .header-all-categories {
+        padding: 4px 6px 4px 10px !important;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
