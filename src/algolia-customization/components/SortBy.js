@@ -40,7 +40,7 @@ class SortBy extends Component {
      render() {
         const { items,  currentRefinement, refine, className, separator } = this.props;
 
-         const breadcrumb = items.map((item, idx) => {
+         const containerLinks = items.map((item, idx) => {
              const isLast = idx === items.length - 1;
              const theClassName= cx(currentRefinement=== item.value?'link-selected':'link')
              return (
@@ -63,7 +63,7 @@ class SortBy extends Component {
 
         return (
             <div className={classNames(cx(''), className) + ' grid-no-wrap text-align-left'}>
-                {breadcrumb}
+                {containerLinks}
             </div>
         );
     }
