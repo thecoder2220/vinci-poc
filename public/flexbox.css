@@ -174,3 +174,29 @@ h2, h3 {
     -ms-flex-align: end;
     align-items: flex-end
 }
+
+.title {
+    border-bottom: 1px solid #ccc;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: start;
+    font-size: 160%;
+}
+
+.flex-title {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.flex-title > span {
+    white-space: nowrap;
+}
+
+.flex-title .title-main {
+    flex-grow: 1;
+}
+
+.flex-title > div {
+    white-space: nowrap;
+}

@@ -129,29 +129,45 @@ class App extends Component {
                                    placeholder: '',
                                }}
                     />
+                    <i id="magnifier" className="fas fa-search"></i>
+                </div>
+                <h3 className="title flex-title">
+                    <span className="title-main">Main Title Here</span>
+                    <span>This is a good look, right here.</span>
+                </h3>
+                <div className="title flex-title">
 
-                    <i id="magnifier" className="fas fa-search" ></i>
-
-
+                    <Stats translations={{
+                        stats (n) {
+                            return `${n.toLocaleString()} résultats`
+                        }
+                    }} className="title-main"/>
+                    <CustomizedSortBy
+                        items={[
+                            {value: 'site_search_sort_by_date', label: 'Tri par date'},
+                            {value: 'site-search', label: 'Tri par pertinence'},
+                        ]}
+                        defaultRefinement="site-search"
+                    />
                 </div>
                 <div id="ContainerSortBy" className="Grid align-center">
-                        <div  className="Grid-cell items-start Grid" id="BlockStats">
-                            <Stats translations={{
-                                stats (n) {
-                                    return `${n.toLocaleString()} résultats`
-                                }
-                            }}  className="items-start" />
-                        </div>
-                        <div className="fontsize18 items-end"  >
-                            <CustomizedSortBy
-                                items={[
-                                    {value: 'site_search_sort_by_date', label: 'Tri par date'},
-                                    {value: 'site-search', label: 'Tri par pertinence'},
-                                ]}
-                                defaultRefinement="site-search"
-                                className="items-end"
-                            />
-                        </div>
+                    <div className="Grid-cell items-start Grid" id="BlockStats">
+                        <Stats translations={{
+                            stats (n) {
+                                return `${n.toLocaleString()} résultats`
+                            }
+                        }} className="items-start"/>
+                    </div>
+                    <div className="fontsize18 items-end">
+                        <CustomizedSortBy
+                            items={[
+                                {value: 'site_search_sort_by_date', label: 'Tri par date'},
+                                {value: 'site-search', label: 'Tri par pertinence'},
+                            ]}
+                            defaultRefinement="site-search"
+                            className="items-end"
+                        />
+                    </div>
                 </div>
 
                 <div id="ContainerHitsAndCategories">
