@@ -120,7 +120,7 @@ class App extends Component {
             <InstantSearch
                 appId="AP1SAU3HM8"
                 apiKey="ca5a4ca0494ad49d12591dc4823ac172"
-                indexName="site2"
+                indexName="site-search"
                 onSearchStateChange={this.handleSearchState}
             >
                 <div id="container-main-searchbox" className="Grid Grid-cell">
