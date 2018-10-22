@@ -62,7 +62,7 @@ class SortBy extends Component {
          });
 
         return (
-            <div className={classNames(cx(''), className) + ' grid-no-wrap text-align-left'}>
+            <div className={classNames(cx(''), className) + ' grid-no-wrap'}>
                 {containerLinks}
             </div>
         );
