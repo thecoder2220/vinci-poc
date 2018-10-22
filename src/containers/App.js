@@ -130,6 +130,9 @@ class App extends Component {
                                }}
                     />
 
+                    <i id="magnifier" className="fas fa-search" ></i>
+
+
                 </div>
                 <div id="ContainerSortBy" className="Grid align-center">
                         <div  className="Grid-cell items-start Grid" id="BlockStats">

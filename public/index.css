@@ -538,3 +538,7 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
 #BlockStats {
     margin-left: 265px;
 }
+
+#magnifier  {
+    margin-left: -3px;
+}
