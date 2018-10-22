@@ -94,7 +94,7 @@ const YearMenu = connectHits(({hits}) => {
         return null;
     }
     return (
-        <CustomizedMenu attribute="year" className="dn-attr-v" showMore={true} limit={3}
+        <CustomizedMenu attribute="searchYear" className="dn-attr-v" showMore={true} limit={3}
                         headerTitle="Année"/>
     );
 });
@@ -142,11 +142,10 @@ class App extends Component {
                         <div className="fontsize18 items-end"  >
                             <CustomizedSortBy
                                 items={[
-                                    {value: 'site2_sort_by_date', label: 'Tri par date'},
-                                    {value: 'site2', label: 'Tri par pertinence'},
+                                    {value: 'site_search_sort_by_date', label: 'Tri par date'},
+                                    {value: 'site-search', label: 'Tri par pertinence'},
                                 ]}
-                                defaultRefinement="site2"
-
+                                defaultRefinement="site-search"
                                 className="items-end"
                             />
                         </div>
