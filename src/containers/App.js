@@ -124,30 +124,32 @@ class App extends Component {
                 onSearchStateChange={this.handleSearchState}
             >
                 <div id="container-main-searchbox" className="Grid Grid-cell">
-                        <SearchBox className="fake-column"
-                                   translations={{
-                                       placeholder: '',
-                                   }}
-                        />
-                        <Stats translations={{
-                            stats (n) {
-                                return `${n.toLocaleString()} résultats`
-                            }
-                        }} className="Grid" />
+                    <SearchBox className="fake-column"
+                               translations={{
+                                   placeholder: '',
+                               }}
+                    />
+
                 </div>
                 <div id="ContainerSortBy" className="Grid align-center">
-                    <div className="Grid-cell">
+                        <div  className="Grid-cell items-start Grid" id="BlockStats">
+                            <Stats translations={{
+                                stats (n) {
+                                    return `${n.toLocaleString()} résultats`
+                                }
+                            }}  className="items-start" />
+                        </div>
+                        <div className="fontsize18 items-end"  >
+                            <CustomizedSortBy
+                                items={[
+                                    {value: 'site2_sort_by_date', label: 'Tri par date'},
+                                    {value: 'site2', label: 'Tri par pertinence'},
+                                ]}
+                                defaultRefinement="site2"
 
-                    </div>
-                    <div className="fontsize18" id="BlockSortBy">
-                        <CustomizedSortBy
-                            items={[
-                                {value: 'site2_sort_by_date', label: 'Tri par date'},
-                                {value: 'site2', label: 'Tri par pertinence'},
-                            ]}
-                            defaultRefinement="site2"
-                        />
-                    </div>
+                                className="items-end"
+                            />
+                        </div>
                 </div>
 
                 <div id="ContainerHitsAndCategories">

@@ -353,3 +353,7 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     opacity: 0;
 
 }
+
+#BlockStats {
+    margin-left: 265px;
+}

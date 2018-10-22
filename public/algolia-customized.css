@@ -74,8 +74,7 @@ ul.ais-Hits-list li:first-child {
 .ais-Stats-text {
     color: black;
     font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-size: .9rem;
-    margin-left: 1rem;
+    font-size: 18px;
 }
 
 .title-result {
