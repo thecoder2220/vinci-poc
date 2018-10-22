@@ -134,14 +134,6 @@
         align-items: center;
     }
 
-    #container-main-searchbox div:first-child {
-        width: 20%!important;
-        -webkit-box-flex: 0!important;
-        -webkit-flex: none!important;
-        -ms-flex: none!important;
-        flex: none!important;
-    }
-
     #BlockSortBy {
         width: 20%!important;
     }
@@ -166,9 +158,6 @@
         flex-direction: column;
     }
 
-    .ais-Stats {
-        padding: 1rem;
-    }
 }
 
 @media only screen and (min-width: 1200px) {

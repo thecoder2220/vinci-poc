@@ -115,6 +115,7 @@ li {
     min-width: 221px;
     max-width: 221px;
     text-align: left;
+    margin-right: 1rem;
 }
 
 .fake-column > span {

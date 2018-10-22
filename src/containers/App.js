@@ -117,67 +117,63 @@ class App extends Component {
     render() {
 
         return (
-                <InstantSearch
-                    appId="AP1SAU3HM8"
-                    apiKey="ca5a4ca0494ad49d12591dc4823ac172"
-                    indexName="site2"
-                    onSearchStateChange={this.handleSearchState}
-                >
-                    <div id="container-main-searchbox" className="Grid">
-                        <div className="Grid-cell">
-                            <SearchBox className="fake-column"
+            <InstantSearch
+                appId="AP1SAU3HM8"
+                apiKey="ca5a4ca0494ad49d12591dc4823ac172"
+                indexName="site2"
+                onSearchStateChange={this.handleSearchState}
+            >
+                <div id="container-main-searchbox" className="Grid Grid-cell">
+                        <SearchBox className="fake-column"
                                    translations={{
                                        placeholder: '',
                                    }}
                         />
-                        </div>
-                        <div className="Grid-cell text-align-left" >
-                            <Stats translations={{
-                                stats (n) {
-                                    return `${n.toLocaleString()} résultats`
-                                }
-                            }}/>
-                        </div>
-                    </div>
-                    <div id="ContainerSortBy" className="Grid align-center" >
-                        <div className="Grid-cell">
-
-                        </div>
-                        <div className="fontsize18"  id="BlockSortBy" >
-                            <CustomizedSortBy
-                                items={[
-                                    {value: 'site2_sort_by_date', label: 'Tri par date'},
-                                    {value: 'site2', label: 'Tri par pertinence'},
-                                ]}
-                                defaultRefinement="site2"
-                            />
-                        </div>
-                    </div>
-
-                    <div id="ContainerHitsAndCategories" >
-                        <div className="flexcontainer-as-column">
-                            <div className="hits-wrapper wrapper">
-                                <Hits hitComponent={Hit}/>
-                            </div>
-                        </div>
-                        <div id="ContainerCategories" >
-                            <div className="dn-hdr Grid-cell fake-column">
-                                <span><b>Filtrer</b></span>
-                            </div>
-
-                            <div id="dyn_nav" className="align-center Grid-cell fake-column">
-                                <HitsCategories searchState={this.state.searchState}/>
-                                <YearMenu />
-                                <CustomizedMenu attribute="country" className="dn-attr-v"
-                                                showMore={true} limit={3} headerTitle="Pays"/>
-                            </div>
-                        </div>
+                        <Stats translations={{
+                            stats (n) {
+                                return `${n.toLocaleString()} résultats`
+                            }
+                        }} className="Grid" />
+                </div>
+                <div id="ContainerSortBy" className="Grid align-center">
+                    <div className="Grid-cell">
 
                     </div>
-                    <div className="pagination">
-                        <Pagination />
+                    <div className="fontsize18" id="BlockSortBy">
+                        <CustomizedSortBy
+                            items={[
+                                {value: 'site2_sort_by_date', label: 'Tri par date'},
+                                {value: 'site2', label: 'Tri par pertinence'},
+                            ]}
+                            defaultRefinement="site2"
+                        />
                     </div>
-                </InstantSearch>
+                </div>
+
+                <div id="ContainerHitsAndCategories">
+                    <div className="flexcontainer-as-column">
+                        <div className="hits-wrapper wrapper">
+                            <Hits hitComponent={Hit}/>
+                        </div>
+                    </div>
+                    <div id="ContainerCategories">
+                        <div className="dn-hdr Grid-cell fake-column">
+                            <span><b>Filtrer</b></span>
+                        </div>
+
+                        <div id="dyn_nav" className="align-center Grid-cell fake-column">
+                            <HitsCategories searchState={this.state.searchState}/>
+                            <YearMenu />
+                            <CustomizedMenu attribute="country" className="dn-attr-v"
+                                            showMore={true} limit={3} headerTitle="Pays"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="pagination">
+                    <Pagination />
+                </div>
+            </InstantSearch>
         );
     }
 }

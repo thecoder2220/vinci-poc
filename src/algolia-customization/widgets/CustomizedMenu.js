@@ -65,7 +65,7 @@ class MenuWidget extends Component {
         return (
             <PanelCallbackHandler {...props}>
                 <ul className="one-category dn-attr-more ">
-                    <li className="header-category ">
+                    <li className="header-category fake-column">
                         <div
                             className="display-searchable"
                             onClick={this.onClick}
