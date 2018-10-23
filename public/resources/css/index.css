@@ -369,7 +369,6 @@ footer {
 .dn-attr-v {
     line-height: 1.1em !important;
     overflow-x: hidden;
-    width: 99%;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
@@ -447,9 +446,6 @@ li.header-category {
     height: -webkit-calc(99% - 10px); /* pour Chrome */
     height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
-    max-width: -webkit-calc(99% - 10px); /* pour Chrome */
-    max-width: -moz-calc(99% - 10px); /* pour Firefox */
-    max-width: calc(99% - 10px);
     background-color: white;
 }
 
