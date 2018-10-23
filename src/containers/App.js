@@ -85,7 +85,7 @@ class App extends Component {
                 indexName="site-search"
                 onSearchStateChange={this.handleSearchState}
             >
-                <div id="container-main-searchbox" className="Grid Grid-cell">
+                <div id="container-main-searchbox" className="Grid flex-1">
                     <SearchBox className="fake-column"
                                translations={{
                                    placeholder: '',
@@ -116,11 +116,11 @@ class App extends Component {
                         </div>
                     </div>
                     <div id="ContainerCategories">
-                        <div className="header-all-categories Grid-cell fake-column">
+                        <div className="header-all-categories flex-1 fake-column">
                             <span><b>Filtrer</b></span>
                         </div>
 
-                        <div id="dyn_nav" className="align-center Grid-cell fake-column">
+                        <div id="dyn_nav" className="align-center flex-1 fake-column">
                             <HitsCategories searchState={this.state.searchState}/>
                             <YearMenu />
                             <CustomizedMenu attribute="country" className="dn-attr-v"

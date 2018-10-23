@@ -45,22 +45,15 @@ h2, h3 {
     padding: 0;
 }
 
-.Grid-cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
 .Grid--gutters {
     margin: -1em 0 1em -1em;
 }
 
-.Grid--gutters > .Grid-cell {
+.Grid--gutters > .flex-1 {
     padding: 1em 0 0 1em;
 }
 
-.Grid--flexCells > .Grid-cell {
+.Grid--flexCells > .flex-1 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
