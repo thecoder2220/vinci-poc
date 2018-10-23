@@ -132,12 +132,8 @@ class App extends Component {
                     <i id="magnifier" className="fas fa-search"></i>
                 </div>
                 <div id="container-stats-sortby" className="container-end-horizontal-line">
+                    <div className="grow-1" ></div>
 
-                    <Stats translations={{
-                        stats (n) {
-                            return `${n.toLocaleString()} résultats`
-                        }
-                    }} className="grow-1"/>
                     <CustomizedSortBy
                         items={[
                             {value: 'site_search_sort_by_date', label: 'Tri par date'},
@@ -149,6 +145,11 @@ class App extends Component {
                 <div id="ContainerHitsAndCategories">
                     <div className="flexcontainer-as-column">
                         <div className="hits-wrapper wrapper">
+                            <Stats translations={{
+                                stats (n) {
+                                    return `${n.toLocaleString()} résultats`
+                                }
+                            }} />
                             <Hits hitComponent={Hit}/>
                         </div>
                     </div>

@@ -452,6 +452,7 @@ li.header-category {
 
 .hits-wrapper {
     border-left: 1px solid #c6c6c6 !important;
+
 }
 
 .align-center {
@@ -529,6 +530,6 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
 }
 
 #container-stats-sortby {
-    margin: 2.6rem 0 1rem 22.5%;
+    margin: 2.6rem 0 36px 0;
 }
 
