@@ -261,7 +261,6 @@ main .text {
 }
 
 .header_text * {
-    width: 1200px;
     margin: 0 auto;
     color: #fff;
     text-align: left;
