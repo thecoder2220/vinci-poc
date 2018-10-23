@@ -165,14 +165,14 @@
 
     #back-to-top {
         position: fixed;
-        bottom: 40px;
-        right: 40px;
+        bottom: 15px;
+        right: 10px;
         z-index: 9999;
-        width: 32px;
-        height: 32px;
+        width: 51px;
+        height: 51px;
         text-align: center;
         line-height: 30px;
-        background: #f5f5f5;
+        background: url(../ui.totop.png) no-repeat left top;
         color: #444;
         cursor: pointer;
         border: 0;
@@ -182,11 +182,40 @@
         opacity: 0;
     }
     #back-to-top:hover {
-        background: #e9ebec;
+        background: url(../ui.totop.png) no-repeat left -51px;
+        width: 51px;
+        height: 51px;
     }
     #back-to-top.show {
         opacity: 1;
     }
+
+
+  /* ancienne CSS
+    #toTop {
+        display: none;
+        text-decoration: none;
+        position: fixed;
+        bottom: 15px;
+        right: 10px;
+        overflow: hidden;
+        width: 51px;
+        height: 51px;
+        border: none;
+        text-indent: 100%;
+        background: url(../ui.totop.png) no-repeat left top;
+    }
+
+    #toTopHover {
+        background: url(../ui.totop.png) no-repeat left -51px;
+        width: 51px;
+        height: 51px;
+        display: block;
+        overflow: hidden;
+        float: left;
+        opacity: 0;
+    }  */
+
 
     #magnifier  {
         margin-left: -3px;
