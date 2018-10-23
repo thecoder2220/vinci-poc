@@ -148,6 +148,11 @@
         margin-right: 3.3em;
     }
 
+
+    .ais-Stats-text {
+        padding-left: 16px;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
