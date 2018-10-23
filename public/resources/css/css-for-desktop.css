@@ -23,19 +23,6 @@
     }
 
     #logo-header {
-        /* ma version qui remplace la classe .header de vinci.com
-
-        background: #fff;
-        height: 70px;
-        width: 1200px;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-content: center;
-        align-items: center;
-        */
-
         line-height: 1.5em;
         background: #fff;
         height: 70px;
@@ -60,13 +47,6 @@
         margin-left: auto;
         margin-right: auto;
         text-align: right;
-
-        /* ma version qui remplace la classe .logo-desktop de vinci.com
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;   */
-
     }
 
     .langues, .nav-toggle, .search, .logo-mobile {
@@ -115,7 +95,6 @@
         padding: 0 2rem;
     }
 
-
     main {
         padding-top: 99px;
         margin-top: 1rem;
@@ -162,60 +141,6 @@
     .header-all-categories {
         padding: 4px 6px 4px 10px !important;
     }
-
-    #back-to-top {
-        position: fixed;
-        bottom: 15px;
-        right: 10px;
-        z-index: 9999;
-        width: 51px;
-        height: 51px;
-        text-align: center;
-        line-height: 30px;
-        background: url(../ui.totop.png) no-repeat left top;
-        color: #444;
-        cursor: pointer;
-        border: 0;
-        border-radius: 2px;
-        text-decoration: none;
-        transition: opacity 0.2s ease-out;
-        opacity: 0;
-    }
-    #back-to-top:hover {
-        background: url(../ui.totop.png) no-repeat left -51px;
-        width: 51px;
-        height: 51px;
-    }
-    #back-to-top.show {
-        opacity: 1;
-    }
-
-
-  /* ancienne CSS
-    #toTop {
-        display: none;
-        text-decoration: none;
-        position: fixed;
-        bottom: 15px;
-        right: 10px;
-        overflow: hidden;
-        width: 51px;
-        height: 51px;
-        border: none;
-        text-indent: 100%;
-        background: url(../ui.totop.png) no-repeat left top;
-    }
-
-    #toTopHover {
-        background: url(../ui.totop.png) no-repeat left -51px;
-        width: 51px;
-        height: 51px;
-        display: block;
-        overflow: hidden;
-        float: left;
-        opacity: 0;
-    }  */
-
 
     #magnifier  {
         margin-left: -3px;
