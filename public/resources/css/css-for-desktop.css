@@ -104,10 +104,6 @@
         display: none;
     }
 
-    #root {
-        margin: 0 13.2% 0 13.2%;
-    }
-
     #container-main-searchbox {
         margin: 1.2rem 0;
         align-items: center;
@@ -145,6 +141,13 @@
     #magnifier  {
         margin-left: -3px;
     }
+
+    #root {
+        margin-top: 0.3em;
+        margin-left: 3.3em;
+        margin-right: 3.3em;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {

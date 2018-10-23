@@ -25,44 +25,6 @@ import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy'
 
 import './style.scss';
 
-const PdfHit = ({hit}) => (
-    <div className="pdf-hit" onClick={() => (window.location = hit.objectID)}>
-        <div className="icon">
-            <svg
-                className="icon icon-plain-text"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="28"
-                viewBox="0 0 24 28"
-                aria-hidden="true"
-            >
-                <path
-                    d="M22.937 7.438c.156.156.297.344.438.562H16V.625a3.3 3.3 0 0 1 .562.438zM15.5 10H24v16.5a1.5 1.5 0 0 1-1.5 1.5h-21A1.5 1.5 0 0 1 0 26.5v-25A1.5 1.5 0 0 1 1.5 0H14v8.5a1.5 1.5 0 0 0 1.5 1.5zM18 21.5v-1c0-.281-.219-.5-.5-.5h-11c-.281 0-.5.219-.5.5v1c0 .281.219.5.5.5h11c.281 0 .5-.219.5-.5zm0-4v-1c0-.281-.219-.5-.5-.5h-11c-.281 0-.5.219-.5.5v1c0 .281.219.5.5.5h11c.281 0 .5-.219.5-.5zm0-4v-1c0-.281-.219-.5-.5-.5h-11c-.281 0-.5.219-.5.5v1c0 .281.219.5.5.5h11c.281 0 .5-.219.5-.5z"/>
-            </svg>
-        </div>
-        <div className="hit-content">
-            <div className="pdf-hit__title">
-                {hit.title ? (
-                    <Highlight attributeName="pdfTitle" hit={hit}/>
-                ) : (
-                    'Document'
-                )}
-            </div>
-            <div className="pdf-hit__content">
-                <Snippet attributeName="content" hit={hit}/>
-            </div>
-        </div>
-    </div>
-);
-
-const VirtualSearch = connectSearchBox(() => null);
-const VirtualMenu = connectMenu(() => null);
-const Pdfs = () => <VirtualMenu attributeName="type" defaultRefinement="pdf"/>;
-
-const VirtualCategory = () => <VirtualMenu attributeName="categories_lvl0"/>;
-const VirtualLvl1 = () => <VirtualMenu attributeName="categories_lvl1"/>;
-const VirtualYear = () => <VirtualMenu attributeName="year"/>;
-
 const Hit = ({hit}) => {
     return (
         <div className="algolia-article-result">
