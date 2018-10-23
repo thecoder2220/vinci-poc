@@ -132,6 +132,7 @@
     .fake-column {
         text-align: left;
         margin-right: 1rem;
+        max-width: 221px;
     }
 
     .header-all-categories {
