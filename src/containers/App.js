@@ -35,6 +35,7 @@ const Hit = ({hit}) => {
             </a>
             <div className="algolia-content-result">
                 <Snippet attribute="content" hit={hit}/>
+                <span><font color="#706F6F" size="-1">2018-02-02</font></span>
             </div>
         </div>
     );
