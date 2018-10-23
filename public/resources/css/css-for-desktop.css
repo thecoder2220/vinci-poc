@@ -126,16 +126,12 @@
     }
 
     #root {
-        margin: 0 19.5% 0 19.5%;
+        margin: 0 13.2% 0 13.2%;
     }
 
     #container-main-searchbox {
         margin: 1.2rem 0;
         align-items: center;
-    }
-
-    #BlockSortBy {
-        /* width: 80%!important;   */
     }
 
     #ContainerHitsAndCategories {
@@ -191,7 +187,6 @@
     #back-to-top.show {
         opacity: 1;
     }
-
 }
 
 @media only screen and (min-width: 1200px) {

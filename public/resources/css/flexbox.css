@@ -175,28 +175,18 @@ h2, h3 {
     align-items: flex-end
 }
 
-.title {
-    border-bottom: 1px solid #ccc;
-    max-width: 1000px;
-    margin: 40px auto;
-    text-align: start;
-    font-size: 160%;
-}
-
-.flex-title {
+.container-end-horizontal-line{
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
 }
 
-.flex-title > span {
+.container-end-horizontal-line > div, .container-end-horizontal-line > span {
     white-space: nowrap;
 }
 
-.flex-title .title-main {
-    flex-grow: 1;
-}
-
-.flex-title > div {
-    white-space: nowrap;
+.grow-1 {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
 }

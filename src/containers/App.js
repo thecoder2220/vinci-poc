@@ -131,17 +131,13 @@ class App extends Component {
                     />
                     <i id="magnifier" className="fas fa-search"></i>
                 </div>
-                <h3 className="title flex-title">
-                    <span className="title-main">Main Title Here</span>
-                    <span>This is a good look, right here.</span>
-                </h3>
-                <div className="title flex-title">
+                <div id="container-stats-sortby" className="container-end-horizontal-line">
 
                     <Stats translations={{
                         stats (n) {
                             return `${n.toLocaleString()} résultats`
                         }
-                    }} className="title-main"/>
+                    }} className="grow-1"/>
                     <CustomizedSortBy
                         items={[
                             {value: 'site_search_sort_by_date', label: 'Tri par date'},
@@ -150,26 +146,6 @@ class App extends Component {
                         defaultRefinement="site-search"
                     />
                 </div>
-                <div id="ContainerSortBy" className="Grid align-center">
-                    <div className="Grid-cell items-start Grid" id="BlockStats">
-                        <Stats translations={{
-                            stats (n) {
-                                return `${n.toLocaleString()} résultats`
-                            }
-                        }} className="items-start"/>
-                    </div>
-                    <div className="fontsize18 items-end">
-                        <CustomizedSortBy
-                            items={[
-                                {value: 'site_search_sort_by_date', label: 'Tri par date'},
-                                {value: 'site-search', label: 'Tri par pertinence'},
-                            ]}
-                            defaultRefinement="site-search"
-                            className="items-end"
-                        />
-                    </div>
-                </div>
-
                 <div id="ContainerHitsAndCategories">
                     <div className="flexcontainer-as-column">
                         <div className="hits-wrapper wrapper">

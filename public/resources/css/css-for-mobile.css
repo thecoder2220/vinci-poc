@@ -41,8 +41,8 @@
         margin-top: -70px;
         text-indent: -9999px;
         overflow: hidden;
-        background: #706f70 url('resources/hamburger.png') no-repeat 50% 50%;
-        background-image: url("resources/hamburger.png");
+        background: #706f70 url('../hamburger.png') no-repeat 50% 50%;
+        background-image: url("../hamburger.png");
         background-size: auto auto;
     }
 
@@ -147,7 +147,7 @@
 /**********/
 @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and  (-webkit-min-device-pixel-ratio: 2) {
     .nav-toggle {
-        background-image: url("resources/hamburger-retina.png");
+        background-image: url("../hamburger-retina.png");
         background-size: 100px 100px
     }
 }

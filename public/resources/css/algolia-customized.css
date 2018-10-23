@@ -71,6 +71,11 @@ ul.ais-Hits-list li:first-child {
     height: 0px;
 }
 
+.ais-Stats {
+    font-size: 18px;
+    text-align: start;
+}
+
 .ais-Stats-text {
     color: black;
     font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
@@ -146,15 +151,18 @@ li.ais-Menu-item {
 
 .algolia-SortBy-separator {
     padding-right: 4px;
+    font-size: 18px;
 }
 
 a.algolia-SortBy-link-selected {
     color: #000;
     cursor: auto;
+    font-size: 18px;
 }
 
 a.algolia-SortBy-link  {
     color: #004489;
+    font-size: 18px;
 }
 
 a.algolia-SortBy-link:hover {
