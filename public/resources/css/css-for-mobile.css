@@ -122,6 +122,11 @@
     .header-all-categories {
         padding: 4px 10px !important;
     }
+
+    #magnifier  {
+        margin-top: 1.2%;
+        margin-left: 1.5%;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {
