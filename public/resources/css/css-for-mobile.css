@@ -132,6 +132,10 @@
     #root-left-block, #root-right-block {
         display:none;
     }
+
+    .document-date {
+        font-size: small;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {
