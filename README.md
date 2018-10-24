@@ -15,4 +15,6 @@ dn-hdr => header-all-categories
 
 debugger // eslint-disable-line
 
-=>      <a href="#" id="toTop" ><span id="toTopHover" style="opacity: 0;"></span>To Top</a>
+=>      <a href="#" id="toTop" ><span id="toTopHover" style="opacity: 0;"></span>To Top<
+
+=>  bons sites Flexbox  : - https://github.com/ryanve/flexboxes 

@@ -111,7 +111,7 @@ h2, h3 {
     width: 16.6666% !important;
 }
 
-.u-1of4, .u-3of4, .u-1of5, .u-4of5, .u-1of6  {
+.u-1of4, .u-3of4, .u-1of5, .u-4of5, .u-1of6 {
     -webkit-box-flex: 0 !important;
     -webkit-flex: none !important;
     -ms-flex: none !important;
@@ -140,7 +140,7 @@ h2, h3 {
     align-items: flex-end
 }
 
-.container-end-horizontal-line{
+.container-end-horizontal-line {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
@@ -158,6 +158,12 @@ h2, h3 {
 
 .container-end-horizontal-line > span {
     white-space: nowrap;
+}
+
+.grow-0 {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0
 }
 
 .grow-1 {
