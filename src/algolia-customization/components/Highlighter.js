@@ -44,6 +44,10 @@ const Highlighter = ({
     highlightProperty,
   });
 
+    if (hit.lastUpdated) {
+      const lastUpdated = hit.lastUpdated.toString();
+        var dateDocument = lastUpdated.slice(0, 4) + "-" + lastUpdated.slice(4, 6) + "-" + lastUpdated.slice(6, 8);
+    }
   return (
     <span className={classNames(cx(''), className)}>
       {parsedHighlightedValue.map((item, i) => {
@@ -77,7 +81,10 @@ const Highlighter = ({
           />
         );
       })}
-        <div><font color="#706F6F" size="-1">2018-02-02</font></div>
+        <br/>
+        {dateDocument && (
+
+        <div className="document-date"><font color="#706F6F" size="-1">{dateDocument}</font></div> ) }
     </span>
   );
 };
