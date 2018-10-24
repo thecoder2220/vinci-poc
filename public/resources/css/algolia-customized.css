@@ -208,3 +208,7 @@ a.algolia-SortBy-link:hover {
     top: -62px;
     max-width: 250px !important;
 }
+
+.ais-Highlight-highlighted, .ais-Snippet-highlighted {
+    font-size: 18px;
+}
