@@ -535,27 +535,6 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     opacity: 1;
 }
 
-/* ancienne CSS
-  #toTop {
-      display: none;
-      text-decoration: none;
-      position: fixed;
-      bottom: 15px;
-      right: 10px;
-      overflow: hidden;
-      width: 51px;
-      height: 51px;
-      border: none;
-      text-indent: 100%;
-      background: url(../ui.totop.png) no-repeat left top;
-  }
-
-  #toTopHover {
-      background: url(../ui.totop.png) no-repeat left -51px;
-      width: 51px;
-      height: 51px;
-      display: block;
-      overflow: hidden;
-      float: left;
-      opacity: 0;
-  }  */
+.document-date {
+    font-size: small;
+}
