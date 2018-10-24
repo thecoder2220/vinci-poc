@@ -22,6 +22,7 @@ import {
 
 import CustomizedMenu from '../algolia-customization/widgets/CustomizedMenu';
 import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy';
+import CustomizedSnippet from '../algolia-customization/widgets/CustomizedSnippet';
 
 import './style.scss';
 
@@ -34,8 +35,7 @@ const Hit = ({hit}) => {
                 <Highlight attribute="title" hit={hit} className="title-result"/>
             </a>
             <div className="algolia-content-result">
-                <Snippet attribute="content" hit={hit}/>
-                <span><font color="#706F6F" size="-1">2018-02-02</font></span>
+                <CustomizedSnippet attribute="content" hit={hit}/>
             </div>
         </div>
     );
