@@ -48,6 +48,7 @@ class SortBy extends Component {
                      key={idx}
                  >
                      <Link
+                         //className={theClassName + ' flex-auto'}
                          className={theClassName}
                          onClick={() => this.onChange(item.value)}
                          href="#"

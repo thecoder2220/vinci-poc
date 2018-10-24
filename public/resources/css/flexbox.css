@@ -172,6 +172,8 @@ h2, h3 {
     flex-grow: 1
 }
 
+.grow-2 { -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2 }
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
