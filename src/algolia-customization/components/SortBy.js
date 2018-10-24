@@ -63,7 +63,7 @@ class SortBy extends Component {
          });
 
         return (
-            <div className={classNames(cx(''), className) + ' grid-no-wrap'}>
+            <div className={'grid-no-wrap'}>
                 {containerLinks}
             </div>
         );
