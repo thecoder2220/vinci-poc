@@ -206,4 +206,5 @@ a.algolia-SortBy-link:hover {
     text-align: start;
     position: relative;
     top: -62px;
+    max-width: 250px !important;
 }

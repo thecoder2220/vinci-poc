@@ -141,9 +141,10 @@
 }
 
 @media only screen and (max-width: 1199px) {
-    main div {
+   /* NE PAS REPRENDRE
+        main div {
         max-width: 100% !important;
-    }
+    }  */
 }
 
 @media print {
