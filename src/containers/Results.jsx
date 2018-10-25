@@ -64,7 +64,7 @@ const Results = () => (
 
             <CustomizedSortBy
                 items={[
-                    {value: 'site_search_sort_by_date', label: 'Tri par date'},
+                    {value: 'site_search_sort_by _date', label: 'Tri par date'},
                     {value: 'site-search', label: 'Tri par pertinence'},
                 ]}
                 defaultRefinement="site-search"
