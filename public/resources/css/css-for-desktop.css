@@ -61,7 +61,7 @@
 
     .top-menu {
         width: 100%;
-        margin: -45px 18.2vw 0 18.2vw;
+        margin: -45px auto 0 auto;
         text-align: left;
     }
 
@@ -92,7 +92,7 @@
         font-size: 1.125rem;
         border-left: solid 1px #ededed;
         border-right: solid 1px #ededed;
-        margin: 0 2.7rem;
+        padding: 0 2rem;
     }
 
     main {
@@ -187,4 +187,12 @@
     }
 }
 
-
+@media only screen and (max-width: 1199px) and (min-width: 901px) {
+    .dropdown-toggle {
+        padding: 0 2vw;
+    }
+    .top-menu {
+        background: #ededed;
+        margin: 0;
+    }
+}
