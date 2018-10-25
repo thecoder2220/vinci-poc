@@ -92,7 +92,7 @@
         font-size: 1.125rem;
         border-left: solid 1px #ededed;
         border-right: solid 1px #ededed;
-        padding: 0 2rem;
+        margin: 0 2.7rem;
     }
 
     main {
@@ -145,8 +145,8 @@
 
     #root {
         margin-top: 0.3em;
-        margin-left: 3.3em;
-        margin-right: 3.3em;
+        margin-left: 3.7em;
+        margin-right: 3.7em;
     }
 
     .ais-Stats-text {
@@ -159,6 +159,14 @@
             margin-left: auto;
             margin-right: auto;
         }
+    }
+
+    .header_text * {
+        padding:0 1.9rem;
+    }
+
+    #container-stats-sortby {
+        margin: 2.6rem 0 36px 0;
     }
 }
 

@@ -136,6 +136,14 @@
     #NoResultsBlock {
         margin-top: 1rem;
     }
+
+    .header_text * {
+        padding:0 1.25rem;
+    }
+
+    #container-stats-sortby {
+        margin: 2.4rem 0 36px 0;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {

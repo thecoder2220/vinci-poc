@@ -261,10 +261,9 @@ main .text {
 }
 
 .header_text * {
-    margin: 0 auto;
     color: #fff;
     text-align: left;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .header_text_00 {
@@ -502,10 +501,6 @@ div.display-searchable {
 strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     font-family: 'VinciSansBold' !important;
     font-weight: normal !important;
-}
-
-#container-stats-sortby {
-    margin: 2.6rem 0 36px 0;
 }
 
 #back-to-top {
