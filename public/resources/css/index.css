@@ -539,3 +539,10 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
 .document-date {
     font-size: small;
 }
+
+#NoResultsBlock {
+    padding-bottom: 1.5rem;
+    font-size: 1.125rem;
+    text-align: left;
+    color: #000000;
+}

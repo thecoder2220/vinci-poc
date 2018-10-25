@@ -153,6 +153,13 @@
         padding-left: 16px;
     }
 
+    @media only screen and (min-width: 1201px) {
+        #NoResultsBlock {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 @media only screen and (min-width: 1200px) {

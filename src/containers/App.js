@@ -27,7 +27,7 @@ const ResultsOrNoResults = connectStateResults(
         searchResults && searchResults.nbHits !== 0 ? (
             <Results />
         ) : (
-            <NoResults />
+            <NoResults searchState={searchState}/>
         )
 );
 
@@ -46,12 +46,7 @@ class App extends Component {
 
     handleSearchState = searchState => this.setState({searchState});
 
-
-
     render() {
-
-
-
 
         return (
             <InstantSearch
@@ -68,7 +63,7 @@ class App extends Component {
                     />
                     <i id="magnifier" className="fas fa-search"></i>
                 </div>
-                <ResultsOrNoResults />
+                <ResultsOrNoResults  />
             </InstantSearch>
         );
     }

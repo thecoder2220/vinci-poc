@@ -132,6 +132,10 @@
     #root-left-block, #root-right-block {
         display:none;
     }
+
+    #NoResultsBlock {
+        margin-top: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {
