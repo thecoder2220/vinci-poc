@@ -90,7 +90,7 @@ const Results = () => (
                     <HitsCategories />
                     <YearMenu />
                     <CustomizedMenu attribute="searchCountryFR" className="dn-attr-v"
-                                    showMore={true} limit={3} headerTitle="Pays"/>
+                                    showMore={true} limit={3} headerTitle="Pays" showMoreLimit={200} />
                 </div>
             </div>
 
