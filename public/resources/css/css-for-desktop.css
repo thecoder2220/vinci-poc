@@ -131,7 +131,7 @@
 
     .fake-column {
         text-align: left;
-        margin-right: 1rem;
+        margin-right: 0.8rem;
         max-width: 221px;
     }
 
@@ -145,8 +145,8 @@
 
     #root {
         margin-top: 0.3em;
-        margin-left: 3.7em;
-        margin-right: 3.7em;
+        margin-left: 3.6em;
+        margin-right: 3.6em;
     }
 
     .ais-Stats-text {
@@ -166,7 +166,7 @@
     }
 
     #container-stats-sortby {
-        margin: 2.6rem 0 36px 0;
+        margin: 2.4rem 0 30px 0;
     }
 }
 
