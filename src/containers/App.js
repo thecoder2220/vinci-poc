@@ -21,6 +21,7 @@ import {
 
 import Results from './Results';
 import NoResults from './NoResults';
+import CustomizedSearchBox from '../algolia-customization/widgets/CustomizedSearchBox';
 
 const ResultsOrNoResults = connectStateResults(
     ({ searchState, searchResults }) =>
@@ -56,12 +57,13 @@ class App extends Component {
                 onSearchStateChange={this.handleSearchState}
             >
                 <div id="container-main-searchbox" className="Grid flex-1">
-                    <SearchBox className="fake-column"
+                    <CustomizedSearchBox className="fake-column"
                                translations={{
                                    placeholder: '',
                                }}
                     />
                     <i id="magnifier" className="fas fa-search"></i>
+                    <ClearRefinements />
                 </div>
                 <ResultsOrNoResults  />
             </InstantSearch>
