@@ -108,10 +108,10 @@ class List extends Component {
                 >
                         </span>
                     {extended ? (
-                        <span
+                        <span  onClick={this.onShowMoreClick}
                             className="showMore-count-customized">{translate('showMore', extended)}</span>
                     ) : (
-                        <span
+                        <span onClick={this.onShowMoreClick}
                             className="showMore-count-customized">{countRemainingItems} {translate('showMore', extended)}
                             </span>
                     )}

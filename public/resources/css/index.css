@@ -380,6 +380,7 @@ footer {
 #dyn_nav li a {
     color: #3C3C3B !important;
     font-size: 0.917rem !important;
+    cursor:pointer;
 }
 
 .text a:hover {
