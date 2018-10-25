@@ -89,7 +89,7 @@ const Results = () => (
                 <div id="dyn_nav" className="align-center flex-1 fake-column">
                     <HitsCategories />
                     <YearMenu />
-                    <CustomizedMenu attribute="country" className="dn-attr-v"
+                    <CustomizedMenu attribute="searchCountryFR" className="dn-attr-v"
                                     showMore={true} limit={3} headerTitle="Pays"/>
                 </div>
             </div>
