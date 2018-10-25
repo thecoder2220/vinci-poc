@@ -1,4 +1,4 @@
-/* eslint-disable react/no-deprecated */
+/* eslint-disable react/no-deprecated,no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -62,25 +62,28 @@ const defaultSubmit = (
     </svg>
 );
 
-const ClearQuery = ({ refine }) => {
+const ClearQuery = ({ refine, hidden }) => {
     const onClick = ev => {
         refine('');
         ev.stopPropagation();
     };
+
     return (
         <div onClick={onClick}>
-            <ConnectedClearAllRefinements />
+            <ConnectedClearAllRefinements hidden={hidden} />
         </div>
     );
 };
 
-const ClearAllRefinements = ({ refine, items }) => {
+const ClearAllRefinements = ({ refine, items, hidden }) => {
     const onClick = () => refine(items);
+    console.log('hidden=', hidden);
     return (
         <button
             type="reset"
             className="ais-SearchBox-reset"
             onClick={onClick}
+            hidden={hidden}
         />
     );
 };
@@ -322,7 +325,9 @@ class SearchBox extends Component {
                         {reset}
                     </button>
 
-                    <ClearQueryAndRefinements />
+                    <ClearQueryAndRefinements
+                        hidden={!query || isSearchStalled}
+                    />
 
                     {this.props.showLoadingIndicator && (
                         <span
