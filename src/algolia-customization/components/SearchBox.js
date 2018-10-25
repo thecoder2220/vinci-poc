@@ -1,7 +1,12 @@
+/* eslint-disable react/no-deprecated */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { translatable } from 'react-instantsearch-core';
+import {
+    connectCurrentRefinements,
+    connectSearchBox,
+} from 'react-instantsearch-dom';
 import { createClassNames } from '../core/utils';
 
 const cx = createClassNames('SearchBox');
@@ -57,6 +62,33 @@ const defaultSubmit = (
     </svg>
 );
 
+const ClearQuery = ({ refine }) => {
+    const onClick = ev => {
+        refine('');
+        ev.stopPropagation();
+    };
+    return (
+        <div onClick={onClick}>
+            <ConnectedClearAllRefinements />
+        </div>
+    );
+};
+
+const ClearAllRefinements = ({ refine, items }) => {
+    const onClick = () => refine(items);
+    return (
+        <button
+            type="reset"
+            className="ais-SearchBox-reset"
+            onClick={onClick}
+        />
+    );
+};
+
+const ClearQueryAndRefinements = connectSearchBox(ClearQuery);
+const ConnectedClearAllRefinements = connectCurrentRefinements(
+    ClearAllRefinements
+);
 class SearchBox extends Component {
     static propTypes = {
         currentRefinement: PropTypes.string,
@@ -289,6 +321,9 @@ class SearchBox extends Component {
                     >
                         {reset}
                     </button>
+
+                    <ClearQueryAndRefinements />
+
                     {this.props.showLoadingIndicator && (
                         <span
                             hidden={!isSearchStalled}

@@ -63,7 +63,6 @@ class App extends Component {
                                }}
                     />
                     <i id="magnifier" className="fas fa-search"></i>
-                    <ClearRefinements />
                 </div>
                 <ResultsOrNoResults  />
             </InstantSearch>
