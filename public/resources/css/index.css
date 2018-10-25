@@ -264,6 +264,7 @@ main .text {
     color: #fff;
     text-align: left;
     margin: 0 auto;
+    padding:0 20px;
 }
 
 .header_text_00 {
