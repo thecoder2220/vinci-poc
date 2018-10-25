@@ -32,8 +32,7 @@ ul.ais-Hits-list li:first-child {
     width: calc(99% - 10px);
     border: 0px solid #c4c8d8;
     box-shadow: 0 0 0 0 #e3e5ec;;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0;
     margin: 0;
 }
 
@@ -101,6 +100,7 @@ ul.ais-Hits-list li:first-child {
 
 .algolia-article-result {
     text-align: left;
+    margin-left: 8px;
 }
 
 .algolia-content-result {
@@ -166,7 +166,7 @@ a.algolia-SortBy-link:hover {
 }
 
 .ais-Pagination-list {
-    padding: 1vw 0 !important;
+    padding: 1em 0 !important;
     border-top: 1px solid #c6c6c6 !important;
 }
 

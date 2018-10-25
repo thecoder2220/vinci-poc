@@ -299,7 +299,7 @@ li {
 }
 
 .fake-column > span {
-    padding-left: 6px;
+    padding-left: 3px;
 }
 
 .fake-column > ul > li {
@@ -396,7 +396,7 @@ li.header-category {
     outline-style: none;
     padding: 6px 10px !important;
     line-height: 1.5em !important;
-    color: #3C3C3B !important;
+    color: #000000;
     background: #EDEDED !important;
 }
 
@@ -447,11 +447,6 @@ li.header-category {
     height: -moz-calc(99% - 10px); /* pour Firefox */
     height: calc(99% - 10px);
     background-color: white;
-}
-
-.hits-wrapper {
-    border-left: 1px solid #c6c6c6 !important;
-
 }
 
 .align-center {
@@ -542,3 +537,4 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     text-align: left;
     color: #000000;
 }
+
