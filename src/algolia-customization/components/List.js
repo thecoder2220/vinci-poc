@@ -93,9 +93,8 @@ class List extends Component {
 
         const {extended} = this.state;
         const disabled = this.props.limit >= this.props.items.length;
-        const nbItemsToDisplay = this.props.items.length - this.props.limit;
+        const nbItemsToDisplay = this.props.items.length;
         const countRemainingItems = nbItemsToDisplay > this.props.limit ? nbItemsToDisplay : '';
-
         if (nbItemsToDisplay <= this.props.limit) {
             return null;
         }
