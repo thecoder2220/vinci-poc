@@ -77,7 +77,6 @@ const ClearQuery = ({ refine, hidden }) => {
 
 const ClearAllRefinements = ({ refine, items, hidden }) => {
     const onClick = () => refine(items);
-    console.log('hidden=', hidden);
     return (
         <button
             type="reset"
