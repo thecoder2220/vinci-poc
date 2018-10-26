@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { pick } from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -32,6 +33,7 @@ class Menu extends Component {
         showMoreLimit: PropTypes.number,
         transformItems: PropTypes.func,
         className: PropTypes.string,
+        sortByName: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -79,6 +81,7 @@ class Menu extends Component {
                     'searchable',
                     'canRefine',
                     'className',
+                    'sortByName'
                 ])}
             />
         );

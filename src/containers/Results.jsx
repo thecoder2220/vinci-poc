@@ -53,7 +53,7 @@ const YearMenu = connectHits(({hits}) => {
     }
     return (
         <CustomizedMenu attribute="searchYear" className="dn-attr-v" showMore={true} limit={3}
-                        headerTitle="Année"/>
+                        headerTitle="Année" sortByName={true} />
     );
 });
 

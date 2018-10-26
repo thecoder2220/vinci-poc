@@ -1,5 +1,7 @@
+/* eslint-disable */
 /* eslint-disable prettier/prettier */
 
+import { orderBy } from 'lodash';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -30,11 +32,13 @@ class List extends Component {
         searchable: PropTypes.bool,
         isFromSearch: PropTypes.bool,
         canRefine: PropTypes.bool,
+        sortByName:PropTypes.bool,
     };
 
     static defaultProps = {
         className: '',
         isFromSearch: false,
+        sortByName:false,
     };
 
     constructor() {
@@ -157,12 +161,21 @@ class List extends Component {
     }
 
     render() {
-        const {cx, items, className, searchable, canRefine} = this.props;
+        const {cx, className, searchable, canRefine, sortByName} = this.props;
+        let {items} = this.props;
         const searchBox = searchable ? this.renderSearchBox() : null;
         const rootClassName = classNames(
             cx('', !canRefine && '-noRefinement'),
             className
         );
+
+        if (sortByName) {
+            items =orderBy(
+                this.props.items,
+                [ 'label' , 'count','isRefined'],
+                ['desc', 'desc', 'desc']
+            )
+        }
 
         if (items.length === 0) {
             return <div className={rootClassName}>{searchBox}</div>;
