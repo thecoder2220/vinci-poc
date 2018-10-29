@@ -4,13 +4,6 @@
     font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
-.ais-Hits-list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0rem;
-    margin-left: 0rem;
-}
-
 .ais-Hits-list > div {
     height: -webkit-calc(99% - 10px); /* pour Chrome */
     height: -moz-calc(99% - 10px); /* pour Firefox */

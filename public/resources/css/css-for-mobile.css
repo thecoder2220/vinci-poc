@@ -153,6 +153,13 @@
         margin: 0px 0 4px 0;
     }
 
+    .ais-Hits-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: 0rem;
+    }
+
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {

@@ -159,14 +159,6 @@
         }
     }
 
-    #container-stats-sortby {
-        margin: 2.4rem 0 17px 0;
-    }
-
-    .ais-Stats {
-        top: -42px;
-    }
-
     #root {
         padding-left: 1.125rem;
         padding-right: 1.125rem;
@@ -179,6 +171,21 @@
 
     ul.one-category {
         margin: 7px 0 4px 0;
+    }
+
+    #container-stats-sortby {
+        margin: 2.25rem 0 20px 0;
+    }
+
+    .ais-Stats {
+        top: -43px;
+    }
+
+    .ais-Hits-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.3rem;
+        margin-left: 0rem;
     }
 }
 
