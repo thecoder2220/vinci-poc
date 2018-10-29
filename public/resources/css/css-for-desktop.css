@@ -176,6 +176,10 @@
     .hits-wrapper {
         border-left: 1px solid #c6c6c6 !important;
     }
+
+    ul.one-category {
+        margin: 7px 0 4px 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

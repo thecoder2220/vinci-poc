@@ -149,6 +149,10 @@
         top: -65px;
     }
 
+    ul.one-category {
+        margin: 0px 0 4px 0;
+    }
+
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px) {
