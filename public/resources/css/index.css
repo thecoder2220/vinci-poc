@@ -534,3 +534,9 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
     color: #000000;
 }
 
+div.preview-pdf img {
+    max-height: 100px;
+    max-width: 75px;
+    cursor: pointer;
+    height: auto;
+}

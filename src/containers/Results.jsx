@@ -22,6 +22,8 @@ import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy'
 import CustomizedSnippet from '../algolia-customization/widgets/CustomizedSnippet';
 
 const Hit = ({hit}) => {
+
+    console.log('hit', hit)
     return (
         <div className="algolia-article-result">
             {hit.type === 'PDF' &&
@@ -29,12 +31,17 @@ const Hit = ({hit}) => {
             <a href={hit.objectID}>
                 <Highlight attribute="title" hit={hit} className="title-result"/>
             </a>
-            <div className="algolia-content-result">
-                <CustomizedSnippet attribute="content" hit={hit}/>
+            <div className="algolia-content-result container-end-horizontal-line">
+                <CustomizedSnippet attribute="content" className="grow-1" hit={hit}/>
+                <div className="preview-pdf">
+                    <img
+                        src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
+                        alt="Could not generate preview"/>
+                </div>
             </div>
+
         </div>
     );
-
 };
 
 const HitsCategories = connectHits(({hits}) => {
@@ -53,7 +60,7 @@ const YearMenu = connectHits(({hits}) => {
     }
     return (
         <CustomizedMenu attribute="searchYear" className="dn-attr-v" showMore={true} limit={3}
-                        headerTitle="Année" sortByName={true} />
+                        headerTitle="Année" sortByName={true}/>
     );
 });
 
@@ -90,7 +97,8 @@ const Results = () => (
                     <HitsCategories />
                     <YearMenu />
                     <CustomizedMenu attribute="searchCountryFR" className="dn-attr-v"
-                                    showMore={true} limit={3} headerTitle="Pays" showMoreLimit={200} />
+                                    showMore={true} limit={3} headerTitle="Pays"
+                                    showMoreLimit={200}/>
                 </div>
             </div>
 
