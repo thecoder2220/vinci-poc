@@ -1,19 +1,21 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Lightbox from 'react-image-lightbox';
 import './css/preview.css';
 
-const images = [
-    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png',
-    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-2.png',
-    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-3.png',
-    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-4.png',
-    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-5.png',
-];
+const convertObjectIdToFilePath  = (args) => {
+    var result = args.replace('https://','');
+    console.log('convertObjectIdToFilePath part one =',result)
+    result = result.replace(/[^a-zA-Z0-9]/g, '-');
+    console.log('convertObjectIdToFilePath part two =',result)
+    return result;
+}
 
 export default class Preview extends Component {
     static propTypes = {
-        hit: PropTypes.arrayOf(PropTypes.object).isRequired,
+        hit: PropTypes.object,
     };
 
     state = {
@@ -23,12 +25,29 @@ export default class Preview extends Component {
 
     render() {
         const { photoIndex, isOpen } = this.state;
+        const {objectID} = this.props.hit;
 
+        const tokens = objectID.split('/');
+        console.log('tokens =', tokens )
+        const fileName = tokens[tokens.length-1];
+        console.log('fileName =', fileName )
+        const filePath = '/input/img/' + convertObjectIdToFilePath(objectID)+'/'+fileName;
+        const firstPageSuffix='-1.png';
+        const firstImgPath = filePath + firstPageSuffix;
+        console.log('firstImgPath =',firstImgPath  )
+
+        const images = [
+            firstImgPath,
+            filePath +'-2.png',
+            filePath +'-3.png',
+            filePath +'-4.png',
+            filePath +'-5.png',
+        ];
         return (
             <div>
                 <img
                     onClick={() => this.setState({ isOpen: true })}
-                    src="/input/img/www-vinci-com-commun-communiques-nsf-DCC7F89D1A4DE415C125692F002D5AE4--file-opegtmus-pdf/opegtmus.pdf-1.png"
+                    src={firstImgPath}
                     alt="Could not generate preview"
                 />
                 {isOpen && (
