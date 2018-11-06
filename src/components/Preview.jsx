@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Lightbox from 'react-image-lightbox';
+import LightboxWithPagination from './LightboxWithPagination';
 import './css/preview.css';
 
 const convertObjectIdToFilePath  = (args) => {
@@ -36,13 +36,17 @@ export default class Preview extends Component {
         const firstImgPath = filePath + firstPageSuffix;
         console.log('firstImgPath =',firstImgPath  )
 
-        const images = [
+        /*const images = [
             firstImgPath,
             filePath +'-2.png',
             filePath +'-3.png',
             filePath +'-4.png',
             filePath +'-5.png',
-        ];
+        ]; */
+
+        const images=[{ src: firstImgPath },{ src: filePath +'-2.png'},{ src: filePath +'-3.png'},{ src: filePath +'-4.png'},{ src: filePath +'-5.png'}]
+
+
         return (
             <div>
                 <img
@@ -51,28 +55,15 @@ export default class Preview extends Component {
                     alt="Could not generate preview"
                 />
                 {isOpen && (
-                    <Lightbox
-                        mainSrc={images[photoIndex]}
-                        nextSrc={images[(photoIndex + 1) % images.length]}
-                        prevSrc={
-                            images[
-                                (photoIndex + images.length - 1) % images.length
-                            ]
-                        }
-                        onCloseRequest={() => this.setState({ isOpen: false })}
-                        onMovePrevRequest={() =>
-                            this.setState({
-                                photoIndex:
-                                    (photoIndex + images.length - 1) %
-                                    images.length,
-                            })
-                        }
-                        onMoveNextRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + 1) % images.length,
-                            })
-                        }
+
+                <LightboxWithPagination
+                    images={images}
+                    isOpen={this.state.isOpen}
+                    onClickPrev={this.gotoPrev}
+                    onClickNext={this.gotoNext}
+                    onClose={this.closeBackdrop}
                     />
+
                 )}
             </div>
         );
