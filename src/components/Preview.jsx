@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import './css/preview.css';
 
 const images = [
-    '//placekitten.com/1500/500',
-    '//placekitten.com/4000/3000',
-    '//placekitten.com/800/1200',
-    '//placekitten.com/1500/1500',
+    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png',
+    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-2.png',
+    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-3.png',
+    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-4.png',
+    '/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-5.png',
 ];
 
 export default class Preview extends Component {
@@ -24,13 +25,11 @@ export default class Preview extends Component {
 
         return (
             <div>
-                <button
-                    type="button"
+                <img
                     onClick={() => this.setState({ isOpen: true })}
-                >
-                    Open Lightbox
-                </button>
-
+                    src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
+                    alt="Could not generate preview"
+                />
                 {isOpen && (
                     <Lightbox
                         mainSrc={images[photoIndex]}

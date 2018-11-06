@@ -34,12 +34,11 @@ const Hit = ({hit}) => {
             <div className="algolia-content-result container-end-horizontal-line">
                 <CustomizedSnippet attribute="content" hit={hit}  className="grow-2 maxwidth69" />
                 <div className="grow-1" >&nbsp;</div>
-                <div className="preview-pdf grow-0" >
-                    <img
-                        src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
-                        alt="Could not generate preview"/>
-                    <Preview />
+                {hit.type === 'PDF' &&
+                <div className="preview-pdf grow-0">
+                    <Preview  hit={hit} />
                 </div>
+                }
             </div>
         </div>
     );
