@@ -97,7 +97,6 @@ ul.ais-Hits-list li:first-child {
 }
 
 .algolia-content-result {
-    width: calc(70% - 10px);
     padding-bottom: 1rem;
     padding-top: 1rem;
 }

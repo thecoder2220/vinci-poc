@@ -22,8 +22,6 @@ import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy'
 import CustomizedSnippet from '../algolia-customization/widgets/CustomizedSnippet';
 
 const Hit = ({hit}) => {
-
-    console.log('hit', hit)
     return (
         <div className="algolia-article-result">
             {hit.type === 'PDF' &&
@@ -32,16 +30,17 @@ const Hit = ({hit}) => {
                 <Highlight attribute="title" hit={hit} className="title-result"/>
             </a>
             <div className="algolia-content-result container-end-horizontal-line">
-                <CustomizedSnippet attribute="content" className="grow-1" hit={hit}/>
-                <div className="preview-pdf">
+                <CustomizedSnippet attribute="content" hit={hit}  className="grow-2 maxwidth69" />
+                <div className="grow-1" >&nbsp;</div>
+                <div className="preview-pdf grow-0" >
                     <img
                         src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
                         alt="Could not generate preview"/>
                 </div>
             </div>
-
         </div>
     );
+
 };
 
 const HitsCategories = connectHits(({hits}) => {

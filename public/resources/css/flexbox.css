@@ -142,16 +142,6 @@ h2, h3 {
 
 .container-end-horizontal-line {
     display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
-.container-end-horizontal-line > div, .container-end-horizontal-line > span {
-    white-space: nowrap;
-}
-
-.container-end-horizontal-line > span {
-    white-space: nowrap;
 }
 
 .grow-0 {

@@ -535,8 +535,12 @@ strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
 }
 
 div.preview-pdf img {
-    max-height: 100px;
+    max-height: 75px;
     max-width: 75px;
     cursor: pointer;
     height: auto;
+}
+
+.maxwidth69{
+    max-width:69%;
 }
