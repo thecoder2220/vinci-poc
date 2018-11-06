@@ -17,9 +17,11 @@ import {
     RefinementList,
     Stats,
 } from 'react-instantsearch-dom';
+import 'react-image-lightbox/style.css';
 import CustomizedMenu from '../algolia-customization/widgets/CustomizedMenu';
 import CustomizedSortBy from '../algolia-customization/widgets/CustomizedSortBy';
 import CustomizedSnippet from '../algolia-customization/widgets/CustomizedSnippet';
+import Preview from '../components/Preview';
 
 const Hit = ({hit}) => {
     return (
@@ -36,11 +38,11 @@ const Hit = ({hit}) => {
                     <img
                         src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
                         alt="Could not generate preview"/>
+                    <Preview />
                 </div>
             </div>
         </div>
     );
-
 };
 
 const HitsCategories = connectHits(({hits}) => {
