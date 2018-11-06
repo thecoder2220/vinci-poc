@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Lightbox from 'react-image-lightbox';
 import './css/preview.css';
 
@@ -11,14 +12,14 @@ const images = [
 ];
 
 export default class Preview extends Component {
-    constructor(props) {
-        super(props);
+    static propTypes = {
+        hit: PropTypes.arrayOf(PropTypes.object).isRequired,
+    };
 
-        this.state = {
-            photoIndex: 0,
-            isOpen: false,
-        };
-    }
+    state = {
+        photoIndex: 0,
+        isOpen: false,
+    };
 
     render() {
         const { photoIndex, isOpen } = this.state;
@@ -27,7 +28,7 @@ export default class Preview extends Component {
             <div>
                 <img
                     onClick={() => this.setState({ isOpen: true })}
-                    src="/input/www.vinci.com-publi-vinci_energies-vincienergies04s-fr.pdf/page-1.png"
+                    src="/input/img/www-vinci-com-commun-communiques-nsf-DCC7F89D1A4DE415C125692F002D5AE4--file-opegtmus-pdf/opegtmus.pdf-1.png"
                     alt="Could not generate preview"
                 />
                 {isOpen && (
