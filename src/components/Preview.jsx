@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import LightboxWithPagination from './LightboxWithPagination';
+import Lightbox from './LightboxWithPagination/Lightbox';
 import './css/preview.css';
 
 const convertObjectIdToFilePath  = (args) => {
@@ -15,56 +15,98 @@ const convertObjectIdToFilePath  = (args) => {
 
 export default class Preview extends Component {
     static propTypes = {
+        heading: PropTypes.string,
         hit: PropTypes.object,
+        showThumbnails: PropTypes.bool,
+        subheading: PropTypes.string,
     };
 
     state = {
-        photoIndex: 0,
-        isOpen: false,
+        lightboxIsOpen: false,
+        currentImage: 0,
     };
 
-    render() {
-        const { photoIndex, isOpen } = this.state;
-        const {objectID} = this.props.hit;
+    constructor() {
+        super();
+        this.gotoNext = this.gotoNext.bind(this);
+        this.gotoPrevious = this.gotoPrevious.bind(this);
+        this.handleClickImage = this.handleClickImage.bind(this);
+        this.closeLightbox = this.closeLightbox.bind(this);
+    }
 
+    openLightbox (index, event) {
+        event.preventDefault();
+        this.setState({
+            currentImage: index,
+            lightboxIsOpen: true,
+        });
+    }
+
+    closeLightbox () {
+        this.setState({
+            currentImage: 0,
+            lightboxIsOpen: false,
+        });
+    }
+
+    gotoPrevious () {
+        this.setState({
+            currentImage: this.state.currentImage - 1,
+        });
+    }
+
+    gotoNext () {
+        this.setState({
+            currentImage: this.state.currentImage + 1,
+        });
+    }
+
+    gotoImage (index) {
+        this.setState({
+            currentImage: index,
+        });
+    }
+
+    handleClickImage () {
+        if (this.state.currentImage === this.props.images.length - 1) return;
+        this.gotoNext();
+    }
+
+    render() {
+
+        const {objectID} = this.props.hit;
         const tokens = objectID.split('/');
-        console.log('tokens =', tokens )
         const fileName = tokens[tokens.length-1];
-        console.log('fileName =', fileName )
         const filePath = '/input/img/' + convertObjectIdToFilePath(objectID)+'/'+fileName;
         const firstPageSuffix='-1.png';
         const firstImgPath = filePath + firstPageSuffix;
-        console.log('firstImgPath =',firstImgPath  )
-
-        /*const images = [
-            firstImgPath,
-            filePath +'-2.png',
-            filePath +'-3.png',
-            filePath +'-4.png',
-            filePath +'-5.png',
-        ]; */
-
         const images=[{ src: firstImgPath },{ src: filePath +'-2.png'},{ src: filePath +'-3.png'},{ src: filePath +'-4.png'},{ src: filePath +'-5.png'}]
-
 
         return (
             <div>
                 <img
-                    onClick={() => this.setState({ isOpen: true })}
+                    onClick={() => this.setState({ lightboxIsOpen: true })}
                     src={firstImgPath}
                     alt="Could not generate preview"
                 />
-                {isOpen && (
 
-                <LightboxWithPagination
+                <Lightbox
+                    currentImage={this.state.currentImage}
                     images={images}
-                    isOpen={this.state.isOpen}
-                    onClickPrev={this.gotoPrev}
+                    isOpen={this.state.lightboxIsOpen}
+                    onClickImage={this.handleClickImage}
                     onClickNext={this.gotoNext}
-                    onClose={this.closeBackdrop}
-                    />
+                    onClickPrev={this.gotoPrevious}
+                    onClickThumbnail={this.gotoImage}
+                    onClose={this.closeLightbox}
+                    preventScroll={this.props.preventScroll}
+                    showThumbnails={this.props.showThumbnails}
+                    spinner={this.props.spinner}
+                    spinnerColor={this.props.spinnerColor}
+                    spinnerSize={this.props.spinnerSize}
+                    theme={this.props.theme}
+                />
 
-                )}
             </div>
         );
     }

@@ -20,7 +20,7 @@ debugger // eslint-disable-line
 =>  bons sites Flexbox  : - https://github.com/ryanve/flexboxes 
 
 =>  recherches utiles =>    dateopegtmus.PDF
-                            Dufour
+                            dp Dufour
 
 =>  LightboxWithPagination  vient de https://github.com/jossmac/react-images
   
